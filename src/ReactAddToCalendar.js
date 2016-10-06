@@ -2,7 +2,7 @@ import React, {
 	Component,
 } from 'react';
 
-import helpersClass from './helpers.js';
+import helpersClass from './helpers';
 const helpers = new helpersClass();
 
 export default class ReactAddToCalendar extends React.Component {
@@ -80,7 +80,7 @@ export default class ReactAddToCalendar extends React.Component {
         });
 
         return (
-            <div className="react-add-to-calendar__dropdown">
+            <div className={this.props.dropdownClass}>
                 <ul>
                     {items}
                 </ul>
@@ -119,11 +119,10 @@ export default class ReactAddToCalendar extends React.Component {
                 );
         }
 
-        let buttonClass = (this.state.optionsOpen) ? 'react-add-to-calendar__button react-add-to-calendar__button--light' :
-                                                    'react-add-to-calendar__button';
+        let buttonClass = (this.state.optionsOpen) ? this.props.buttonClassClosed + ' ' + this.props.buttonClassOpen : this.props.buttonClassClosed;
 
         return (
-            <div className="react-add-to-calendar__wrapper">
+            <div className={this.props.buttonWrapperClass}>
                 <a id={this.state.componentId} className={buttonClass}
                     onClick={this.toggleCalendarDropdown}>{buttonLabel}</a>
             </div>
@@ -142,7 +141,7 @@ export default class ReactAddToCalendar extends React.Component {
         }
 
         return (
-            <div className="react-add-to-calendar">
+            <div className={this.props.rootClass}>
                 {addToCalendarBtn}
                 {options}
             </div>
@@ -153,17 +152,32 @@ export default class ReactAddToCalendar extends React.Component {
 ReactAddToCalendar.displayName = 'Add To Calendar';
 
 ReactAddToCalendar.propTypes = {
+	buttonClassClosed: React.PropTypes.string,
+	buttonClassOpen: React.PropTypes.string,
 	buttonLabel: React.PropTypes.string,
     buttonTemplate: React.PropTypes.object,
+	buttonWrapperClass: React.PropTypes.string,
 	displayItemIcons: React.PropTypes.bool,
-	event: React.PropTypes.object.isRequired,
-    listItems: React.PropTypes.array
+	dropdownClass: React.PropTypes.string,
+	event: React.PropTypes.shape({
+		title: React.PropTypes.string,
+		description: React.PropTypes.string,
+		location: React.PropTypes.string,
+		startTime: React.PropTypes.string,
+		endTime: React.PropTypes.string
+	}).isRequired,
+    listItems: React.PropTypes.arrayOf(React.PropTypes.object),
+	rootClass: React.PropTypes.string
 };
 
 ReactAddToCalendar.defaultProps = {
+	buttonClassClosed: 'react-add-to-calendar__button',
+	buttonClassOpen: 'react-add-to-calendar__button--light',
 	buttonLabel: 'Add to My Calendar',
     buttonTemplate: { caret: 'right' },
+	buttonWrapperClass: 'react-add-to-calendar__wrapper',
 	displayItemIcons: true,
+	dropdownClass: 'react-add-to-calendar__dropdown',
 	event: {
 		title: 'Sample Event',
 		description: 'This is the sample event provided as an example only',
@@ -176,5 +190,6 @@ ReactAddToCalendar.defaultProps = {
         { google: 'Google' },
         { outlook: 'Outlook' },
         { yahoo: 'Yahoo' }
-    ]
+    ],
+	rootClass: 'react-add-to-calendar'
 };

@@ -2,11 +2,11 @@
 
 [![npm version](https://badge.fury.io/js/react-add-to-calendar.svg)](https://badge.fury.io/js/react-add-to-calendar)
 [![Build Status](https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master)](https://travis-ci.org/jasonsalzman/react-add-to-calendar)
-[![Dependency Status](https://david-dm.org/jasonsalzman/react-add-to-calendar.svg)](https://david-dm.org/jasonsalzman/react-add-to-calendar)
+[![Dependency Status](https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000)](https://david-dm.org/jasonsalzman/react-add-to-calendar)
 [![codecov](https://codecov.io/gh/jasonsalzman/react-add-to-calendar/branch/master/graph/badge.svg)](https://codecov.io/gh/jasonsalzman/react-add-to-calendar)
 [![Downloads](http://img.shields.io/npm/dm/react-add-to-calendar.svg)](https://npmjs.org/package/react-add-to-calendar)
 
-A simple and reusable Add to Calendar component for React ([Demo](https://jasonsalzman.github.io/react-add-to-calendar/))
+A simple, customizable, and reusable Add to Calendar button component for React ([Demo](https://jasonsalzman.github.io/react-add-to-calendar/))
 
 ## Installation
 

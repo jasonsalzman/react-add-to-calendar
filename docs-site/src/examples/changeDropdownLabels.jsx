@@ -2,7 +2,7 @@ import React from 'react'
 import AddToCalendar from 'react-add-to-calendar'
 
 export default React.createClass({
-    displayName: 'Default',
+    displayName: 'Change Dropdown Labels',
 
     render () {
         let event = {
@@ -13,35 +13,38 @@ export default React.createClass({
             endTime: '2016-09-16T21:45:00-04:00'
         };
 
+        let items = [
+            { outlook: 'Outlook' },
+            { apple: 'iCal' },
+            { yahoo: 'Yahoo!' },
+            { google: 'Google' }
+        ];
+
         return (
             <div className="row">
                 <pre className="column example__code">
                     <code className="js">
-                        {"let event = \{"}<br/>
+                        {"let items = ["}<br/>
                         &nbsp;&nbsp;&nbsp;
-                        {"  title: 'Sample Event',"}<br/>
+                        {"\{ outlook: 'Outlook' \}"}<br/>
                         &nbsp;&nbsp;&nbsp;
-                        {"  description: 'This is the sample event provided as an example only',"}<br/>
+                        {"\{ apple: 'iCal' \}"}<br/>
                         &nbsp;&nbsp;&nbsp;
-                        {"  location: 'Portland, OR',"}<br/>
+                        {"\{ yahoo: 'Yahoo!' \}"}<br/>
                         &nbsp;&nbsp;&nbsp;
-                        {"  startTime: '2016-09-16T20:15:00-04:00',"}<br/>
-                        &nbsp;&nbsp;&nbsp;
-                        {"  endTime: '2016-09-16T21:45:00-04:00'"}<br/>
-                        {"\};"}<br/><br/>
-                        {"/*"}<br/>
-                        &nbsp;&nbsp;&nbsp;
-                        {"startTime and endTime can use any datetime"}<br/>
-                        &nbsp;&nbsp;&nbsp;
-                        {"string that is acceptable by MomentJS"}<br/>
-                        {"*/"}
+                        {"\{ google: 'Google' \}"}<br/>
+                        {"];"}<br/><br/>
                     </code>
                     <code className="jsx">
-                        {"<AddToCalendar event={event} />"}
+                        {"<AddToCalendar"}<br/>
+                        &nbsp;&nbsp;&nbsp;
+                        {"event={event}"}<br/>
+                        &nbsp;&nbsp;&nbsp;
+                        {"listItems=\{items\} />"}
                     </code>
                 </pre>
                 <div className="column">
-                    <AddToCalendar event={event} />
+                    <AddToCalendar event={event} listItems={items} />
                 </div>
             </div>
         );

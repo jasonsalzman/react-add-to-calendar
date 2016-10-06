@@ -25,24 +25,21 @@ export default React.createClass({
         </div>
         <div className="wrapper">
           <h1>React Add to Calendar Button</h1>
-          { /* <p>
-            <a href="https://npmjs.org/package/react-datepicker">
-              <img src="https://badge.fury.io/js/react-datepicker.svg" className="badge" />
+          <p>
+            <a href="https://npmjs.org/package/react-add-to-calendar">
+              <img src="https://badge.fury.io/js/react-add-to-calendar.svg" className="badge" />
+            </a>&nbsp;&nbsp;
+            <a href="https://travis-ci.org/jasonsalzman/react-add-to-calendar">
+              <img src="https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master" className="badge" />
+            </a>&nbsp;&nbsp;
+            <a href="https://david-dm.org/jasonsalzman/react-add-to-calendar">
+              <img src="https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000" className="badge" />
+            </a>&nbsp;&nbsp;
+            <a href={'https://npmjs.org/package/react-add-to-calendar'}>
+              <img src="https://img.shields.io/npm/dm/react-add-to-calendar.svg" className="badge" />
             </a>
-            <a href="https://travis-ci.org/Hacker0x01/react-datepicker">
-              <img src="https://travis-ci.org/Hacker0x01/react-datepicker.svg?branch=master" className="badge" />
-            </a>
-            <a href="https://david-dm.org/Hacker0x01/react-datepicker">
-              <img src="https://david-dm.org/Hacker0x01/react-datepicker.svg" className="badge" />
-            </a>
-            <a href={'https://npmjs.org/package/react-datepicker' +
-              '?__hstc=72727564.ca821b01b5b29b1831f0936a681f0483.1428679773810.1435582678273.1438354735499.5' +
-              '&__hssc=72727564.1.1438354735499' +
-              '&__hsfp=2497064007'}>
-              <img src="https://img.shields.io/npm/dm/react-datepicker.svg" className="badge" />
-            </a>
-          </p> */}
-          <p>A simple and reusable Add to Calendar component for React.</p>
+          </p>
+          <p>A simple, customizable, and reusable Add to Calendar button component for React.</p>
 
           <h2>Installation</h2>
           <p>The package can be installed via NPM:</p>

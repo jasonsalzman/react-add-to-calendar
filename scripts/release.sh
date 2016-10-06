@@ -7,7 +7,7 @@ git checkout .
 
 npm version $1
 
-react-docgen ./src/ReactAddToCalendar.js --resolver findAllComponentDefinitions | ./scripts/buildDocs.sh
+react-docgen ./src/*.js --resolver findAllComponentDefinitions | ./scripts/buildDocs.sh
 
 git add .
 

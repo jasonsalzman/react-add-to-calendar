@@ -1,10 +1,22 @@
-`ReactAddToCalendar` (component)
-================================
+`0` (component)
+===============
 
 
 
 Props
 -----
+
+### `buttonClassClosed`
+
+type: `string`
+defaultValue: `'react-add-to-calendar__button'`
+
+
+### `buttonClassOpen`
+
+type: `string`
+defaultValue: `'react-add-to-calendar__button--light'`
+
 
 ### `buttonLabel`
 
@@ -18,10 +30,22 @@ type: `object`
 defaultValue: `{ caret: 'right' }`
 
 
+### `buttonWrapperClass`
+
+type: `string`
+defaultValue: `'react-add-to-calendar__wrapper'`
+
+
 ### `displayItemIcons`
 
 type: `bool`
 defaultValue: `true`
+
+
+### `dropdownClass`
+
+type: `string`
+defaultValue: `'react-add-to-calendar__dropdown'`
 
 
 ### `event` (required)
@@ -45,4 +69,10 @@ defaultValue: `[
     { outlook: 'Outlook' },
     { yahoo: 'Yahoo' }
 ]`
+
+
+### `rootClass`
+
+type: `string`
+defaultValue: `'react-add-to-calendar'`
 
