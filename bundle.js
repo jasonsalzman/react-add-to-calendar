@@ -20495,7 +20495,7 @@
 
 	var _example_components2 = _interopRequireDefault(_example_components);
 
-	var _hero_example = __webpack_require__(447);
+	var _hero_example = __webpack_require__(454);
 
 	var _hero_example2 = _interopRequireDefault(_hero_example);
 
@@ -20546,7 +20546,34 @@
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'A simple and reusable Add to Calendar component for React.'
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://npmjs.org/package/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://badge.fury.io/js/react-add-to-calendar.svg', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://travis-ci.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://david-dm.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://npmjs.org/package/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/npm/dm/react-add-to-calendar.svg', className: 'badge' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'A simple, customizable, and reusable Add to Calendar button component for React.'
 	        ),
 	        _react2.default.createElement(
 	          'h2',
@@ -20589,7 +20616,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _react = __webpack_require__(2);
@@ -20604,72 +20631,121 @@
 
 	var _default2 = _interopRequireDefault(_default);
 
-	var _code_example_component = __webpack_require__(444);
+	var _changeLabel = __webpack_require__(444);
+
+	var _changeLabel2 = _interopRequireDefault(_changeLabel);
+
+	var _changeTemplate = __webpack_require__(445);
+
+	var _changeTemplate2 = _interopRequireDefault(_changeTemplate);
+
+	var _textOnlyTemplate = __webpack_require__(446);
+
+	var _textOnlyTemplate2 = _interopRequireDefault(_textOnlyTemplate);
+
+	var _textOnlyDropdown = __webpack_require__(447);
+
+	var _textOnlyDropdown2 = _interopRequireDefault(_textOnlyDropdown);
+
+	var _changeDropdownOrder = __webpack_require__(448);
+
+	var _changeDropdownOrder2 = _interopRequireDefault(_changeDropdownOrder);
+
+	var _removeDropdownItem = __webpack_require__(449);
+
+	var _removeDropdownItem2 = _interopRequireDefault(_removeDropdownItem);
+
+	var _changeDropdownLabels = __webpack_require__(450);
+
+	var _changeDropdownLabels2 = _interopRequireDefault(_changeDropdownLabels);
+
+	var _code_example_component = __webpack_require__(451);
 
 	var _code_example_component2 = _interopRequireDefault(_code_example_component);
 
-	__webpack_require__(445);
+	__webpack_require__(452);
 
-	__webpack_require__(446);
+	__webpack_require__(453);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'exampleComponents',
+	    displayName: 'exampleComponents',
 
-	  componentDidMount: function componentDidMount() {
-	    _highlight2.default.initHighlightingOnLoad();
-	  },
+	    componentDidMount: function componentDidMount() {
+	        _highlight2.default.initHighlightingOnLoad();
+	    },
 
 
-	  examples: [{
-	    title: 'Default',
-	    component: _react2.default.createElement(_default2.default, null)
-	  }],
+	    examples: [{
+	        title: 'Default',
+	        component: _react2.default.createElement(_default2.default, null)
+	    }, {
+	        title: 'Change Button Label',
+	        component: _react2.default.createElement(_changeLabel2.default, null)
+	    }, {
+	        title: 'Change Button Template',
+	        component: _react2.default.createElement(_changeTemplate2.default, null)
+	    }, {
+	        title: 'Text Only Button Template',
+	        component: _react2.default.createElement(_textOnlyTemplate2.default, null)
+	    }, {
+	        title: 'Text Only Dropdown Items',
+	        component: _react2.default.createElement(_textOnlyDropdown2.default, null)
+	    }, {
+	        title: 'Change Dropdown Order',
+	        component: _react2.default.createElement(_changeDropdownOrder2.default, null)
+	    }, {
+	        title: 'Remove Dropdown Item',
+	        component: _react2.default.createElement(_removeDropdownItem2.default, null)
+	    }, {
+	        title: 'Change Dropdown Labels',
+	        component: _react2.default.createElement(_changeDropdownLabels2.default, null)
+	    }],
 
-	  renderExamples: function renderExamples() {
-	    return this.examples.map(function (example, index) {
-	      return _react2.default.createElement(
-	        _code_example_component2.default,
-	        { key: 'example-' + index, id: index, title: example.title },
-	        example.component
-	      );
-	    });
-	  },
-	  renderLeftColumn: function renderLeftColumn() {
-	    return this.examples.map(function (example, index) {
-	      return _react2.default.createElement(
-	        'li',
-	        { className: 'examples__navigation-item', key: 'link-' + index },
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#example-' + index },
-	          example.title
-	        )
-	      );
-	    });
-	  },
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Examples'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        { className: 'examples__navigation' },
-	        this.renderLeftColumn()
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'examples' },
-	        this.renderExamples()
-	      )
-	    );
-	  }
+	    renderExamples: function renderExamples() {
+	        return this.examples.map(function (example, index) {
+	            return _react2.default.createElement(
+	                _code_example_component2.default,
+	                { key: 'example-' + index, id: index, title: example.title },
+	                example.component
+	            );
+	        });
+	    },
+	    renderLeftColumn: function renderLeftColumn() {
+	        return this.examples.map(function (example, index) {
+	            return _react2.default.createElement(
+	                'li',
+	                { className: 'examples__navigation-item', key: 'link-' + index },
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: '#example-' + index },
+	                    example.title
+	                )
+	            );
+	        });
+	    },
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Examples'
+	            ),
+	            _react2.default.createElement(
+	                'ul',
+	                { className: 'examples__navigation' },
+	                this.renderLeftColumn()
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'examples' },
+	                this.renderExamples()
+	            )
+	        );
+	    }
 	});
 
 /***/ },
@@ -36975,7 +37051,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _react = __webpack_require__(2);
@@ -36989,28 +37065,69 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'Default',
+	    displayName: 'Default',
 
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'row' },
-	      _react2.default.createElement(
-	        'pre',
-	        { className: 'column example__code' },
-	        _react2.default.createElement(
-	          'code',
-	          { className: 'jsx' },
-	          "<AddToCalendar/>"
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'column' },
-	        _react2.default.createElement(_reactAddToCalendar2.default, null)
-	      )
-	    );
-	  }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let event = \{",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  title: 'Sample Event',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  description: 'This is the sample event provided as an example only',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  location: 'Portland, OR',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  startTime: '2016-09-16T20:15:00-04:00',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  endTime: '2016-09-16T21:45:00-04:00'",
+	                    _react2.default.createElement('br', null),
+	                    "\};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null),
+	                    "/*",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "startTime and endTime can use any datetime",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "string that is acceptable by MomentJS",
+	                    _react2.default.createElement('br', null),
+	                    "*/"
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar event={event} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event })
+	            )
+	        );
+	    }
 	});
 
 /***/ },
@@ -37131,7 +37248,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'react-add-to-calendar__dropdown' },
+	                { className: this.props.dropdownClass },
 	                _react2.default.createElement(
 	                    'ul',
 	                    null,
@@ -37170,11 +37287,11 @@
 	                );
 	            }
 
-	            var buttonClass = this.state.optionsOpen ? 'react-add-to-calendar__button react-add-to-calendar__button--light' : 'react-add-to-calendar__button';
+	            var buttonClass = this.state.optionsOpen ? this.props.buttonClassClosed + ' ' + this.props.buttonClassOpen : this.props.buttonClassClosed;
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'react-add-to-calendar__wrapper' },
+	                { className: this.props.buttonWrapperClass },
 	                _react2.default.createElement(
 	                    'a',
 	                    { id: this.state.componentId, className: buttonClass,
@@ -37198,7 +37315,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'react-add-to-calendar' },
+	                { className: this.props.rootClass },
 	                addToCalendarBtn,
 	                options
 	            );
@@ -37214,17 +37331,32 @@
 	ReactAddToCalendar.displayName = 'Add To Calendar';
 
 	ReactAddToCalendar.propTypes = {
+	    buttonClassClosed: _react2.default.PropTypes.string,
+	    buttonClassOpen: _react2.default.PropTypes.string,
 	    buttonLabel: _react2.default.PropTypes.string,
 	    buttonTemplate: _react2.default.PropTypes.object,
+	    buttonWrapperClass: _react2.default.PropTypes.string,
 	    displayItemIcons: _react2.default.PropTypes.bool,
-	    event: _react2.default.PropTypes.object.isRequired,
-	    listItems: _react2.default.PropTypes.array
+	    dropdownClass: _react2.default.PropTypes.string,
+	    event: _react2.default.PropTypes.shape({
+	        title: _react2.default.PropTypes.string,
+	        description: _react2.default.PropTypes.string,
+	        location: _react2.default.PropTypes.string,
+	        startTime: _react2.default.PropTypes.string,
+	        endTime: _react2.default.PropTypes.string
+	    }).isRequired,
+	    listItems: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object),
+	    rootClass: _react2.default.PropTypes.string
 	};
 
 	ReactAddToCalendar.defaultProps = {
+	    buttonClassClosed: 'react-add-to-calendar__button',
+	    buttonClassOpen: 'react-add-to-calendar__button--light',
 	    buttonLabel: 'Add to My Calendar',
 	    buttonTemplate: { caret: 'right' },
+	    buttonWrapperClass: 'react-add-to-calendar__wrapper',
 	    displayItemIcons: true,
+	    dropdownClass: 'react-add-to-calendar__dropdown',
 	    event: {
 	        title: 'Sample Event',
 	        description: 'This is the sample event provided as an example only',
@@ -37232,7 +37364,8 @@
 	        startTime: '2016-09-16T20:15:00-04:00',
 	        endTime: '2016-09-16T21:45:00-04:00'
 	    },
-	    listItems: [{ apple: 'Apple Calendar' }, { google: 'Google' }, { outlook: 'Outlook' }, { yahoo: 'Yahoo' }]
+	    listItems: [{ apple: 'Apple Calendar' }, { google: 'Google' }, { outlook: 'Outlook' }, { yahoo: 'Yahoo' }],
+	    rootClass: 'react-add-to-calendar'
 	};
 
 /***/ },
@@ -51752,6 +51885,511 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'ChangeLabel',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonLabel=\"Put on my calendar\" />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonLabel: 'Put on my calendar' })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 445 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'ChangeTemplate',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var icon = { 'calendar-plus-o': 'left' };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let icon = \{ 'calendar-plus-o': 'left' \};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null),
+	                    "/*",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "object property can be any Font Awesome icon",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "and value can be 'left' or 'right'",
+	                    _react2.default.createElement('br', null),
+	                    "*/",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonTemplate=\{icon\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 446 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'TextOnlyTemplate',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var icon = { textOnly: 'none' };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let icon = \{ textOnly: 'none' \};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonTemplate=\{icon\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 447 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'TextOnlyDropdown',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "displayItemIcons=\{false\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, displayItemIcons: false })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 448 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Change Dropdown Order',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var items = [{ outlook: 'Outlook' }, { apple: 'Apple Calendar' }, { yahoo: 'Yahoo' }, { google: 'Google' }];
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ apple: 'Apple Calendar' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ yahoo: 'Yahoo' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 449 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Remove Dropdown Item',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var items = [{ outlook: 'Outlook' }, { google: 'Google' }];
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 450 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(335);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Change Dropdown Labels',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var items = [{ outlook: 'Outlook' }, { apple: 'iCal' }, { yahoo: 'Yahoo!' }, { google: 'Google' }];
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ apple: 'iCal' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ yahoo: 'Yahoo!' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
+	    }
+	});
+
+/***/ },
+/* 451 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
@@ -51785,15 +52423,15 @@
 	});
 
 /***/ },
-/* 445 */
+/* 452 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 446 */
-445,
-/* 447 */
+/* 453 */
+452,
+/* 454 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
