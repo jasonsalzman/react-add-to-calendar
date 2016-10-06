@@ -3,6 +3,8 @@
 var webpack = require('webpack')
 var path = require('path')
 
+var BROWSERS = (process.env.TRAVIS) ? ['Chrome_travis_ci', 'Firefox'] : ['Chrome', 'Firefox', 'Safari'];
+
 module.exports = function(config) {
   config.set({
 
@@ -104,9 +106,17 @@ module.exports = function(config) {
     autoWatch: false,
 
 
+    customLaunchers: {
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    },
+
+
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Safari'],
+    browsers: BROWSERS,
 
 
     // Continuous Integration mode
