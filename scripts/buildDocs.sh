@@ -25,7 +25,6 @@ process.stdin.on('end', function() {
 function buildDocs(api) {
   // api is an object keyed by filepath. We use the file name as component name.
   for (var filepath in api) {
-    process.stdout.write(filepath + '\n\n');
     var name = getComponentName(filepath);
     var markdown = generateMarkdown(name, api[filepath]);
     var outputLocation = './docs/';
@@ -38,7 +37,6 @@ function getComponentName(filepath) {
   var name = path.basename(filepath);
   var ext;
   while ((ext = path.extname(name))) {
-    process.stdout.write(name + '\n\n');
     name = name.substring(0, name.length - ext.length);
   }
   return name;

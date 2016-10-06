@@ -1,4 +1,4 @@
-`0` (component)
+`react-add-to-calendar` (component)
 ===============
 
 
@@ -50,7 +50,7 @@ defaultValue: `'react-add-to-calendar__dropdown'`
 
 ### `event` (required)
 
-type: `object`
+type: `shape[object Object]`
 defaultValue: `{
     title: 'Sample Event',
     description: 'This is the sample event provided as an example only',
@@ -62,7 +62,7 @@ defaultValue: `{
 
 ### `listItems`
 
-type: `array`
+type: `arrayOf[object Object]`
 defaultValue: `[
     { apple: 'Apple Calendar' },
     { google: 'Google' },
