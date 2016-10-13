@@ -20561,6 +20561,12 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: 'https://david-dm.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/david/strongloop/express.svg?maxAge=2592000', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://david-dm.org/jasonsalzman/react-add-to-calendar' },
 	            _react2.default.createElement('img', { src: 'https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000', className: 'badge' })
 	          ),
 	          '\xA0\xA0',
