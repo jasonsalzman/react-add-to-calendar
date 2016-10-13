@@ -33,6 +33,9 @@ export default React.createClass({
               <img src="https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master" className="badge" />
             </a>&nbsp;&nbsp;
             <a href="https://david-dm.org/jasonsalzman/react-add-to-calendar">
+                <img src="https://img.shields.io/david/strongloop/express.svg?maxAge=2592000" className="badge" />
+            </a>&nbsp;&nbsp;
+            <a href="https://david-dm.org/jasonsalzman/react-add-to-calendar">
               <img src="https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000" className="badge" />
             </a>&nbsp;&nbsp;
             <a href={'https://npmjs.org/package/react-add-to-calendar'}>

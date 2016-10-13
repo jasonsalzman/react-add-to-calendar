@@ -2,7 +2,7 @@
   "author": "Jason Salzman",
   "name": "react-add-to-calendar",
   "description": "A simple and reusable add to calendar button component for React",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "homepage": "https://github.com/jasonsalzman/react-add-to-calendar",
   "repository": {
@@ -70,7 +70,6 @@
     "lodash": "^4.3.0",
     "mocha": "^3.0.2",
     "mocha-jsdom": "^1.1.0",
-    "moment": "^2.13.0",
     "node-sass": "^3.4.2",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
@@ -88,6 +87,9 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.13.0"
   },
   "scripts": {
     "build": "NODE_ENV=production grunt build",
