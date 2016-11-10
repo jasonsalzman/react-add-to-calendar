@@ -59,12 +59,12 @@ export default class ReactAddToCalendar extends React.Component {
         let self = this;
 
         let items = this.props.listItems.map((listItem) => {
-            let currentItem = Object.keys(listItem);
+            let currentItem = Object.keys(listItem)[0];
             let currentLabel = listItem[currentItem];
 
             let icon = null;
             if (self.props.displayItemIcons) {
-                let currentIcon = (currentItem[0] === 'outlook') ? 'windows' : currentItem;
+                let currentIcon = (currentItem === 'outlook') ? 'windows' : currentItem;
                 icon = <i className={'fa fa-' + currentIcon}/>;
             }
 
