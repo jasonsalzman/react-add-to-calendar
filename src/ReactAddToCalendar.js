@@ -10,7 +10,6 @@ export default class ReactAddToCalendar extends React.Component {
 		super(props);
 
 		this.state = {
-			componentId: 'addToCalendar-' + helpers.getRandomKey(),
 			optionsOpen: false,
             isCrappyIE: false
 		};
@@ -21,7 +20,7 @@ export default class ReactAddToCalendar extends React.Component {
 
 	componentWillMount() {
         let isCrappyIE = false;
-        if (window.navigator.msSaveOrOpenBlob && window.Blob) {
+        if (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) {
             isCrappyIE = true;
         }
 
@@ -123,7 +122,7 @@ export default class ReactAddToCalendar extends React.Component {
 
         return (
             <div className={this.props.buttonWrapperClass}>
-                <a id={this.state.componentId} className={buttonClass}
+                <a className={buttonClass}
                     onClick={this.toggleCalendarDropdown}>{buttonLabel}</a>
             </div>
         );
