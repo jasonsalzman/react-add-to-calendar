@@ -1,22 +1,24 @@
-import React, {Component} from 'react';
+import React, {
+	Component,
+} from 'react';
 
 import helpersClass from './helpers';
 const helpers = new helpersClass();
 
 export default class ReactAddToCalendar extends React.Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            optionsOpen: false,
-            isCrappyIE: false
-        };
+		this.state = {
+			optionsOpen: false,
+      isCrappyIE: false
+		};
 
-        this.toggleCalendarDropdown = this.toggleCalendarDropdown.bind(this);
-        this.handleDropdownLinkClick = this.handleDropdownLinkClick.bind(this);
-    }
+		this.toggleCalendarDropdown = this.toggleCalendarDropdown.bind(this);
+		this.handleDropdownLinkClick = this.handleDropdownLinkClick.bind(this);
+	}
 
-    componentWillMount() {
+	componentWillMount() {
         let isCrappyIE = false;
         if (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) {
             isCrappyIE = true;
@@ -26,13 +28,13 @@ export default class ReactAddToCalendar extends React.Component {
     }
 
     toggleCalendarDropdown() {
-        let showOptions = !this.state.optionsOpen;
+    	let showOptions = !this.state.optionsOpen;
 
         if (showOptions) {
-            document.addEventListener('click', this.toggleCalendarDropdown, false);
-        } else {
-            document.removeEventListener('click', this.toggleCalendarDropdown);
-        }
+			document.addEventListener('click', this.toggleCalendarDropdown, false);
+		} else {
+			document.removeEventListener('click', this.toggleCalendarDropdown);
+		}
 
         this.setState({optionsOpen: showOptions});
     }
@@ -60,15 +62,15 @@ export default class ReactAddToCalendar extends React.Component {
 
             let icon = null;
             if (self.props.displayItemIcons) {
-                let currentIcon = (currentItem === 'outlook')
-                    ? 'windows'
-                    : currentItem;
+                let currentIcon = (currentItem === 'outlook') ? 'windows' : currentItem;
                 icon = <i className={'fa fa-' + currentIcon}/>;
             }
 
             return (
                 <li key={helpers.getRandomKey()}>
-                    <a className={currentItem + '-link'} onClick={self.handleDropdownLinkClick} href={helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE)} target="_blank">
+                    <a className={currentItem + '-link'} onClick={self.handleDropdownLinkClick}
+                        href={helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE)}
+                        target="_blank">
                         {icon}
                         {currentLabel}</a>
                 </li>
@@ -94,22 +96,20 @@ export default class ReactAddToCalendar extends React.Component {
             let buttonIconClass = 'react-add-to-calendar__icon--' + iconPlacement + ' fa fa-';
 
             if (template[0] === 'caret') {
-                buttonIconClass += (this.state.optionsOpen)
-                    ? 'caret-up'
-                    : 'caret-down';
+                buttonIconClass += (this.state.optionsOpen) ? 'caret-up' : 'caret-down';
             } else {
                 buttonIconClass += template[0];
             }
 
             buttonIcon = <i className={buttonIconClass}/>;
-            buttonLabel = (iconPlacement === 'right')
-                ? (
+            buttonLabel = (iconPlacement === 'right') ?
+                (
                     <span>
                         {buttonLabel + ' '}
                         {buttonIcon}
                     </span>
-                )
-                : (
+                ) :
+                (
                     <span>
                         {buttonIcon}
                         {' ' + buttonLabel}
@@ -117,19 +117,18 @@ export default class ReactAddToCalendar extends React.Component {
                 );
         }
 
-        let buttonClass = (this.state.optionsOpen)
-            ? this.props.buttonClassClosed + ' ' + this.props.buttonClassOpen
-            : this.props.buttonClassClosed;
+        let buttonClass = (this.state.optionsOpen) ? this.props.buttonClassClosed + ' ' + this.props.buttonClassOpen : this.props.buttonClassClosed;
 
         return (
             <div className={this.props.buttonWrapperClass}>
-                <a className={buttonClass} onClick={this.toggleCalendarDropdown}>{buttonLabel}</a>
+                <a className={buttonClass}
+                    onClick={this.toggleCalendarDropdown}>{buttonLabel}</a>
             </div>
         );
     }
 
-    render() {
-        let options = null;
+	render() {
+		let options = null;
         if (this.state.optionsOpen) {
             options = this.renderDropdown();
         }
@@ -145,51 +144,50 @@ export default class ReactAddToCalendar extends React.Component {
                 {options}
             </div>
         );
-    }
+	}
 }
 
 ReactAddToCalendar.displayName = 'Add To Calendar';
 
 ReactAddToCalendar.propTypes = {
-    buttonClassClosed: React.PropTypes.string,
-    buttonClassOpen: React.PropTypes.string,
-    buttonLabel: React.PropTypes.string,
+	buttonClassClosed: React.PropTypes.string,
+	buttonClassOpen: React.PropTypes.string,
+	buttonLabel: React.PropTypes.string,
     buttonTemplate: React.PropTypes.object,
-    buttonWrapperClass: React.PropTypes.string,
-    displayItemIcons: React.PropTypes.bool,
-    dropdownClass: React.PropTypes.string,
-    event: React.PropTypes.shape({title: React.PropTypes.string, description: React.PropTypes.string, location: React.PropTypes.string, startTime: React.PropTypes.string, endTime: React.PropTypes.string}).isRequired,
+	buttonWrapperClass: React.PropTypes.string,
+	displayItemIcons: React.PropTypes.bool,
+	dropdownClass: React.PropTypes.string,
+	event: React.PropTypes.shape({
+		title: React.PropTypes.string,
+		description: React.PropTypes.string,
+		location: React.PropTypes.string,
+		startTime: React.PropTypes.string,
+		endTime: React.PropTypes.string
+	}).isRequired,
     listItems: React.PropTypes.arrayOf(React.PropTypes.object),
-    rootClass: React.PropTypes.string
+	rootClass: React.PropTypes.string
 };
 
 ReactAddToCalendar.defaultProps = {
-    buttonClassClosed: 'react-add-to-calendar__button',
-    buttonClassOpen: 'react-add-to-calendar__button--light',
-    buttonLabel: 'Add to My Calendar',
-    buttonTemplate: {
-        caret: 'right'
-    },
-    buttonWrapperClass: 'react-add-to-calendar__wrapper',
-    displayItemIcons: true,
-    dropdownClass: 'react-add-to-calendar__dropdown',
-    event: {
-        title: 'Sample Event',
-        description: 'This is the sample event provided as an example only',
-        location: 'Portland, OR',
-        startTime: '2016-09-16T20:15:00-04:00',
-        endTime: '2016-09-16T21:45:00-04:00'
-    },
+	buttonClassClosed: 'react-add-to-calendar__button',
+	buttonClassOpen: 'react-add-to-calendar__button--light',
+	buttonLabel: 'Add to My Calendar',
+    buttonTemplate: { caret: 'right' },
+	buttonWrapperClass: 'react-add-to-calendar__wrapper',
+	displayItemIcons: true,
+	dropdownClass: 'react-add-to-calendar__dropdown',
+	event: {
+		title: 'Sample Event',
+		description: 'This is the sample event provided as an example only',
+		location: 'Portland, OR',
+		startTime: '2016-09-16T20:15:00-04:00',
+		endTime: '2016-09-16T21:45:00-04:00'
+	},
     listItems: [
-        {
-            apple: 'Apple Calendar'
-        }, {
-            google: 'Google'
-        }, {
-            outlook: 'Outlook'
-        }, {
-            yahoo: 'Yahoo'
-        }
+        { apple: 'Apple Calendar' },
+        { google: 'Google' },
+        { outlook: 'Outlook' },
+        { yahoo: 'Yahoo' }
     ],
-    rootClass: 'react-add-to-calendar'
+	rootClass: 'react-add-to-calendar'
 };
