@@ -36749,7 +36749,9 @@
 	                    { key: helpers.getRandomKey() },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: currentItem + '-link', onClick: self.handleDropdownLinkClick, href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE), target: '_blank' },
+	                        { className: currentItem + '-link', onClick: self.handleDropdownLinkClick,
+	                            href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE),
+	                            target: '_blank' },
 	                        icon,
 	                        currentLabel
 	                    )
@@ -36804,7 +36806,8 @@
 	                { className: this.props.buttonWrapperClass },
 	                _react2.default.createElement(
 	                    'a',
-	                    { className: buttonClass, onClick: this.toggleCalendarDropdown },
+	                    { className: buttonClass,
+	                        onClick: this.toggleCalendarDropdown },
 	                    buttonLabel
 	                )
 	            );
@@ -36847,7 +36850,13 @@
 	    buttonWrapperClass: _react2.default.PropTypes.string,
 	    displayItemIcons: _react2.default.PropTypes.bool,
 	    dropdownClass: _react2.default.PropTypes.string,
-	    event: _react2.default.PropTypes.shape({ title: _react2.default.PropTypes.string, description: _react2.default.PropTypes.string, location: _react2.default.PropTypes.string, startTime: _react2.default.PropTypes.string, endTime: _react2.default.PropTypes.string }).isRequired,
+	    event: _react2.default.PropTypes.shape({
+	        title: _react2.default.PropTypes.string,
+	        description: _react2.default.PropTypes.string,
+	        location: _react2.default.PropTypes.string,
+	        startTime: _react2.default.PropTypes.string,
+	        endTime: _react2.default.PropTypes.string
+	    }).isRequired,
 	    listItems: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object),
 	    rootClass: _react2.default.PropTypes.string
 	};
@@ -36856,9 +36865,7 @@
 	    buttonClassClosed: 'react-add-to-calendar__button',
 	    buttonClassOpen: 'react-add-to-calendar__button--light',
 	    buttonLabel: 'Add to My Calendar',
-	    buttonTemplate: {
-	        caret: 'right'
-	    },
+	    buttonTemplate: { caret: 'right' },
 	    buttonWrapperClass: 'react-add-to-calendar__wrapper',
 	    displayItemIcons: true,
 	    dropdownClass: 'react-add-to-calendar__dropdown',
@@ -36869,15 +36876,7 @@
 	        startTime: '2016-09-16T20:15:00-04:00',
 	        endTime: '2016-09-16T21:45:00-04:00'
 	    },
-	    listItems: [{
-	        apple: 'Apple Calendar'
-	    }, {
-	        google: 'Google'
-	    }, {
-	        outlook: 'Outlook'
-	    }, {
-	        yahoo: 'Yahoo'
-	    }],
+	    listItems: [{ apple: 'Apple Calendar' }, { google: 'Google' }, { outlook: 'Outlook' }, { yahoo: 'Yahoo' }],
 	    rootClass: 'react-add-to-calendar'
 	};
 
