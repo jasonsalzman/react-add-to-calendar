@@ -30,14 +30,16 @@ export default class helpers {
 
         switch (type) {
             case 'google':
-                calendarUrl = 'https://www.google.com/calendar/event';
+            // This is all I changed, there were 2 problems,
+            // first, the root URL of Google calendar changed, and second,
+            // somehow the order of the params creates a bad request so I fixed that too
+                calendarUrl = 'https://calendar.google.com/calendar/render';
                 calendarUrl += '?action=TEMPLATE';
-                calendarUrl += '&text=' + event.title;
                 calendarUrl += '&dates=' + this.formatTime(event.startTime);
                 calendarUrl += '/' + this.formatTime(event.endTime);
-                calendarUrl += '&details=' + event.description;
                 calendarUrl += '&location=' + encodeURIComponent(event.location);
-                calendarUrl += '&sprop=&sprop=name:Alpha';
+                calendarUrl += '&text=' + encodeURIComponent(event.title);
+                calendarUrl += '&details=' + encodeURIComponent(event.description);
                 break;
 
             case 'yahoo':
