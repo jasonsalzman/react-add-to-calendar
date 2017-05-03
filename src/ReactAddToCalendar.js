@@ -62,7 +62,7 @@ export default class ReactAddToCalendar extends React.Component {
 
             let icon = null;
             if (self.props.displayItemIcons) {
-                let currentIcon = (currentItem === 'outlook') ? 'windows' : currentItem;
+                let currentIcon = (currentItem === 'outlook' || currentItem === 'outlookcom') ? 'windows' : currentItem;
                 icon = <i className={'fa fa-' + currentIcon}/>;
             }
 
@@ -187,7 +187,8 @@ ReactAddToCalendar.defaultProps = {
         { apple: 'Apple Calendar' },
         { google: 'Google' },
         { outlook: 'Outlook' },
-        { yahoo: 'Yahoo' }
+        { outlookcom: 'Outlook.com' },
+        { yahoo: 'Yahoo' },
     ],
 	rootClass: 'react-add-to-calendar'
 };

@@ -67,6 +67,7 @@ defaultValue: `[
     { apple: 'Apple Calendar' },
     { google: 'Google' },
     { outlook: 'Outlook' },
+    { outlookcom: 'Outlook.com' },
     { yahoo: 'Yahoo' }
 ]`
 
