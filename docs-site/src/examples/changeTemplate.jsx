@@ -17,7 +17,7 @@ export default class ChangeTemplate extends React.Component {
       <div className="row">
         <pre className="column example__code">
           <code className="js">
-            {"let icon = \{ 'calendar-plus-o': 'left' \};"}<br /><br />
+            {"let icon = { 'calendar-plus-o': 'left' };"}<br /><br />
             {"/*"}<br />
             &nbsp;&nbsp;&nbsp;
             {"object property can be any Font Awesome icon"}<br />
@@ -30,7 +30,7 @@ export default class ChangeTemplate extends React.Component {
             &nbsp;&nbsp;&nbsp;
             {"event={event}"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"buttonTemplate=\{icon\} />"}
+            {"buttonTemplate={icon} />"}
           </code>
         </pre>
         <div className="column">

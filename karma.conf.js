@@ -56,7 +56,10 @@ module.exports = function(config) {
           {
             test: /\.js?$/,
             include: path.resolve(__dirname, 'src'),
-            loader: 'istanbul-instrumenter'
+            loader: 'istanbul-instrumenter',
+            query: {
+              esModules: true
+            }
           }
         ]
       },

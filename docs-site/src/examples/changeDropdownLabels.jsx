@@ -25,15 +25,15 @@ export default class ChangeDropdownLabels extends React.Component {
           <code className="js">
             {"let items = ["}<br />
             &nbsp;&nbsp;&nbsp;
-            {"\{ outlook: 'Outlook' \}"}<br />
+            {"{ outlook: 'Outlook' }"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"\{ outlookcom: 'Outlook.com' \}"}<br />
+            {"{ outlookcom: 'Outlook.com' }"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"\{ apple: 'iCal' \}"}<br />
+            {"{ apple: 'iCal' }"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"\{ yahoo: 'Yahoo!' \}"}<br />
+            {"{ yahoo: 'Yahoo!' }"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"\{ google: 'Google' \}"}<br />
+            {"{ google: 'Google' }"}<br />
             {"];"}<br /><br />
           </code>
           <code className="jsx">
@@ -41,7 +41,7 @@ export default class ChangeDropdownLabels extends React.Component {
             &nbsp;&nbsp;&nbsp;
             {"event={event}"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"listItems=\{items\} />"}
+            {"listItems={items} />"}
           </code>
         </pre>
         <div className="column">

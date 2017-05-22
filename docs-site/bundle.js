@@ -21368,7 +21368,7 @@
 	  hljs.NUMBER_RE = '\\b\\d+(\\.\\d+)?';
 	  hljs.C_NUMBER_RE = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'; // 0x..., 0..., decimal, float
 	  hljs.BINARY_NUMBER_RE = '\\b(0b[01]+)'; // 0b...
-	  hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+	  hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
 
 	  // Common modes
 	  hljs.BACKSLASH_ESCAPE = {
@@ -21962,7 +21962,7 @@
 	            },
 	            {
 	              className: 'variable',
-	              begin: '[\\$%]\\{', end: '\\}',
+	              begin: '[\\$%]\{', end: '\}',
 	              contains: ['self', NUMBER]
 	            },
 	            NUMBER,
@@ -22854,7 +22854,7 @@
 	      {
 	        // the function class is a bit different for AspectJ compared to the Java language
 	        className : 'function',
-	        begin : /\w+ +\w+(\.)?\w+\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
+	        begin : /\w+ +\w+(\.)?\w+\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[{;]/,
 	        returnBegin : true,
 	        end : /[{;=]/,
 	        keywords : KEYWORDS,
@@ -23159,7 +23159,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$[\w\d#@][\w\d_]*/},
-	      {begin: /\$\{(.*?)}/}
+	      {begin: /\${(.*?)}/}
 	    ]
 	  };
 	  var KEYWORDS = 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10';
@@ -23251,7 +23251,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$[\w\d#@][\w\d_]*/},
-	      {begin: /\$\{(.*?)}/}
+	      {begin: /\${(.*?)}/}
 	    ]
 	  };
 	  var QUOTE_STRING = {
@@ -23308,7 +23308,7 @@
 	      },
 	      {
 	        className: 'function',
-	        begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
+	        begin: /\w[\w\d_]*\s*\(\s*\)\s*{/,
 	        returnBegin: true,
 	        contains: [hljs.inherit(hljs.TITLE_MODE, {begin: /\w[\w\d_]*/})],
 	        relevance: 0
@@ -23462,8 +23462,8 @@
 	  var COMMENT_MODES = [
 	    hljs.C_LINE_COMMENT_MODE,
 	    hljs.COMMENT(
-	      /\{/,
-	      /\}/,
+	      /{/,
+	      /}/,
 	      {
 	        relevance: 0
 	      }
@@ -23565,7 +23565,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'struct enum', end: /\{/,
+	        beginKeywords: 'struct enum', end: /{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -23575,7 +23575,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'interface', end: /\{/,
+	        beginKeywords: 'interface', end: /{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -23682,7 +23682,7 @@
 	      hljs.QUOTE_STRING_MODE,
 	      hljs.C_NUMBER_MODE,
 
-	      {begin: '->|<-[|:]?|::|#!?|>>=|\\{\\||\\|\\}|:==|=:|\\.\\.|<>|`'} // relevance booster
+	      {begin: '->|<-[|:]?|::|#!?|>>=|\{\\||\\|\}|:==|=:|\\.\\.|<>|`'} // relevance booster
 	    ]
 	  };
 	};
@@ -23749,13 +23749,13 @@
 	    begin: /\b(true|false|nil)\b/
 	  };
 	  var COLLECTION = {
-	    begin: '[\\[\\{]', end: '[\\]\\}]'
+	    begin: '[\\[\{]', end: '[\\]\}]'
 	  };
 	  var HINT = {
 	    className: 'comment',
 	    begin: '\\^' + SYMBOL_RE
 	  };
-	  var HINT_COL = hljs.COMMENT('\\^\\{', '\\}');
+	  var HINT_COL = hljs.COMMENT('\\^\{', '\}');
 	  var KEY = {
 	    className: 'symbol',
 	    begin: '[:]{1,2}' + SYMBOL_RE
@@ -23870,7 +23870,7 @@
 	  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#\{/, end: /}/,
+	    begin: /#{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var EXPRESSIONS = [
@@ -24302,7 +24302,7 @@
 	  var NUM_SUFFIX = '(_[uif](8|16|32|64))?';
 	  var CRYSTAL_IDENT_RE = '[a-zA-Z_]\\w*[!?=]?';
 	  var RE_STARTER = '!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|' +
-	    '>>|>|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+	    '>>|>|\\[|\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
 	  var CRYSTAL_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\][=?]?';
 	  var CRYSTAL_KEYWORDS = {
 	    keyword:
@@ -24320,8 +24320,8 @@
 	  var EXPANSION = {
 	    className: 'template-variable',
 	    variants: [
-	      {begin: '\\{\\{', end: '\\}\\}'},
-	      {begin: '\\{%', end: '%\\}'}
+	      {begin: '\{\{', end: '\}\}'},
+	      {begin: '\{%', end: '%\}'}
 	    ],
 	    keywords: CRYSTAL_KEYWORDS
 	  };
@@ -24969,8 +24969,8 @@
 	   */
 	  var D_TOKEN_STRING_MODE = {
 	    className: 'string',
-	    begin: 'q"\\{',
-	    end: '\\}"'
+	    begin: 'q"\{',
+	    end: '\}"'
 	  };
 
 	  /**
@@ -25162,7 +25162,7 @@
 	module.exports = function (hljs) {
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '\\$\\{', end: '}',
+	    begin: '\\$\{', end: '}',
 	    keywords: 'true false null this is new super'
 	  };
 
@@ -25279,13 +25279,13 @@
 	    'specialize strict unaligned varargs ';
 	  var COMMENT_MODES = [
 	    hljs.C_LINE_COMMENT_MODE,
-	    hljs.COMMENT(/\{/, /\}/, {relevance: 0}),
+	    hljs.COMMENT(/{/, /}/, {relevance: 0}),
 	    hljs.COMMENT(/\(\*/, /\*\)/, {relevance: 10})
 	  ];
 	  var DIRECTIVE = {
 	    className: 'meta',
 	    variants: [
-	      {begin: /\{\$/, end: /\}/},
+	      {begin: /{\$/, end: /}/},
 	      {begin: /\(\*\$/, end: /\*\)/}
 	    ]
 	  };
@@ -25406,11 +25406,11 @@
 	    case_insensitive: true,
 	    subLanguage: 'xml',
 	    contains: [
-	      hljs.COMMENT(/\{%\s*comment\s*%}/, /\{%\s*endcomment\s*%}/),
-	      hljs.COMMENT(/\{#/, /#}/),
+	      hljs.COMMENT(/{%\s*comment\s*%}/, /{%\s*endcomment\s*%}/),
+	      hljs.COMMENT(/{#/, /#}/),
 	      {
 	        className: 'template-tag',
-	        begin: /\{%/, end: /%}/,
+	        begin: /{%/, end: /%}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -25438,7 +25438,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /\{\{/, end: /}}/,
+	        begin: /{{/, end: /}}/,
 	        contains: [FILTER]
 	      }
 	    ]
@@ -25752,7 +25752,7 @@
 	    contains: [
 	      {
 	        className: 'template-tag',
-	        begin: /\{[#\/]/, end: /\}/, illegal: /;/,
+	        begin: /{[#\/]/, end: /}/, illegal: /;/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -25768,7 +25768,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /\{/, end: /\}/, illegal: /;/,
+	        begin: /{/, end: /}/, illegal: /;/,
 	        keywords: EXPRESSION_KEYWORDS
 	      }
 	    ]
@@ -25825,7 +25825,7 @@
 	    'include use alias fn quote';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '#\\{', end: '}',
+	    begin: '#\{', end: '}',
 	    lexemes: ELIXIR_IDENT_RE,
 	    keywords: ELIXIR_KEYWORDS
 	  };
@@ -26042,7 +26042,7 @@
 	  ];
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '#\\{', end: '}',
+	    begin: '#\{', end: '}',
 	    keywords: RUBY_KEYWORDS
 	  };
 	  var STRING = {
@@ -26981,7 +26981,7 @@
 	    aliases: ['gss'],
 	    case_insensitive: true, // language is case-insensitive
 	    keywords: KEYWORDS,
-	    illegal: '(\\{[%#]|[%#]\\})',
+	    illegal: '(\{[%#]|[%#]\})',
 	    contains: [
 	      hljs.C_NUMBER_MODE,
 	      hljs.C_LINE_COMMENT_MODE,
@@ -27335,7 +27335,7 @@
 	      },
 	      {
 	        className: 'function',
-	        beginKeywords: 'func', end: /\s*\{/, excludeEnd: true,
+	        beginKeywords: 'func', end: /\s*{/, excludeEnd: true,
 	        contains: [
 	          hljs.TITLE_MODE,
 	          {
@@ -27639,7 +27639,7 @@
 	    hljs.COMMENT('{{!(--)?', '(--)?}}'),
 	      {
 	        className: 'template-tag',
-	        begin: /\{\{[#\/]/, end: /\}\}/,
+	        begin: /{{[#\/]/, end: /}}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -27656,7 +27656,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /\{\{/, end: /\}\}/,
+	        begin: /{{/, end: /}}/,
 	        keywords: BUILT_INS
 	      }
 	    ]
@@ -27817,7 +27817,7 @@
 	        contains: [
 	          hljs.BACKSLASH_ESCAPE,
 	          { className: 'subst', // interpolation
-	            begin: '\\$\\{', end: '\\}'
+	            begin: '\\$\{', end: '\}'
 	          },
 	          { className: 'subst', // interpolation
 	            begin: '\\$', end: '\\W}'
@@ -27849,13 +27849,13 @@
 	        excludeBegin: true, excludeEnd: true
 	      },
 	      { className: 'class', // enums
-	        beginKeywords: 'enum', end: '\\{',
+	        beginKeywords: 'enum', end: '\{',
 	        contains: [
 	          hljs.TITLE_MODE
 	        ]
 	      },
 	      { className: 'class', // abstracts
-	        beginKeywords: 'abstract', end: '[\\{$]',
+	        beginKeywords: 'abstract', end: '[\{$]',
 	        contains: [
 	          { className: 'type',
 	            begin: '\\(', end: '\\)',
@@ -27876,7 +27876,7 @@
 	        }
 	      },
 	      { className: 'class', // classes
-	        begin: '\\b(class|interface) +', end: '[\\{$]',  excludeEnd: true,
+	        begin: '\\b(class|interface) +', end: '[\{$]',  excludeEnd: true,
 	        keywords: 'class interface',
 	        contains: [
 	          { className: 'keyword',
@@ -27963,7 +27963,7 @@
 	  var BUILT_INS = 'action collection component concat debugger each each-in else get hash if input link-to loc log mut outlet partial query-params render textarea unbound unless with yield view';
 
 	  var ATTR_ASSIGNMENT = {
-	    illegal: /\}\}/,
+	    illegal: /}}/,
 	    begin: /[a-zA-Z0-9_]+=/,
 	    returnBegin: true,
 	    relevance: 0,
@@ -27975,7 +27975,7 @@
 	  };
 
 	  var SUB_EXPR = {
-	    illegal: /\}\}/,
+	    illegal: /}}/,
 	    begin: /\)/, end: /\)/,
 	    contains: [
 	      {
@@ -28008,7 +28008,7 @@
 	      hljs.COMMENT('{{!(--)?', '(--)?}}'),
 	      {
 	        className: 'template-tag',
-	        begin: /\{\{[#\/]/, end: /\}\}/,
+	        begin: /{{[#\/]/, end: /}}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -28020,7 +28020,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /\{\{[a-zA-Z][a-zA-Z\-]+/, end: /\}\}/,
+	        begin: /{{[a-zA-Z][a-zA-Z\-]+/, end: /}}/,
 	        keywords: {keyword: 'as', built_in: BUILT_INS},
 	        contains: [
 	          hljs.QUOTE_STRING_MODE
@@ -28144,13 +28144,13 @@
 	    begin: /\b([Tt]rue|[Ff]alse|nil|None)\b/
 	  };
 	  var COLLECTION = {
-	    begin: '[\\[\\{]', end: '[\\]\\}]'
+	    begin: '[\\[\{]', end: '[\\]\}]'
 	  };
 	  var HINT = {
 	    className: 'comment',
 	    begin: '\\^' + SYMBOL_RE
 	  };
-	  var HINT_COL = hljs.COMMENT('\\^\\{', '\\}');
+	  var HINT_COL = hljs.COMMENT('\\^\{', '\}');
 	  var KEY = {
 	    className: 'symbol',
 	    begin: '[:]{1,2}' + SYMBOL_RE
@@ -28295,7 +28295,7 @@
 	                className: 'variable',
 	                variants: [
 	                  {begin: /\$[\w\d"][\w\d_]*/},
-	                  {begin: /\$\{(.*?)}/}
+	                  {begin: /\${(.*?)}/}
 	                ]
 	              },
 	              STRING,
@@ -28542,7 +28542,7 @@
 	  };
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '\\$\\{', end: '\\}',
+	    begin: '\\$\{', end: '\}',
 	    keywords: KEYWORDS,
 	    contains: []  // defined later
 	  };
@@ -28645,7 +28645,7 @@
 	      },
 	      {
 	        className: 'function',
-	        beginKeywords: 'function', end: /\{/, excludeEnd: true,
+	        beginKeywords: 'function', end: /{/, excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: IDENT_RE}),
 	          {
@@ -28672,7 +28672,7 @@
 	        ]
 	      },
 	      {
-	        beginKeywords: 'constructor', end: /\{/, excludeEnd: true
+	        beginKeywords: 'constructor', end: /{/, excludeEnd: true
 	      }
 	    ],
 	    illegal: /#(?!!)/
@@ -29101,7 +29101,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'class interface trait', end: /[:\{(]|$/, // remove 'trait' when removed from KEYWORDS
+	        beginKeywords: 'class interface trait', end: /[:{(]|$/, // remove 'trait' when removed from KEYWORDS
 	        excludeEnd: true,
 	        illegal: 'extends implements',
 	        contains: [
@@ -29807,7 +29807,7 @@
 	  var TITLE = hljs.inherit(hljs.TITLE_MODE, {begin: JS_IDENT_RE});
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#\{/, end: /}/,
+	    begin: /#{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var SUBST_SIMPLE = {
@@ -30324,7 +30324,7 @@
 	      hljs.QUOTE_STRING_MODE,
 	      hljs.C_NUMBER_MODE,
 	      {
-	        begin: /\{/, end: /\}/,
+	        begin: /{/, end: /}/,
 	        illegal: /:/
 	      }
 	    ]
@@ -30406,7 +30406,7 @@
 	        starts: TRANSPOSE
 	      },
 	      {
-	        begin: '\\{', end: /}/,
+	        begin: '\{', end: /}/,
 	        contains: COMMON_CONTAINS,
 	        relevance: 0,
 	        starts: TRANSPOSE
@@ -30417,7 +30417,7 @@
 	        relevance: 0,
 	        starts: TRANSPOSE
 	      },
-	      hljs.COMMENT('^\\s*\\%\\{\\s*$', '^\\s*\\%\\}\\s*$'),
+	      hljs.COMMENT('^\\s*\\%\{\\s*$', '^\\s*\\%\}\\s*$'),
 	      hljs.COMMENT('\\%', '$')
 	    ].concat(COMMON_CONTAINS)
 	  };
@@ -31287,7 +31287,7 @@
 	    'atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '[$@]\\{', end: '\\}',
+	    begin: '[$@]\{', end: '\}',
 	    keywords: PERL_KEYWORDS
 	  };
 	  var METHOD = {
@@ -31326,7 +31326,7 @@
 	          relevance: 5
 	        },
 	        {
-	          begin: 'q[qwxr]?\\s*\\{', end: '\\}',
+	          begin: 'q[qwxr]?\\s*\{', end: '\}',
 	          relevance: 5
 	        },
 	        {
@@ -31551,7 +31551,7 @@
 	  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#\{/, end: /}/,
+	    begin: /#{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var EXPRESSIONS = [
@@ -31728,7 +31728,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$\d+/},
-	      {begin: /\$\{/, end: /}/},
+	      {begin: /\${/, end: /}/},
 	      {begin: '[\\$\\@]' + hljs.UNDERSCORE_IDENT_RE}
 	    ]
 	  };
@@ -31812,7 +31812,7 @@
 	        relevance: 0
 	      }
 	    ],
-	    illegal: '[^\\s\\}]'
+	    illegal: '[^\\s\}]'
 	  };
 	};
 
@@ -31891,7 +31891,7 @@
 	  };
 	  var ANTIQUOTE = {
 	    className: 'subst',
-	    begin: /\$\{/,
+	    begin: /\${/,
 	    end: /}/,
 	    keywords: NIX_KEYWORDS
 	  };
@@ -32245,7 +32245,7 @@
 		FUNCTIONS = {
 			className: 'function',
 			beginKeywords: 'module function',
-			end: '\\=|\\{',
+			end: '\\=|\{',
 			contains: [PARAMS, hljs.UNDERSCORE_TITLE_MODE]
 		};
 
@@ -32380,7 +32380,7 @@
 	      },
 	      {
 	        className: 'variable',
-	        begin: '\\$\\{?[\\w\\-\\.\\:]+\\}?'
+	        begin: '\\$\{?[\\w\\-\\.\\:]+\}?'
 	      },
 	      {
 	        className: 'keyword',
@@ -32522,7 +32522,7 @@
 	            className: 'subst',
 	            variants: [
 	              {begin: /\$\w+/},
-	              {begin: /\{\$/, end: /\}/}
+	              {begin: /{\$/, end: /}/}
 	            ]
 	          }
 	        ]
@@ -32958,7 +32958,7 @@
 	      hljs.C_LINE_COMMENT_MODE,
 	      {
 	        className: 'class',
-	        beginKeywords: 'message enum service', end: /\{/,
+	        beginKeywords: 'message enum service', end: /{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -33047,12 +33047,12 @@
 	      VARIABLE,
 	      STRING,
 	      {
-	        beginKeywords: 'class', end: '\\{|;',
+	        beginKeywords: 'class', end: '\{|;',
 	        illegal: /=/,
 	        contains: [TITLE, COMMENT]
 	      },
 	      {
-	        beginKeywords: 'define', end: /\{/,
+	        beginKeywords: 'define', end: /{/,
 	        contains: [
 	          {
 	            className: 'section', begin: hljs.IDENT_RE, endsParent: true
@@ -33060,7 +33060,7 @@
 	        ]
 	      },
 	      {
-	        begin: hljs.IDENT_RE + '\\s+\\{', returnBegin: true,
+	        begin: hljs.IDENT_RE + '\\s+\{', returnBegin: true,
 	        end: /\S/,
 	        contains: [
 	          {
@@ -33068,7 +33068,7 @@
 	            begin: hljs.IDENT_RE
 	          },
 	          {
-	            begin: /\{/, end: /\}/,
+	            begin: /{/, end: /}/,
 	            keywords: PUPPET_KEYWORDS,
 	            relevance: 0,
 	            contains: [
@@ -33179,7 +33179,7 @@
 	  };
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /\{/, end: /\}/,
+	    begin: /{/, end: /}/,
 	    keywords: KEYWORDS,
 	    illegal: /#/
 	  };
@@ -33420,7 +33420,7 @@
 	          hljs.BACKSLASH_ESCAPE,
 	          {
 	            className: 'subst',
-	            begin: '\\$\\{', end: '\\}'
+	            begin: '\\$\{', end: '\}'
 	          }
 	        ]
 	      },
@@ -33454,7 +33454,7 @@
 	      PROPERTY,
 	      {
 	        className: 'function',
-	        beginKeywords: 'function', end: /\{/, excludeEnd: true,
+	        beginKeywords: 'function', end: /{/, excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/}),
 	          {
@@ -33591,7 +33591,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
-	  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
+	  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\{';
 
 	  var PROPERTY = {
 	    className: 'attribute',
@@ -33998,7 +33998,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
-	  var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+';
+	  var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\{\}",\'`;#|\\\\\\s]+';
 	  var SCHEME_SIMPLE_NUMBER_RE = '(\\-|\\+)?\\d+([./]\\d+)?';
 	  var SCHEME_COMPLEX_NUMBER_RE = SCHEME_SIMPLE_NUMBER_RE + '[+\\-]' + SCHEME_SIMPLE_NUMBER_RE + 'i';
 	  var BUILTINS = {
@@ -35146,7 +35146,7 @@
 	      },
 	      {
 	        className: 'variable',
-	        begin: /\$\{?[a-zA-Z0-9_]+\}?/
+	        begin: /\${?[a-zA-Z0-9_]+}?/
 	      },
 	      {
 	        className: 'string',
@@ -35817,7 +35817,7 @@
 	        className: 'class',
 	        beginKeywords: 'struct protocol class extension enum',
 	        keywords: SWIFT_KEYWORDS,
-	        end: '\\{',
+	        end: '\{',
 	        excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][\u00C0-\u02B80-9A-Za-z$_]*/})
@@ -35909,8 +35909,8 @@
 	  var TEMPLATE_VARIABLES = {
 	    className: 'template-variable',
 	    variants: [
-	      { begin: '\{\{', end: '\}\}' }, // jinja templates Ansible
-	      { begin: '%\{', end: '\}' } // Ruby i18n
+	      { begin: '{{', end: '}}' }, // jinja templates Ansible
+	      { begin: '%{', end: '}' } // Ruby i18n
 	    ]
 	  };
 	  var STRING = {
@@ -36044,7 +36044,7 @@
 	      hljs.COMMENT('^[ \\t]*#', '$'),
 	      {
 	        beginKeywords: 'proc',
-	        end: '[\\{]',
+	        end: '[\{]',
 	        excludeEnd: true,
 	        contains: [
 	          {
@@ -36060,12 +36060,12 @@
 	        excludeEnd: true,
 	        variants: [
 	          {
-	            begin: '\\$(\\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*\\(([a-zA-Z0-9_])*\\)',
-	            end: '[^a-zA-Z0-9_\\}\\$]'
+	            begin: '\\$(\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*\\(([a-zA-Z0-9_])*\\)',
+	            end: '[^a-zA-Z0-9_\}\\$]'
 	          },
 	          {
-	            begin: '\\$(\\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
-	            end: '(\\))?[^a-zA-Z0-9_\\}\\$]'
+	            begin: '\\$(\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
+	            end: '(\\))?[^a-zA-Z0-9_\}\\$]'
 	          }
 	        ]
 	      },
@@ -36109,7 +36109,7 @@
 	              className: 'string', // because it looks like attributes in HTML tags
 	              variants: [
 	                {begin: /\[/, end: /\]/},
-	                {begin: /\{/, end: /\}/}
+	                {begin: /{/, end: /}/}
 	              ]
 	            },
 	            {
@@ -36173,7 +36173,7 @@
 	      hljs.C_BLOCK_COMMENT_MODE,
 	      {
 	        className: 'class',
-	        beginKeywords: 'struct enum service exception', end: /\{/,
+	        beginKeywords: 'struct enum service exception', end: /{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -36322,10 +36322,10 @@
 	    case_insensitive: true,
 	    subLanguage: 'xml',
 	    contains: [
-	      hljs.COMMENT(/\{#/, /#}/),
+	      hljs.COMMENT(/{#/, /#}/),
 	      {
 	        className: 'template-tag',
-	        begin: /\{%/, end: /%}/,
+	        begin: /{%/, end: /%}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -36341,7 +36341,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /\{\{/, end: /}}/,
+	        begin: /{{/, end: /}}/,
 	        contains: ['self', FILTER, FUNCTIONS]
 	      }
 	    ]
@@ -36389,7 +36389,7 @@
 	          hljs.BACKSLASH_ESCAPE,
 	          {
 	            className: 'subst',
-	            begin: '\\$\\{', end: '\\}'
+	            begin: '\\$\{', end: '\}'
 	          }
 	        ]
 	      },
@@ -36444,7 +36444,7 @@
 	      },
 	      {
 	        className: 'function',
-	        begin: 'function', end: /[\{;]/, excludeEnd: true,
+	        begin: 'function', end: /[{;]/, excludeEnd: true,
 	        keywords: KEYWORDS,
 	        contains: [
 	          'self',
@@ -36466,7 +36466,7 @@
 	        relevance: 0 // () => {} is more typical in TypeScript
 	      },
 	      {
-	        beginKeywords: 'constructor', end: /\{/, excludeEnd: true,
+	        beginKeywords: 'constructor', end: /{/, excludeEnd: true,
 	        contains: [
 	          'self',
 	          {
@@ -36489,10 +36489,10 @@
 	        relevance: 0
 	      },
 	      {
-	        beginKeywords: 'module', end: /\{/, excludeEnd: true
+	        beginKeywords: 'module', end: /{/, excludeEnd: true
 	      },
 	      {
-	        beginKeywords: 'interface', end: /\{/, excludeEnd: true,
+	        beginKeywords: 'interface', end: /{/, excludeEnd: true,
 	        keywords: 'interface extends'
 	      },
 	      {
@@ -37419,7 +37419,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let event = \{",
+	            "let event = {",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
 	            "  title: 'Sample Event',",
@@ -37436,7 +37436,7 @@
 	            "\xA0\xA0\xA0",
 	            "  endTime: '2016-09-16T21:45:00-04:00'",
 	            _react2.default.createElement("br", null),
-	            "\};",
+	            "};",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null),
 	            "/*",
@@ -37527,6 +37527,14 @@
 	  _createClass(ReactAddToCalendar, [{
 	    key: "componentWillMount",
 	    value: function componentWillMount() {
+	      // polyfill for startsWith to fix IE bug
+	      if (!String.prototype.startsWith) {
+	        String.prototype.startsWith = function (searchString, position) {
+	          position = position || 0;
+	          return this.indexOf(searchString, position) === position;
+	        };
+	      }
+
 	      var isCrappyIE = false;
 	      if (typeof window !== "undefined" && window.navigator.msSaveOrOpenBlob && window.Blob) {
 	        isCrappyIE = true;
@@ -53894,7 +53902,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let icon = \{ 'calendar-plus-o': 'left' \};",
+	            "let icon = { 'calendar-plus-o': 'left' };",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null),
 	            "/*",
@@ -53918,7 +53926,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "buttonTemplate=\{icon\} />"
+	            "buttonTemplate={icon} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -53997,7 +54005,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let icon = \{ textOnly: 'none' \};",
+	            "let icon = { textOnly: 'none' };",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null)
 	          ),
@@ -54010,7 +54018,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "buttonTemplate=\{icon\} />"
+	            "buttonTemplate={icon} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54093,7 +54101,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "displayItemIcons=\{false\} />"
+	            "displayItemIcons={false} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54175,19 +54183,19 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlookcom: 'Outlook.com' \}",
+	            "{ outlookcom: 'Outlook.com' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ apple: 'Apple Calendar' \}",
+	            "{ apple: 'Apple Calendar' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ yahoo: 'Yahoo' \}",
+	            "{ yahoo: 'Yahoo' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54202,7 +54210,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54284,10 +54292,10 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54302,7 +54310,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54384,19 +54392,19 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlookcom: 'Outlook.com' \}",
+	            "{ outlookcom: 'Outlook.com' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ apple: 'iCal' \}",
+	            "{ apple: 'iCal' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ yahoo: 'Yahoo!' \}",
+	            "{ yahoo: 'Yahoo!' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54411,7 +54419,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(

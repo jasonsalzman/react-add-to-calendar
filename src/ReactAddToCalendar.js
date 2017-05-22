@@ -99,11 +99,10 @@ export default class ReactAddToCalendar extends React.Component {
       return (
         <li key={helpers.getRandomKey()}>
           <a
-            className={currentItem + "-link"}
-            onClick={self.handleDropdownLinkClick}
-            href={helpers.buildUrl(self.props.event, currentItem)}
-            target="_blank"
-          >
+              className={currentItem + "-link"}
+              onClick={self.handleDropdownLinkClick}
+              href={helpers.buildUrl(self.props.event, currentItem)}
+              target="_blank">
             {icon}
             {currentLabel}
           </a>

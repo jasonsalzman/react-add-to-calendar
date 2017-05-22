@@ -19,7 +19,7 @@ export default class TextOnlyDropdown extends React.Component {
             &nbsp;&nbsp;&nbsp;
             {"event={event}"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"displayItemIcons=\{false\} />"}
+            {"displayItemIcons={false} />"}
           </code>
         </pre>
         <div className="column">

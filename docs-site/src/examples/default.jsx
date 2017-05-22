@@ -15,7 +15,7 @@ export default class Default extends React.Component {
       <div className="row">
         <pre className="column example__code">
           <code className="js">
-            {"let event = \{"}<br />
+            {"let event = {"}<br />
             &nbsp;&nbsp;&nbsp;
             {"  title: 'Sample Event',"}<br />
             &nbsp;&nbsp;&nbsp;
@@ -29,7 +29,7 @@ export default class Default extends React.Component {
             {"  startTime: '2016-09-16T20:15:00-04:00',"}<br />
             &nbsp;&nbsp;&nbsp;
             {"  endTime: '2016-09-16T21:45:00-04:00'"}<br />
-            {"\};"}<br /><br />
+            {"};"}<br /><br />
             {"/*"}<br />
             &nbsp;&nbsp;&nbsp;
             {"startTime and endTime can use any datetime"}<br />

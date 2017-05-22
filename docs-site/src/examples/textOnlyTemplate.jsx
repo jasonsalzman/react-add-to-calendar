@@ -17,14 +17,14 @@ export default class TextOnlyTemplate extends React.Component {
       <div className="row">
         <pre className="column example__code">
           <code className="js">
-            {"let icon = \{ textOnly: 'none' \};"}<br /><br />
+            {"let icon = { textOnly: 'none' };"}<br /><br />
           </code>
           <code className="jsx">
             {"<AddToCalendar"}<br />
             &nbsp;&nbsp;&nbsp;
             {"event={event}"}<br />
             &nbsp;&nbsp;&nbsp;
-            {"buttonTemplate=\{icon\} />"}
+            {"buttonTemplate={icon} />"}
           </code>
         </pre>
         <div className="column">

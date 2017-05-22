@@ -56,10 +56,9 @@ export default class ExampleComponents extends React.Component {
   renderExamples() {
     return examples.map((example, index) => (
       <CodeExampleComponent
-        key={`example-${index}`}
-        id={index}
-        title={example.title}
-      >
+          key={`example-${index}`}
+          id={index}
+          title={example.title}>
         {<example.component />}
       </CodeExampleComponent>
     ));

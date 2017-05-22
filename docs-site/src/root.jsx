@@ -26,33 +26,28 @@ export default class Root extends React.Component {
           <p>
             <a href="https://npmjs.org/package/react-add-to-calendar">
               <img
-                src="https://badge.fury.io/js/react-add-to-calendar.svg"
-                className="badge"
-              />
+                  src="https://badge.fury.io/js/react-add-to-calendar.svg"
+                  className="badge"/>
             </a>&nbsp;&nbsp;
             <a href="https://travis-ci.org/jasonsalzman/react-add-to-calendar">
               <img
-                src="https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master"
-                className="badge"
-              />
+                  src="https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master"
+                  className="badge"/>
             </a>&nbsp;&nbsp;
             <a href="https://david-dm.org/jasonsalzman/react-add-to-calendar">
               <img
-                src="https://img.shields.io/david/strongloop/express.svg?maxAge=2592000"
-                className="badge"
-              />
+                  src="https://img.shields.io/david/strongloop/express.svg?maxAge=2592000"
+                  className="badge"/>
             </a>&nbsp;&nbsp;
             <a href="https://david-dm.org/jasonsalzman/react-add-to-calendar">
               <img
-                src="https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000"
-                className="badge"
-              />
+                  src="https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000"
+                  className="badge"/>
             </a>&nbsp;&nbsp;
             <a href={"https://npmjs.org/package/react-add-to-calendar"}>
               <img
-                src="https://img.shields.io/npm/dm/react-add-to-calendar.svg"
-                className="badge"
-              />
+                  src="https://img.shields.io/npm/dm/react-add-to-calendar.svg"
+                  className="badge"/>
             </a>
           </p>
           <p>
@@ -69,10 +64,9 @@ export default class Root extends React.Component {
 
         <a href="https://github.com/jasonsalzman/react-add-to-calendar/">
           <img
-            className="github-ribbon"
-            src="images/ribbon.png"
-            alt="Fork me on GitHub"
-          />
+              className="github-ribbon"
+              src="images/ribbon.png"
+              alt="Fork me on GitHub"/>
         </a>
       </div>
     );
