@@ -46,13 +46,25 @@ export default class helpers {
                 // yahoo doesn't utilize endTime so we need to calulate duration
                 let duration = this.calculateDuration(event.startTime, event.endTime);
                 calendarUrl = 'https://calendar.yahoo.com/?v=60&view=d&type=20';
-                calendarUrl += '&title=' + event.title;
+                calendarUrl += '&title=' + encodeURIComponent(event.title);
                 calendarUrl += '&st=' + this.formatTime(event.startTime);
                 calendarUrl += '&dur=' + duration;
-                calendarUrl += '&desc=' + event.description;
+                calendarUrl += '&desc=' + encodeURIComponent(event.description);
                 calendarUrl += '&in_loc=' + encodeURIComponent(event.location);
                 break;
 
+            case 'outlookcom':
+                calendarUrl = "https://outlook.live.com/owa/?rru=addevent";
+                calendarUrl += "&startdt=" + this.formatTime(event.startTime);
+                calendarUrl += "&enddt=" + this.formatTime(event.endTime);
+                calendarUrl += "&subject=" + encodeURIComponent(event.title);
+                calendarUrl += "&location=" + encodeURIComponent(event.location);
+                calendarUrl += "&body=" + encodeURIComponent(event.description);
+                calendarUrl += "&allday=false";
+                calendarUrl += "&uid=" + this.getRandomKey();
+                calendarUrl += "&path=/calendar/view/Month";
+                break;
+        
             default:
                 calendarUrl = [
                     'BEGIN:VCALENDAR',

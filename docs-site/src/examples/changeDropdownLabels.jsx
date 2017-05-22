@@ -15,6 +15,7 @@ export default React.createClass({
 
         let items = [
             { outlook: 'Outlook' },
+            { outlookcom: 'Outlook.com' },
             { apple: 'iCal' },
             { yahoo: 'Yahoo!' },
             { google: 'Google' }
@@ -27,6 +28,8 @@ export default React.createClass({
                         {"let items = ["}<br/>
                         &nbsp;&nbsp;&nbsp;
                         {"\{ outlook: 'Outlook' \}"}<br/>
+                        &nbsp;&nbsp;&nbsp;
+                        {"\{ outlookcom: 'Outlook.com' \}"}<br/>
                         &nbsp;&nbsp;&nbsp;
                         {"\{ apple: 'iCal' \}"}<br/>
                         &nbsp;&nbsp;&nbsp;
