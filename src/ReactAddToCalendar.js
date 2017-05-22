@@ -1,194 +1,208 @@
-import React, {
-	Component,
-} from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import helpersClass from './helpers';
+import helpersClass from "./helpers";
 const helpers = new helpersClass();
 
 export default class ReactAddToCalendar extends React.Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.state = {
-			optionsOpen: false,
+    this.state = {
+      optionsOpen: false,
       isCrappyIE: false
-		};
+    };
 
-		this.toggleCalendarDropdown = this.toggleCalendarDropdown.bind(this);
-		this.handleDropdownLinkClick = this.handleDropdownLinkClick.bind(this);
-	}
+    this.toggleCalendarDropdown = this.toggleCalendarDropdown.bind(this);
+    this.handleDropdownLinkClick = this.handleDropdownLinkClick.bind(this);
+  }
 
-	componentWillMount() {
-        let isCrappyIE = false;
-        if (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) {
-            isCrappyIE = true;
-        }
-
-        this.setState({isCrappyIE: isCrappyIE});
+  componentWillMount() {
+    let isCrappyIE = false;
+    if (
+      typeof window !== "undefined" &&
+      window.navigator.msSaveOrOpenBlob &&
+      window.Blob
+    ) {
+      isCrappyIE = true;
     }
 
-    toggleCalendarDropdown() {
-    	let showOptions = !this.state.optionsOpen;
+    this.setState({ isCrappyIE: isCrappyIE });
+  }
 
-        if (showOptions) {
-			document.addEventListener('click', this.toggleCalendarDropdown, false);
-		} else {
-			document.removeEventListener('click', this.toggleCalendarDropdown);
-		}
+  toggleCalendarDropdown() {
+    let showOptions = !this.state.optionsOpen;
 
-        this.setState({optionsOpen: showOptions});
+    if (showOptions) {
+      document.addEventListener("click", this.toggleCalendarDropdown, false);
+    } else {
+      document.removeEventListener("click", this.toggleCalendarDropdown);
     }
 
-    handleDropdownLinkClick(e) {
-        e.preventDefault();
-        let url = e.currentTarget.getAttribute('href');
+    this.setState({ optionsOpen: showOptions });
+  }
 
-        if (this.state.isCrappyIE) {
-            let blob = new Blob([url], {type: 'text/calendar'});
-            window.navigator.msSaveOrOpenBlob(blob, 'download.ics');
-        } else {
-            window.open(url, '_blank');
-        }
+  handleDropdownLinkClick(e) {
+    e.preventDefault();
+    let url = e.currentTarget.getAttribute("href");
 
-        this.toggleCalendarDropdown();
+    if (this.state.isCrappyIE) {
+      let blob = new Blob([url], { type: "text/calendar" });
+      window.navigator.msSaveOrOpenBlob(blob, "download.ics");
+    } else {
+      window.open(url, "_blank");
     }
 
-    renderDropdown() {
-        let self = this;
+    this.toggleCalendarDropdown();
+  }
 
-        let items = this.props.listItems.map((listItem) => {
-            let currentItem = Object.keys(listItem)[0];
-            let currentLabel = listItem[currentItem];
+  renderDropdown() {
+    let self = this;
 
-            let icon = null;
-            if (self.props.displayItemIcons) {
-                let currentIcon = (currentItem === 'outlook' || currentItem === 'outlookcom') ? 'windows' : currentItem;
-                icon = <i className={'fa fa-' + currentIcon}/>;
-            }
+    let items = this.props.listItems.map(listItem => {
+      let currentItem = Object.keys(listItem)[0];
+      let currentLabel = listItem[currentItem];
 
-            return (
-                <li key={helpers.getRandomKey()}>
-                    <a className={currentItem + '-link'} onClick={self.handleDropdownLinkClick}
-                        href={helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE)}
-                        target="_blank">
-                        {icon}
-                        {currentLabel}</a>
-                </li>
-            );
-        });
+      let icon = null;
+      if (self.props.displayItemIcons) {
+        let currentIcon = currentItem === "outlook" ||
+          currentItem === "outlookcom"
+          ? "windows"
+          : currentItem;
+        icon = <i className={"fa fa-" + currentIcon} />;
+      }
 
-        return (
-            <div className={this.props.dropdownClass}>
-                <ul>
-                    {items}
-                </ul>
-            </div>
-        );
+      return (
+        <li key={helpers.getRandomKey()}>
+          <a
+            className={currentItem + "-link"}
+            onClick={self.handleDropdownLinkClick}
+            href={helpers.buildUrl(
+              self.props.event,
+              currentItem,
+              self.state.isCrappyIE
+            )}
+            target="_blank"
+          >
+            {icon}
+            {currentLabel}
+          </a>
+        </li>
+      );
+    });
+
+    return (
+      <div className={this.props.dropdownClass}>
+        <ul>
+          {items}
+        </ul>
+      </div>
+    );
+  }
+
+  renderButton() {
+    let buttonLabel = this.props.buttonLabel;
+    let buttonIcon = null;
+    let template = Object.keys(this.props.buttonTemplate);
+
+    if (template[0] !== "textOnly") {
+      let iconPlacement = this.props.buttonTemplate[template];
+      let buttonIconClass =
+        "react-add-to-calendar__icon--" + iconPlacement + " fa fa-";
+
+      if (template[0] === "caret") {
+        buttonIconClass += this.state.optionsOpen ? "caret-up" : "caret-down";
+      } else {
+        buttonIconClass += template[0];
+      }
+
+      buttonIcon = <i className={buttonIconClass} />;
+      buttonLabel = iconPlacement === "right"
+        ? <span>
+            {buttonLabel + " "}
+            {buttonIcon}
+          </span>
+        : <span>
+            {buttonIcon}
+            {" " + buttonLabel}
+          </span>;
     }
 
-    renderButton() {
-        let buttonLabel = this.props.buttonLabel;
-        let buttonIcon = null;
-        let template = Object.keys(this.props.buttonTemplate);
+    let buttonClass = this.state.optionsOpen
+      ? this.props.buttonClassClosed + " " + this.props.buttonClassOpen
+      : this.props.buttonClassClosed;
 
-        if (template[0] !== 'textOnly') {
-            let iconPlacement = this.props.buttonTemplate[template];
-            let buttonIconClass = 'react-add-to-calendar__icon--' + iconPlacement + ' fa fa-';
+    return (
+      <div className={this.props.buttonWrapperClass}>
+        <a className={buttonClass} onClick={this.toggleCalendarDropdown}>
+          {buttonLabel}
+        </a>
+      </div>
+    );
+  }
 
-            if (template[0] === 'caret') {
-                buttonIconClass += (this.state.optionsOpen) ? 'caret-up' : 'caret-down';
-            } else {
-                buttonIconClass += template[0];
-            }
-
-            buttonIcon = <i className={buttonIconClass}/>;
-            buttonLabel = (iconPlacement === 'right') ?
-                (
-                    <span>
-                        {buttonLabel + ' '}
-                        {buttonIcon}
-                    </span>
-                ) :
-                (
-                    <span>
-                        {buttonIcon}
-                        {' ' + buttonLabel}
-                    </span>
-                );
-        }
-
-        let buttonClass = (this.state.optionsOpen) ? this.props.buttonClassClosed + ' ' + this.props.buttonClassOpen : this.props.buttonClassClosed;
-
-        return (
-            <div className={this.props.buttonWrapperClass}>
-                <a className={buttonClass}
-                    onClick={this.toggleCalendarDropdown}>{buttonLabel}</a>
-            </div>
-        );
+  render() {
+    let options = null;
+    if (this.state.optionsOpen) {
+      options = this.renderDropdown();
     }
 
-	render() {
-		let options = null;
-        if (this.state.optionsOpen) {
-            options = this.renderDropdown();
-        }
+    let addToCalendarBtn = null;
+    if (this.props.event) {
+      addToCalendarBtn = this.renderButton();
+    }
 
-        let addToCalendarBtn = null;
-        if (this.props.event) {
-            addToCalendarBtn = this.renderButton();
-        }
-
-        return (
-            <div className={this.props.rootClass}>
-                {addToCalendarBtn}
-                {options}
-            </div>
-        );
-	}
+    return (
+      <div className={this.props.rootClass}>
+        {addToCalendarBtn}
+        {options}
+      </div>
+    );
+  }
 }
 
-ReactAddToCalendar.displayName = 'Add To Calendar';
+ReactAddToCalendar.displayName = "Add To Calendar";
 
 ReactAddToCalendar.propTypes = {
-	buttonClassClosed: React.PropTypes.string,
-	buttonClassOpen: React.PropTypes.string,
-	buttonLabel: React.PropTypes.string,
-    buttonTemplate: React.PropTypes.object,
-	buttonWrapperClass: React.PropTypes.string,
-	displayItemIcons: React.PropTypes.bool,
-	dropdownClass: React.PropTypes.string,
-	event: React.PropTypes.shape({
-		title: React.PropTypes.string,
-		description: React.PropTypes.string,
-		location: React.PropTypes.string,
-		startTime: React.PropTypes.string,
-		endTime: React.PropTypes.string
-	}).isRequired,
-    listItems: React.PropTypes.arrayOf(React.PropTypes.object),
-	rootClass: React.PropTypes.string
+  buttonClassClosed: PropTypes.string,
+  buttonClassOpen: PropTypes.string,
+  buttonLabel: PropTypes.string,
+  buttonTemplate: PropTypes.object,
+  buttonWrapperClass: PropTypes.string,
+  displayItemIcons: PropTypes.bool,
+  dropdownClass: PropTypes.string,
+  event: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    location: PropTypes.string,
+    startTime: PropTypes.string,
+    endTime: PropTypes.string
+  }).isRequired,
+  listItems: PropTypes.arrayOf(PropTypes.object),
+  rootClass: PropTypes.string
 };
 
 ReactAddToCalendar.defaultProps = {
-	buttonClassClosed: 'react-add-to-calendar__button',
-	buttonClassOpen: 'react-add-to-calendar__button--light',
-	buttonLabel: 'Add to My Calendar',
-    buttonTemplate: { caret: 'right' },
-	buttonWrapperClass: 'react-add-to-calendar__wrapper',
-	displayItemIcons: true,
-	dropdownClass: 'react-add-to-calendar__dropdown',
-	event: {
-		title: 'Sample Event',
-		description: 'This is the sample event provided as an example only',
-		location: 'Portland, OR',
-		startTime: '2016-09-16T20:15:00-04:00',
-		endTime: '2016-09-16T21:45:00-04:00'
-	},
-    listItems: [
-        { apple: 'Apple Calendar' },
-        { google: 'Google' },
-        { outlook: 'Outlook' },
-        { outlookcom: 'Outlook.com' },
-        { yahoo: 'Yahoo' },
-    ],
-	rootClass: 'react-add-to-calendar'
+  buttonClassClosed: "react-add-to-calendar__button",
+  buttonClassOpen: "react-add-to-calendar__button--light",
+  buttonLabel: "Add to My Calendar",
+  buttonTemplate: { caret: "right" },
+  buttonWrapperClass: "react-add-to-calendar__wrapper",
+  displayItemIcons: true,
+  dropdownClass: "react-add-to-calendar__dropdown",
+  event: {
+    title: "Sample Event",
+    description: "This is the sample event provided as an example only",
+    location: "Portland, OR",
+    startTime: "2016-09-16T20:15:00-04:00",
+    endTime: "2016-09-16T21:45:00-04:00"
+  },
+  listItems: [
+    { apple: "Apple Calendar" },
+    { google: "Google" },
+    { outlook: "Outlook" },
+    { outlookcom: "Outlook.com" },
+    { yahoo: "Yahoo" }
+  ],
+  rootClass: "react-add-to-calendar"
 };

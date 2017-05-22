@@ -21,9 +21,10 @@ You’ll need to install React and Moment separately since they are not included
 
 ```js
 var React = require('react');
+var createReactClass = require('create-react-class');
 var AddToCalendar = require('react-add-to-calendar');
 
-var Example = React.createClass({
+var Example = createReactClass({
   displayName: 'Example',
 
   getInitialState: function() {

@@ -56,7 +56,7 @@ module.exports = function(config) {
           {
             test: /\.js?$/,
             include: path.resolve(__dirname, 'src'),
-            loader: 'isparta'
+            loader: 'istanbul-instrumenter'
           }
         ]
       },
