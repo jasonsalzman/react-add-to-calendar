@@ -20203,8 +20203,7 @@
 	              { href: "https://npmjs.org/package/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://badge.fury.io/js/react-add-to-calendar.svg",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20212,8 +20211,7 @@
 	              { href: "https://travis-ci.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20221,8 +20219,7 @@
 	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/david/strongloop/express.svg?maxAge=2592000",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20230,8 +20227,7 @@
 	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20239,8 +20235,7 @@
 	              { href: "https://npmjs.org/package/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/npm/dm/react-add-to-calendar.svg",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -20279,8 +20274,7 @@
 	          _react2.default.createElement("img", {
 	            className: "github-ribbon",
 	            src: "images/ribbon.png",
-	            alt: "Fork me on GitHub"
-	          })
+	            alt: "Fork me on GitHub" })
 	        )
 	      );
 	    }
@@ -20411,8 +20405,7 @@
 	          {
 	            key: "example-" + index,
 	            id: index,
-	            title: example.title
-	          },
+	            title: example.title },
 	          _react2.default.createElement(example.component, null)
 	        );
 	      });
@@ -37419,7 +37412,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let event = \{",
+	            "let event = {",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
 	            "  title: 'Sample Event',",
@@ -37436,7 +37429,7 @@
 	            "\xA0\xA0\xA0",
 	            "  endTime: '2016-09-16T21:45:00-04:00'",
 	            _react2.default.createElement("br", null),
-	            "\};",
+	            "};",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null),
 	            "/*",
@@ -37610,8 +37603,7 @@
 	              className: currentItem + "-link",
 	              onClick: self.handleDropdownLinkClick,
 	              href: helpers.buildUrl(self.props.event, currentItem),
-	              target: "_blank"
-	            },
+	              target: "_blank" },
 	            icon,
 	            currentLabel
 	          )
@@ -53902,7 +53894,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let icon = \{ 'calendar-plus-o': 'left' \};",
+	            "let icon = { 'calendar-plus-o': 'left' };",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null),
 	            "/*",
@@ -53926,7 +53918,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "buttonTemplate=\{icon\} />"
+	            "buttonTemplate={icon} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54005,7 +53997,7 @@
 	          _react2.default.createElement(
 	            "code",
 	            { className: "js" },
-	            "let icon = \{ textOnly: 'none' \};",
+	            "let icon = { textOnly: 'none' };",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null)
 	          ),
@@ -54018,7 +54010,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "buttonTemplate=\{icon\} />"
+	            "buttonTemplate={icon} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54101,7 +54093,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "displayItemIcons=\{false\} />"
+	            "displayItemIcons={false} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54183,19 +54175,19 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlookcom: 'Outlook.com' \}",
+	            "{ outlookcom: 'Outlook.com' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ apple: 'Apple Calendar' \}",
+	            "{ apple: 'Apple Calendar' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ yahoo: 'Yahoo' \}",
+	            "{ yahoo: 'Yahoo' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54210,7 +54202,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54292,10 +54284,10 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54310,7 +54302,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54392,19 +54384,19 @@
 	            "let items = [",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlook: 'Outlook' \}",
+	            "{ outlook: 'Outlook' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ outlookcom: 'Outlook.com' \}",
+	            "{ outlookcom: 'Outlook.com' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ apple: 'iCal' \}",
+	            "{ apple: 'iCal' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ yahoo: 'Yahoo!' \}",
+	            "{ yahoo: 'Yahoo!' }",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "\{ google: 'Google' \}",
+	            "{ google: 'Google' }",
 	            _react2.default.createElement("br", null),
 	            "];",
 	            _react2.default.createElement("br", null),
@@ -54419,7 +54411,7 @@
 	            "event={event}",
 	            _react2.default.createElement("br", null),
 	            "\xA0\xA0\xA0",
-	            "listItems=\{items\} />"
+	            "listItems={items} />"
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -54484,8 +54476,7 @@
 	        {
 	          key: this.props.id,
 	          id: "example-" + this.props.id,
-	          className: "example"
-	        },
+	          className: "example" },
 	        _react2.default.createElement(
 	          "h2",
 	          { className: "example__heading" },
