@@ -37553,9 +37553,25 @@
 	      e.preventDefault();
 	      var url = e.currentTarget.getAttribute("href");
 
-	      if (this.state.isCrappyIE) {
-	        var blob = new Blob([url], { type: "text/calendar" });
-	        window.navigator.msSaveOrOpenBlob(blob, "download.ics");
+	      if (url.startsWith("data") || url.startsWith("BEGIN")) {
+	        var filename = "download.ics";
+	        var blob = new Blob([url], { type: "text/calendar;charset=utf-8" });
+
+	        if (this.state.isCrappyIE) {
+	          window.navigator.msSaveOrOpenBlob(blob, filename);
+	        } else {
+	          /****************************************************************
+	          // many browsers do not properly support downloading data URIs
+	          // (even with "download" attribute in use) so this solution
+	          // ensures the event will download cross-browser
+	          ****************************************************************/
+	          var link = document.createElement("a");
+	          link.href = window.URL.createObjectURL(blob);
+	          link.setAttribute("download", filename);
+	          document.body.appendChild(link);
+	          link.click();
+	          document.body.removeChild(link);
+	        }
 	      } else {
 	        window.open(url, "_blank");
 	      }
@@ -37585,7 +37601,7 @@
 	            {
 	              className: currentItem + "-link",
 	              onClick: self.handleDropdownLinkClick,
-	              href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE),
+	              href: helpers.buildUrl(self.props.event, currentItem),
 	              target: "_blank"
 	            },
 	            icon,
@@ -37820,10 +37836,10 @@
 /* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -37837,92 +37853,85 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var helpers = function () {
-	    function helpers() {
-	        _classCallCheck(this, helpers);
+	  function helpers() {
+	    _classCallCheck(this, helpers);
+	  }
+
+	  _createClass(helpers, [{
+	    key: "getRandomKey",
+	    value: function getRandomKey() {
+	      var n = Math.floor(Math.random() * 999999999999).toString();
+	      return new Date().getTime().toString() + "_" + n;
 	    }
+	  }, {
+	    key: "formatTime",
+	    value: function formatTime(date) {
+	      var formattedDate = _moment2.default.utc(date).format("YYYYMMDDTHHmmssZ");
+	      return formattedDate.replace("+00:00", "Z");
+	    }
+	  }, {
+	    key: "calculateDuration",
+	    value: function calculateDuration(startTime, endTime) {
+	      // snag parameters and format properly in UTC
+	      var end = _moment2.default.utc(endTime).format("DD/MM/YYYY HH:mm:ss");
+	      var start = _moment2.default.utc(startTime).format("DD/MM/YYYY HH:mm:ss");
 
-	    _createClass(helpers, [{
-	        key: 'getRandomKey',
-	        value: function getRandomKey() {
-	            var n = Math.floor(Math.random() * 999999999999).toString();
-	            return new Date().getTime().toString() + '_' + n;
-	        }
-	    }, {
-	        key: 'formatTime',
-	        value: function formatTime(date) {
-	            var formattedDate = _moment2.default.utc(date).format('YYYYMMDDTHHmmssZ');
-	            return formattedDate.replace('+00:00', 'Z');
-	        }
-	    }, {
-	        key: 'calculateDuration',
-	        value: function calculateDuration(startTime, endTime) {
-	            // snag parameters and format properly in UTC
-	            var end = _moment2.default.utc(endTime).format('DD/MM/YYYY HH:mm:ss');
-	            var start = _moment2.default.utc(startTime).format('DD/MM/YYYY HH:mm:ss');
+	      // calculate the difference in milliseconds between the start and end times
+	      var difference = (0, _moment2.default)(end, "DD/MM/YYYY HH:mm:ss").diff((0, _moment2.default)(start, "DD/MM/YYYY HH:mm:ss"));
 
-	            // calculate the difference in milliseconds between the start and end times
-	            var difference = (0, _moment2.default)(end, 'DD/MM/YYYY HH:mm:ss').diff((0, _moment2.default)(start, 'DD/MM/YYYY HH:mm:ss'));
+	      // convert difference from above to a proper momentJs duration object
+	      var duration = _moment2.default.duration(difference);
 
-	            // convert difference from above to a proper momentJs duration object
-	            var duration = _moment2.default.duration(difference);
+	      return Math.floor(duration.asHours()) + _moment2.default.utc(difference).format(":mm");
+	    }
+	  }, {
+	    key: "buildUrl",
+	    value: function buildUrl(event, type) {
+	      var calendarUrl = "";
 
-	            return Math.floor(duration.asHours()) + _moment2.default.utc(difference).format(':mm');
-	        }
-	    }, {
-	        key: 'buildUrl',
-	        value: function buildUrl(event, type, isCrappyIE) {
-	            var calendarUrl = '';
+	      switch (type) {
+	        case "google":
+	          calendarUrl = "https://calendar.google.com/calendar/render";
+	          calendarUrl += "?action=TEMPLATE";
+	          calendarUrl += "&dates=" + this.formatTime(event.startTime);
+	          calendarUrl += "/" + this.formatTime(event.endTime);
+	          calendarUrl += "&location=" + encodeURIComponent(event.location);
+	          calendarUrl += "&text=" + encodeURIComponent(event.title);
+	          calendarUrl += "&details=" + encodeURIComponent(event.description);
+	          break;
 
-	            switch (type) {
-	                case 'google':
-	                    // This is all I changed, there were 2 problems,
-	                    // first, the root URL of Google calendar changed, and second,
-	                    // somehow the order of the params creates a bad request so I fixed that too
-	                    calendarUrl = 'https://calendar.google.com/calendar/render';
-	                    calendarUrl += '?action=TEMPLATE';
-	                    calendarUrl += '&dates=' + this.formatTime(event.startTime);
-	                    calendarUrl += '/' + this.formatTime(event.endTime);
-	                    calendarUrl += '&location=' + encodeURIComponent(event.location);
-	                    calendarUrl += '&text=' + encodeURIComponent(event.title);
-	                    calendarUrl += '&details=' + encodeURIComponent(event.description);
-	                    break;
+	        case "yahoo":
+	          // yahoo doesn't utilize endTime so we need to calulate duration
+	          var duration = this.calculateDuration(event.startTime, event.endTime);
+	          calendarUrl = "https://calendar.yahoo.com/?v=60&view=d&type=20";
+	          calendarUrl += "&title=" + encodeURIComponent(event.title);
+	          calendarUrl += "&st=" + this.formatTime(event.startTime);
+	          calendarUrl += "&dur=" + duration;
+	          calendarUrl += "&desc=" + encodeURIComponent(event.description);
+	          calendarUrl += "&in_loc=" + encodeURIComponent(event.location);
+	          break;
 
-	                case 'yahoo':
-	                    // yahoo doesn't utilize endTime so we need to calulate duration
-	                    var duration = this.calculateDuration(event.startTime, event.endTime);
-	                    calendarUrl = 'https://calendar.yahoo.com/?v=60&view=d&type=20';
-	                    calendarUrl += '&title=' + encodeURIComponent(event.title);
-	                    calendarUrl += '&st=' + this.formatTime(event.startTime);
-	                    calendarUrl += '&dur=' + duration;
-	                    calendarUrl += '&desc=' + encodeURIComponent(event.description);
-	                    calendarUrl += '&in_loc=' + encodeURIComponent(event.location);
-	                    break;
+	        case "outlookcom":
+	          calendarUrl = "https://outlook.live.com/owa/?rru=addevent";
+	          calendarUrl += "&startdt=" + this.formatTime(event.startTime);
+	          calendarUrl += "&enddt=" + this.formatTime(event.endTime);
+	          calendarUrl += "&subject=" + encodeURIComponent(event.title);
+	          calendarUrl += "&location=" + encodeURIComponent(event.location);
+	          calendarUrl += "&body=" + encodeURIComponent(event.description);
+	          calendarUrl += "&allday=false";
+	          calendarUrl += "&uid=" + this.getRandomKey();
+	          calendarUrl += "&path=/calendar/view/Month";
+	          break;
 
-	                case 'outlookcom':
-	                    calendarUrl = "https://outlook.live.com/owa/?rru=addevent";
-	                    calendarUrl += "&startdt=" + this.formatTime(event.startTime);
-	                    calendarUrl += "&enddt=" + this.formatTime(event.endTime);
-	                    calendarUrl += "&subject=" + encodeURIComponent(event.title);
-	                    calendarUrl += "&location=" + encodeURIComponent(event.location);
-	                    calendarUrl += "&body=" + encodeURIComponent(event.description);
-	                    calendarUrl += "&allday=false";
-	                    calendarUrl += "&uid=" + this.getRandomKey();
-	                    calendarUrl += "&path=/calendar/view/Month";
-	                    break;
+	        default:
+	          calendarUrl = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "URL:" + document.URL, "DTSTART:" + this.formatTime(event.startTime), "DTEND:" + this.formatTime(event.endTime), "SUMMARY:" + event.title, "DESCRIPTION:" + event.description, "LOCATION:" + event.location, "END:VEVENT", "END:VCALENDAR"].join("\n");
+	      }
 
-	                default:
-	                    calendarUrl = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT', 'URL:' + document.URL, 'DTSTART:' + this.formatTime(event.startTime), 'DTEND:' + this.formatTime(event.endTime), 'SUMMARY:' + event.title, 'DESCRIPTION:' + event.description, 'LOCATION:' + event.location, 'END:VEVENT', 'END:VCALENDAR'].join('\n');
+	      return calendarUrl;
+	    }
+	  }]);
 
-	                    if (!isCrappyIE) {
-	                        calendarUrl = encodeURI('data:text/calendar;charset=utf8,' + calendarUrl);
-	                    }
-	            }
-
-	            return calendarUrl;
-	        }
-	    }]);
-
-	    return helpers;
+	  return helpers;
 	}();
 
 	exports.default = helpers;

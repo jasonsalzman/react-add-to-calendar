@@ -91,7 +91,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "moment": "^2.18.1"
   },
   "scripts": {
