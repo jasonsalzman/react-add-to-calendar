@@ -25,14 +25,11 @@ export default class helpers {
         return Math.floor(duration.asHours()) + moment.utc(difference).format(':mm');
     }
 
-    buildUrl (event, type, isCrappyIE) {
+    buildUrl (event, type) {
         let calendarUrl = '';
 
         switch (type) {
             case 'google':
-            // This is all I changed, there were 2 problems,
-            // first, the root URL of Google calendar changed, and second,
-            // somehow the order of the params creates a bad request so I fixed that too
                 calendarUrl = 'https://calendar.google.com/calendar/render';
                 calendarUrl += '?action=TEMPLATE';
                 calendarUrl += '&dates=' + this.formatTime(event.startTime);
@@ -64,7 +61,7 @@ export default class helpers {
                 calendarUrl += "&uid=" + this.getRandomKey();
                 calendarUrl += "&path=/calendar/view/Month";
                 break;
-        
+
             default:
                 calendarUrl = [
                     'BEGIN:VCALENDAR',
@@ -79,10 +76,6 @@ export default class helpers {
                     'END:VEVENT',
                     'END:VCALENDAR'
                 ].join('\n');
-
-                if (!isCrappyIE) {
-                    calendarUrl = encodeURI('data:text/calendar;charset=utf8,' + calendarUrl);
-                }
         }
 
         return calendarUrl;

@@ -39,19 +39,35 @@ export default class ReactAddToCalendar extends React.Component {
         this.setState({optionsOpen: showOptions});
     }
 
-    handleDropdownLinkClick(e) {
-        e.preventDefault();
-        let url = e.currentTarget.getAttribute('href');
+		handleDropdownLinkClick(e) {
+	    e.preventDefault();
+	    let url = e.currentTarget.getAttribute("href");
 
-        if (this.state.isCrappyIE) {
-            let blob = new Blob([url], {type: 'text/calendar'});
-            window.navigator.msSaveOrOpenBlob(blob, 'download.ics');
-        } else {
-            window.open(url, '_blank');
-        }
+	    if (url.startsWith("data") || url.startsWith("BEGIN")) {
+	      let filename = "download.ics";
+	      let blob = new Blob([url], { type: "text/calendar;charset=utf-8" });
 
-        this.toggleCalendarDropdown();
-    }
+	      if (this.state.isCrappyIE) {
+	        window.navigator.msSaveOrOpenBlob(blob, filename);
+	      } else {
+	        /****************************************************************
+	        // many browsers do not properly support downloading data URIs
+	        // (even with "download" attribute in use) so this solution
+	        // ensures the event will download cross-browser
+	        ****************************************************************/
+	        let link = document.createElement("a");
+	        link.href = window.URL.createObjectURL(blob);
+	        link.setAttribute("download", filename);
+	        document.body.appendChild(link);
+	        link.click();
+	        document.body.removeChild(link);
+	      }
+	    } else {
+	      window.open(url, "_blank");
+	    }
+
+	    this.toggleCalendarDropdown();
+	  }
 
     renderDropdown() {
         let self = this;
@@ -69,7 +85,7 @@ export default class ReactAddToCalendar extends React.Component {
             return (
                 <li key={helpers.getRandomKey()}>
                     <a className={currentItem + '-link'} onClick={self.handleDropdownLinkClick}
-                        href={helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE)}
+                        href={helpers.buildUrl(self.props.event, currentItem)}
                         target="_blank">
                         {icon}
                         {currentLabel}</a>
