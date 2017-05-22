@@ -37424,6 +37424,14 @@
 	    _createClass(ReactAddToCalendar, [{
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
+	            // polyfill for startsWith to fix IE bug
+	            if (!String.prototype.startsWith) {
+	                String.prototype.startsWith = function (searchString, position) {
+	                    position = position || 0;
+	                    return this.indexOf(searchString, position) === position;
+	                };
+	            }
+
 	            var isCrappyIE = false;
 	            if (typeof window !== 'undefined' && window.navigator.msSaveOrOpenBlob && window.Blob) {
 	                isCrappyIE = true;
