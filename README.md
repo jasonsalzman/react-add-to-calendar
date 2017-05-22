@@ -70,7 +70,7 @@ See [here](https://github.com/jasonsalzman/react-add-to-calendar/blob/master/doc
 I'll do my best to stay compatible with the latest version of React. I can't guarantee support for all older versions of React.
 
 Latest compatible versions:
-- React 15.0.0 or newer
+- React 15.5.0 or newer
 
 ### Browser Support
 
