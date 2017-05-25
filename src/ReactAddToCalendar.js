@@ -54,7 +54,10 @@ export default class ReactAddToCalendar extends React.Component {
     e.preventDefault();
     let url = e.currentTarget.getAttribute("href");
 
-    if (url.startsWith("data") || url.startsWith("BEGIN")) {
+    if (
+      !helpers.isMobile() &&
+      (url.startsWith("data") || url.startsWith("BEGIN"))
+    ) {
       let filename = "download.ics";
       let blob = new Blob([url], { type: "text/calendar;charset=utf-8" });
 
@@ -101,7 +104,11 @@ export default class ReactAddToCalendar extends React.Component {
           <a
               className={currentItem + "-link"}
               onClick={self.handleDropdownLinkClick}
-              href={helpers.buildUrl(self.props.event, currentItem)}
+              href={helpers.buildUrl(
+              self.props.event,
+              currentItem,
+              self.state.isCrappyIE
+            )}
               target="_blank">
             {icon}
             {currentLabel}
