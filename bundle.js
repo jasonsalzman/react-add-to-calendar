@@ -502,7 +502,7 @@
 
 /***/ }),
 /* 6 */
-[482, 7],
+[480, 7],
 /* 7 */
 /***/ (function(module, exports) {
 
@@ -5723,7 +5723,7 @@
 
 /***/ }),
 /* 50 */
-[482, 35],
+[480, 35],
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20117,13 +20117,11 @@
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -20133,172 +20131,135 @@
 
 	var _example_components2 = _interopRequireDefault(_example_components);
 
-	var _hero_example = __webpack_require__(481);
+	var _hero_example = __webpack_require__(479);
 
 	var _hero_example2 = _interopRequireDefault(_hero_example);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	  displayName: 'Root',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Root = function (_React$Component) {
-	  _inherits(Root, _React$Component);
-
-	  function Root() {
-	    _classCallCheck(this, Root);
-
-	    return _possibleConstructorReturn(this, (Root.__proto__ || Object.getPrototypeOf(Root)).apply(this, arguments));
-	  }
-
-	  _createClass(Root, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'hero' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "hero" },
+	          'div',
+	          { className: 'hero__content' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "hero__content" },
+	            'h1',
+	            { className: 'hero__title' },
+	            'React Add to Calendar Button'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__crafted-by' },
 	            _react2.default.createElement(
-	              "h1",
-	              { className: "hero__title" },
-	              "React Add to Calendar Button"
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "hero__crafted-by" },
-	              _react2.default.createElement(
-	                "a",
-	                { href: "http://4one.io", className: "hero__crafted-by-link" },
-	                "Crafted by Jason Salzman"
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "hero__example" },
-	              _react2.default.createElement(_hero_example2.default, null)
+	              'a',
+	              { href: 'http://4one.io', className: 'hero__crafted-by-link' },
+	              'Crafted by Jason Salzman'
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'hero__example' },
+	            _react2.default.createElement(_hero_example2.default, null)
 	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "wrapper" },
-	          _react2.default.createElement(
-	            "h1",
-	            null,
-	            "React Add to Calendar Button"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            _react2.default.createElement(
-	              "a",
-	              { href: "https://npmjs.org/package/react-add-to-calendar" },
-	              _react2.default.createElement("img", {
-	                src: "https://badge.fury.io/js/react-add-to-calendar.svg",
-	                className: "badge" })
-	            ),
-	            "\xA0\xA0",
-	            _react2.default.createElement(
-	              "a",
-	              { href: "https://travis-ci.org/jasonsalzman/react-add-to-calendar" },
-	              _react2.default.createElement("img", {
-	                src: "https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master",
-	                className: "badge" })
-	            ),
-	            "\xA0\xA0",
-	            _react2.default.createElement(
-	              "a",
-	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
-	              _react2.default.createElement("img", {
-	                src: "https://img.shields.io/david/strongloop/express.svg?maxAge=2592000",
-	                className: "badge" })
-	            ),
-	            "\xA0\xA0",
-	            _react2.default.createElement(
-	              "a",
-	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
-	              _react2.default.createElement("img", {
-	                src: "https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000",
-	                className: "badge" })
-	            ),
-	            "\xA0\xA0",
-	            _react2.default.createElement(
-	              "a",
-	              { href: "https://npmjs.org/package/react-add-to-calendar" },
-	              _react2.default.createElement("img", {
-	                src: "https://img.shields.io/npm/dm/react-add-to-calendar.svg",
-	                className: "badge" })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "A simple, customizable, and reusable Add to Calendar button component for React."
-	          ),
-	          _react2.default.createElement(
-	            "h2",
-	            null,
-	            "Installation"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "The package can be installed via NPM:"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            _react2.default.createElement(
-	              "code",
-	              null,
-	              "npm install react-add-to-calendar --save"
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "wrapper" },
-	          _react2.default.createElement(_example_components2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          "a",
-	          { href: "https://github.com/jasonsalzman/react-add-to-calendar/" },
-	          _react2.default.createElement("img", {
-	            className: "github-ribbon",
-	            src: "images/ribbon.png",
-	            alt: "Fork me on GitHub" })
 	        )
-	      );
-	    }
-	  }]);
-
-	  return Root;
-	}(_react2.default.Component);
-
-	exports.default = Root;
-
-
-	Root.displayName = "Root";
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'wrapper' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'React Add to Calendar Button'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://npmjs.org/package/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://badge.fury.io/js/react-add-to-calendar.svg', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://travis-ci.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://david-dm.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/david/strongloop/express.svg?maxAge=2592000', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://david-dm.org/jasonsalzman/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000', className: 'badge' })
+	          ),
+	          '\xA0\xA0',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://npmjs.org/package/react-add-to-calendar' },
+	            _react2.default.createElement('img', { src: 'https://img.shields.io/npm/dm/react-add-to-calendar.svg', className: 'badge' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'A simple, customizable, and reusable Add to Calendar button component for React.'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Installation'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'The package can be installed via NPM:'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'npm install react-add-to-calendar --save'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'wrapper' },
+	        _react2.default.createElement(_example_components2.default, null)
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'https://github.com/jasonsalzman/react-add-to-calendar/' },
+	        _react2.default.createElement('img', { className: 'github-ribbon', src: 'images/ribbon.png', alt: 'Fork me on GitHub' })
+	      )
+	    );
+	  }
+	});
 
 /***/ }),
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -20312,151 +20273,122 @@
 
 	var _default2 = _interopRequireDefault(_default);
 
-	var _changeLabel = __webpack_require__(471);
+	var _changeLabel = __webpack_require__(469);
 
 	var _changeLabel2 = _interopRequireDefault(_changeLabel);
 
-	var _changeTemplate = __webpack_require__(472);
+	var _changeTemplate = __webpack_require__(470);
 
 	var _changeTemplate2 = _interopRequireDefault(_changeTemplate);
 
-	var _textOnlyTemplate = __webpack_require__(473);
+	var _textOnlyTemplate = __webpack_require__(471);
 
 	var _textOnlyTemplate2 = _interopRequireDefault(_textOnlyTemplate);
 
-	var _textOnlyDropdown = __webpack_require__(474);
+	var _textOnlyDropdown = __webpack_require__(472);
 
 	var _textOnlyDropdown2 = _interopRequireDefault(_textOnlyDropdown);
 
-	var _changeDropdownOrder = __webpack_require__(475);
+	var _changeDropdownOrder = __webpack_require__(473);
 
 	var _changeDropdownOrder2 = _interopRequireDefault(_changeDropdownOrder);
 
-	var _removeDropdownItem = __webpack_require__(476);
+	var _removeDropdownItem = __webpack_require__(474);
 
 	var _removeDropdownItem2 = _interopRequireDefault(_removeDropdownItem);
 
-	var _changeDropdownLabels = __webpack_require__(477);
+	var _changeDropdownLabels = __webpack_require__(475);
 
 	var _changeDropdownLabels2 = _interopRequireDefault(_changeDropdownLabels);
 
-	var _code_example_component = __webpack_require__(478);
+	var _code_example_component = __webpack_require__(476);
 
 	var _code_example_component2 = _interopRequireDefault(_code_example_component);
 
-	__webpack_require__(479);
+	__webpack_require__(477);
 
-	__webpack_require__(480);
+	__webpack_require__(478);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'exampleComponents',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    componentDidMount: function componentDidMount() {
+	        _highlight2.default.initHighlightingOnLoad();
+	    },
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var examples = [{
-	  title: "Default",
-	  component: _default2.default
-	}, {
-	  title: "Change Button Label",
-	  component: _changeLabel2.default
-	}, {
-	  title: "Change Button Template",
-	  component: _changeTemplate2.default
-	}, {
-	  title: "Text Only Button Template",
-	  component: _textOnlyTemplate2.default
-	}, {
-	  title: "Text Only Dropdown Items",
-	  component: _textOnlyDropdown2.default
-	}, {
-	  title: "Change Dropdown Order",
-	  component: _changeDropdownOrder2.default
-	}, {
-	  title: "Remove Dropdown Item",
-	  component: _removeDropdownItem2.default
-	}, {
-	  title: "Change Dropdown Labels",
-	  component: _changeDropdownLabels2.default
-	}];
+	    examples: [{
+	        title: 'Default',
+	        component: _react2.default.createElement(_default2.default, null)
+	    }, {
+	        title: 'Change Button Label',
+	        component: _react2.default.createElement(_changeLabel2.default, null)
+	    }, {
+	        title: 'Change Button Template',
+	        component: _react2.default.createElement(_changeTemplate2.default, null)
+	    }, {
+	        title: 'Text Only Button Template',
+	        component: _react2.default.createElement(_textOnlyTemplate2.default, null)
+	    }, {
+	        title: 'Text Only Dropdown Items',
+	        component: _react2.default.createElement(_textOnlyDropdown2.default, null)
+	    }, {
+	        title: 'Change Dropdown Order',
+	        component: _react2.default.createElement(_changeDropdownOrder2.default, null)
+	    }, {
+	        title: 'Remove Dropdown Item',
+	        component: _react2.default.createElement(_removeDropdownItem2.default, null)
+	    }, {
+	        title: 'Change Dropdown Labels',
+	        component: _react2.default.createElement(_changeDropdownLabels2.default, null)
+	    }],
 
-	var ExampleComponents = function (_React$Component) {
-	  _inherits(ExampleComponents, _React$Component);
-
-	  function ExampleComponents() {
-	    _classCallCheck(this, ExampleComponents);
-
-	    return _possibleConstructorReturn(this, (ExampleComponents.__proto__ || Object.getPrototypeOf(ExampleComponents)).apply(this, arguments));
-	  }
-
-	  _createClass(ExampleComponents, [{
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      _highlight2.default.initHighlightingOnLoad();
-	    }
-	  }, {
-	    key: "renderExamples",
-	    value: function renderExamples() {
-	      return examples.map(function (example, index) {
+	    renderExamples: function renderExamples() {
+	        return this.examples.map(function (example, index) {
+	            return _react2.default.createElement(
+	                _code_example_component2.default,
+	                { key: 'example-' + index, id: index, title: example.title },
+	                example.component
+	            );
+	        });
+	    },
+	    renderLeftColumn: function renderLeftColumn() {
+	        return this.examples.map(function (example, index) {
+	            return _react2.default.createElement(
+	                'li',
+	                { className: 'examples__navigation-item', key: 'link-' + index },
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: '#example-' + index },
+	                    example.title
+	                )
+	            );
+	        });
+	    },
+	    render: function render() {
 	        return _react2.default.createElement(
-	          _code_example_component2.default,
-	          {
-	            key: "example-" + index,
-	            id: index,
-	            title: example.title },
-	          _react2.default.createElement(example.component, null)
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Examples'
+	            ),
+	            _react2.default.createElement(
+	                'ul',
+	                { className: 'examples__navigation' },
+	                this.renderLeftColumn()
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'examples' },
+	                this.renderExamples()
+	            )
 	        );
-	      });
 	    }
-	  }, {
-	    key: "renderLeftColumn",
-	    value: function renderLeftColumn() {
-	      return examples.map(function (example, index) {
-	        return _react2.default.createElement(
-	          "li",
-	          { className: "examples__navigation-item", key: "link-" + index },
-	          _react2.default.createElement(
-	            "a",
-	            { href: "#example-" + index },
-	            example.title
-	          )
-	        );
-	      });
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "h1",
-	          null,
-	          "Examples"
-	        ),
-	        _react2.default.createElement(
-	          "ul",
-	          { className: "examples__navigation" },
-	          this.renderLeftColumn()
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "examples" },
-	          this.renderExamples()
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ExampleComponents;
-	}(_react2.default.Component);
-
-	exports.default = ExampleComponents;
-
-
-	ExampleComponents.displayName = "exampleComponents";
+	});
 
 /***/ }),
 /* 172 */
@@ -37359,13 +37291,11 @@
 /* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -37377,93 +37307,71 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'Default',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Default = function (_React$Component) {
-	  _inherits(Default, _React$Component);
-
-	  function Default() {
-	    _classCallCheck(this, Default);
-
-	    return _possibleConstructorReturn(this, (Default.__proto__ || Object.getPrototypeOf(Default)).apply(this, arguments));
-	  }
-
-	  _createClass(Default, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let event = {",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "  title: 'Sample Event',",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "  description: 'This is the sample event provided as an example only',",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "  location: 'Portland, OR',",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "  startTime: '2016-09-16T20:15:00-04:00',",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "  endTime: '2016-09-16T21:45:00-04:00'",
-	            _react2.default.createElement("br", null),
-	            "};",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null),
-	            "/*",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "startTime and endTime can use any datetime",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "string that is acceptable by MomentJS",
-	            _react2.default.createElement("br", null),
-	            "*/"
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar event={event} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let event = \{",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  title: 'Sample Event',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  description: 'This is the sample event provided as an example only',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  location: 'Portland, OR',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  startTime: '2016-09-16T20:15:00-04:00',",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "  endTime: '2016-09-16T21:45:00-04:00'",
+	                    _react2.default.createElement('br', null),
+	                    "\};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null),
+	                    "/*",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "startTime and endTime can use any datetime",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "string that is acceptable by MomentJS",
+	                    _react2.default.createElement('br', null),
+	                    "*/"
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar event={event} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event })
+	            )
+	        );
 	    }
-	  }]);
-
-	  return Default;
-	}(_react2.default.Component);
-
-	exports.default = Default;
-
-
-	Default.displayName = "Default";
+	});
 
 /***/ }),
 /* 349 */
@@ -37481,11 +37389,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _propTypes = __webpack_require__(350);
-
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-
-	var _helpers = __webpack_require__(352);
+	var _helpers = __webpack_require__(350);
 
 	var _helpers2 = _interopRequireDefault(_helpers);
 
@@ -37554,7 +37458,7 @@
 	      e.preventDefault();
 	      var url = e.currentTarget.getAttribute("href");
 
-	      if (url.startsWith("data") || url.startsWith("BEGIN")) {
+	      if (!helpers.isMobile() && (url.startsWith("data") || url.startsWith("BEGIN"))) {
 	        var filename = "download.ics";
 	        var blob = new Blob([url], { type: "text/calendar;charset=utf-8" });
 
@@ -37562,10 +37466,10 @@
 	          window.navigator.msSaveOrOpenBlob(blob, filename);
 	        } else {
 	          /****************************************************************
-	          // many browsers do not properly support downloading data URIs
-	          // (even with "download" attribute in use) so this solution
-	          // ensures the event will download cross-browser
-	          ****************************************************************/
+	           // many browsers do not properly support downloading data URIs
+	           // (even with "download" attribute in use) so this solution
+	           // ensures the event will download cross-browser
+	           ****************************************************************/
 	          var link = document.createElement("a");
 	          link.href = window.URL.createObjectURL(blob);
 	          link.setAttribute("download", filename);
@@ -37602,7 +37506,7 @@
 	            {
 	              className: currentItem + "-link",
 	              onClick: self.handleDropdownLinkClick,
-	              href: helpers.buildUrl(self.props.event, currentItem),
+	              href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE),
 	              target: "_blank" },
 	            icon,
 	            currentLabel
@@ -37694,22 +37598,22 @@
 	ReactAddToCalendar.displayName = "Add To Calendar";
 
 	ReactAddToCalendar.propTypes = {
-	  buttonClassClosed: _propTypes2.default.string,
-	  buttonClassOpen: _propTypes2.default.string,
-	  buttonLabel: _propTypes2.default.string,
-	  buttonTemplate: _propTypes2.default.object,
-	  buttonWrapperClass: _propTypes2.default.string,
-	  displayItemIcons: _propTypes2.default.bool,
-	  dropdownClass: _propTypes2.default.string,
-	  event: _propTypes2.default.shape({
-	    title: _propTypes2.default.string,
-	    description: _propTypes2.default.string,
-	    location: _propTypes2.default.string,
-	    startTime: _propTypes2.default.string,
-	    endTime: _propTypes2.default.string
+	  buttonClassClosed: _react2.default.PropTypes.string,
+	  buttonClassOpen: _react2.default.PropTypes.string,
+	  buttonLabel: _react2.default.PropTypes.string,
+	  buttonTemplate: _react2.default.PropTypes.object,
+	  buttonWrapperClass: _react2.default.PropTypes.string,
+	  displayItemIcons: _react2.default.PropTypes.bool,
+	  dropdownClass: _react2.default.PropTypes.string,
+	  event: _react2.default.PropTypes.shape({
+	    title: _react2.default.PropTypes.string,
+	    description: _react2.default.PropTypes.string,
+	    location: _react2.default.PropTypes.string,
+	    startTime: _react2.default.PropTypes.string,
+	    endTime: _react2.default.PropTypes.string
 	  }).isRequired,
-	  listItems: _propTypes2.default.arrayOf(_propTypes2.default.object),
-	  rootClass: _propTypes2.default.string
+	  listItems: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object),
+	  rootClass: _react2.default.PropTypes.string
 	};
 
 	ReactAddToCalendar.defaultProps = {
@@ -37735,107 +37639,6 @@
 /* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	if (false) {
-	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-	    Symbol.for &&
-	    Symbol.for('react.element')) ||
-	    0xeac7;
-
-	  var isValidElement = function(object) {
-	    return typeof object === 'object' &&
-	      object !== null &&
-	      object.$$typeof === REACT_ELEMENT_TYPE;
-	  };
-
-	  // By explicitly using `prop-types` you are opting into new development behavior.
-	  // http://fb.me/prop-types-in-prod
-	  var throwOnDirectAccess = true;
-	  module.exports = require('./factoryWithTypeCheckers')(isValidElement, throwOnDirectAccess);
-	} else {
-	  // By explicitly using `prop-types` you are opting into new production behavior.
-	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(351)();
-	}
-
-
-/***/ }),
-/* 351 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	var emptyFunction = __webpack_require__(12);
-	var invariant = __webpack_require__(8);
-	var ReactPropTypesSecret = __webpack_require__(28);
-
-	module.exports = function() {
-	  function shim(props, propName, componentName, location, propFullName, secret) {
-	    if (secret === ReactPropTypesSecret) {
-	      // It is still safe when called from React.
-	      return;
-	    }
-	    invariant(
-	      false,
-	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-	      'Use PropTypes.checkPropTypes() to call them. ' +
-	      'Read more at http://fb.me/use-check-prop-types'
-	    );
-	  };
-	  shim.isRequired = shim;
-	  function getShim() {
-	    return shim;
-	  };
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-	  var ReactPropTypes = {
-	    array: shim,
-	    bool: shim,
-	    func: shim,
-	    number: shim,
-	    object: shim,
-	    string: shim,
-	    symbol: shim,
-
-	    any: shim,
-	    arrayOf: getShim,
-	    element: shim,
-	    instanceOf: getShim,
-	    node: shim,
-	    objectOf: getShim,
-	    oneOf: getShim,
-	    oneOfType: getShim,
-	    shape: getShim
-	  };
-
-	  ReactPropTypes.checkPropTypes = emptyFunction;
-	  ReactPropTypes.PropTypes = ReactPropTypes;
-
-	  return ReactPropTypes;
-	};
-
-
-/***/ }),
-/* 352 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -37844,7 +37647,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _moment = __webpack_require__(353);
+	var _moment = __webpack_require__(351);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -37886,8 +37689,11 @@
 	    }
 	  }, {
 	    key: "buildUrl",
-	    value: function buildUrl(event, type) {
+	    value: function buildUrl(event, type, isCrappyIE) {
 	      var calendarUrl = "";
+
+	      // allow mobile browsers to open the gmail data URI within native calendar app
+	      type = type == "google" && this.isMobile() ? "outlook" : type;
 
 	      switch (type) {
 	        case "google":
@@ -37925,9 +37731,27 @@
 
 	        default:
 	          calendarUrl = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "URL:" + document.URL, "DTSTART:" + this.formatTime(event.startTime), "DTEND:" + this.formatTime(event.endTime), "SUMMARY:" + event.title, "DESCRIPTION:" + event.description, "LOCATION:" + event.location, "END:VEVENT", "END:VCALENDAR"].join("\n");
+
+	          if (!isCrappyIE && this.isMobile()) {
+	            calendarUrl = encodeURI("data:text/calendar;charset=utf8," + calendarUrl);
+	          }
 	      }
 
 	      return calendarUrl;
+	    }
+
+	    // determine if a mobile browser is being used
+
+	  }, {
+	    key: "isMobile",
+	    value: function isMobile() {
+	      var mobile = false;
+
+	      (function (a) {
+	        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) mobile = true;
+	      })(window.navigator.userAgent || window.navigator.vendor || window.opera);
+
+	      return mobile;
 	    }
 	  }]);
 
@@ -37937,7 +37761,7 @@
 	exports.default = helpers;
 
 /***/ }),
-/* 353 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -39769,7 +39593,7 @@
 	            module && module.exports) {
 	        try {
 	            oldLocale = globalLocale._abbr;
-	            __webpack_require__(355)("./" + name);
+	            __webpack_require__(353)("./" + name);
 	            // because defineLocale currently also sets the global locale, we
 	            // want to undo that for lazy loaded locales
 	            getSetGlobalLocale(oldLocale);
@@ -42404,10 +42228,10 @@
 
 	})));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(354)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(352)(module)))
 
 /***/ }),
-/* 354 */
+/* 352 */
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
@@ -42423,240 +42247,240 @@
 
 
 /***/ }),
-/* 355 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./af": 356,
-		"./af.js": 356,
-		"./ar": 357,
-		"./ar-dz": 358,
-		"./ar-dz.js": 358,
-		"./ar-kw": 359,
-		"./ar-kw.js": 359,
-		"./ar-ly": 360,
-		"./ar-ly.js": 360,
-		"./ar-ma": 361,
-		"./ar-ma.js": 361,
-		"./ar-sa": 362,
-		"./ar-sa.js": 362,
-		"./ar-tn": 363,
-		"./ar-tn.js": 363,
-		"./ar.js": 357,
-		"./az": 364,
-		"./az.js": 364,
-		"./be": 365,
-		"./be.js": 365,
-		"./bg": 366,
-		"./bg.js": 366,
-		"./bn": 367,
-		"./bn.js": 367,
-		"./bo": 368,
-		"./bo.js": 368,
-		"./br": 369,
-		"./br.js": 369,
-		"./bs": 370,
-		"./bs.js": 370,
-		"./ca": 371,
-		"./ca.js": 371,
-		"./cs": 372,
-		"./cs.js": 372,
-		"./cv": 373,
-		"./cv.js": 373,
-		"./cy": 374,
-		"./cy.js": 374,
-		"./da": 375,
-		"./da.js": 375,
-		"./de": 376,
-		"./de-at": 377,
-		"./de-at.js": 377,
-		"./de-ch": 378,
-		"./de-ch.js": 378,
-		"./de.js": 376,
-		"./dv": 379,
-		"./dv.js": 379,
-		"./el": 380,
-		"./el.js": 380,
-		"./en-au": 381,
-		"./en-au.js": 381,
-		"./en-ca": 382,
-		"./en-ca.js": 382,
-		"./en-gb": 383,
-		"./en-gb.js": 383,
-		"./en-ie": 384,
-		"./en-ie.js": 384,
-		"./en-nz": 385,
-		"./en-nz.js": 385,
-		"./eo": 386,
-		"./eo.js": 386,
-		"./es": 387,
-		"./es-do": 388,
-		"./es-do.js": 388,
-		"./es.js": 387,
-		"./et": 389,
-		"./et.js": 389,
-		"./eu": 390,
-		"./eu.js": 390,
-		"./fa": 391,
-		"./fa.js": 391,
-		"./fi": 392,
-		"./fi.js": 392,
-		"./fo": 393,
-		"./fo.js": 393,
-		"./fr": 394,
-		"./fr-ca": 395,
-		"./fr-ca.js": 395,
-		"./fr-ch": 396,
-		"./fr-ch.js": 396,
-		"./fr.js": 394,
-		"./fy": 397,
-		"./fy.js": 397,
-		"./gd": 398,
-		"./gd.js": 398,
-		"./gl": 399,
-		"./gl.js": 399,
-		"./gom-latn": 400,
-		"./gom-latn.js": 400,
-		"./he": 401,
-		"./he.js": 401,
-		"./hi": 402,
-		"./hi.js": 402,
-		"./hr": 403,
-		"./hr.js": 403,
-		"./hu": 404,
-		"./hu.js": 404,
-		"./hy-am": 405,
-		"./hy-am.js": 405,
-		"./id": 406,
-		"./id.js": 406,
-		"./is": 407,
-		"./is.js": 407,
-		"./it": 408,
-		"./it.js": 408,
-		"./ja": 409,
-		"./ja.js": 409,
-		"./jv": 410,
-		"./jv.js": 410,
-		"./ka": 411,
-		"./ka.js": 411,
-		"./kk": 412,
-		"./kk.js": 412,
-		"./km": 413,
-		"./km.js": 413,
-		"./kn": 414,
-		"./kn.js": 414,
-		"./ko": 415,
-		"./ko.js": 415,
-		"./ky": 416,
-		"./ky.js": 416,
-		"./lb": 417,
-		"./lb.js": 417,
-		"./lo": 418,
-		"./lo.js": 418,
-		"./lt": 419,
-		"./lt.js": 419,
-		"./lv": 420,
-		"./lv.js": 420,
-		"./me": 421,
-		"./me.js": 421,
-		"./mi": 422,
-		"./mi.js": 422,
-		"./mk": 423,
-		"./mk.js": 423,
-		"./ml": 424,
-		"./ml.js": 424,
-		"./mr": 425,
-		"./mr.js": 425,
-		"./ms": 426,
-		"./ms-my": 427,
-		"./ms-my.js": 427,
-		"./ms.js": 426,
-		"./my": 428,
-		"./my.js": 428,
-		"./nb": 429,
-		"./nb.js": 429,
-		"./ne": 430,
-		"./ne.js": 430,
-		"./nl": 431,
-		"./nl-be": 432,
-		"./nl-be.js": 432,
-		"./nl.js": 431,
-		"./nn": 433,
-		"./nn.js": 433,
-		"./pa-in": 434,
-		"./pa-in.js": 434,
-		"./pl": 435,
-		"./pl.js": 435,
-		"./pt": 436,
-		"./pt-br": 437,
-		"./pt-br.js": 437,
-		"./pt.js": 436,
-		"./ro": 438,
-		"./ro.js": 438,
-		"./ru": 439,
-		"./ru.js": 439,
-		"./sd": 440,
-		"./sd.js": 440,
-		"./se": 441,
-		"./se.js": 441,
-		"./si": 442,
-		"./si.js": 442,
-		"./sk": 443,
-		"./sk.js": 443,
-		"./sl": 444,
-		"./sl.js": 444,
-		"./sq": 445,
-		"./sq.js": 445,
-		"./sr": 446,
-		"./sr-cyrl": 447,
-		"./sr-cyrl.js": 447,
-		"./sr.js": 446,
-		"./ss": 448,
-		"./ss.js": 448,
-		"./sv": 449,
-		"./sv.js": 449,
-		"./sw": 450,
-		"./sw.js": 450,
-		"./ta": 451,
-		"./ta.js": 451,
-		"./te": 452,
-		"./te.js": 452,
-		"./tet": 453,
-		"./tet.js": 453,
-		"./th": 454,
-		"./th.js": 454,
-		"./tl-ph": 455,
-		"./tl-ph.js": 455,
-		"./tlh": 456,
-		"./tlh.js": 456,
-		"./tr": 457,
-		"./tr.js": 457,
-		"./tzl": 458,
-		"./tzl.js": 458,
-		"./tzm": 459,
-		"./tzm-latn": 460,
-		"./tzm-latn.js": 460,
-		"./tzm.js": 459,
-		"./uk": 461,
-		"./uk.js": 461,
-		"./ur": 462,
-		"./ur.js": 462,
-		"./uz": 463,
-		"./uz-latn": 464,
-		"./uz-latn.js": 464,
-		"./uz.js": 463,
-		"./vi": 465,
-		"./vi.js": 465,
-		"./x-pseudo": 466,
-		"./x-pseudo.js": 466,
-		"./yo": 467,
-		"./yo.js": 467,
-		"./zh-cn": 468,
-		"./zh-cn.js": 468,
-		"./zh-hk": 469,
-		"./zh-hk.js": 469,
-		"./zh-tw": 470,
-		"./zh-tw.js": 470
+		"./af": 354,
+		"./af.js": 354,
+		"./ar": 355,
+		"./ar-dz": 356,
+		"./ar-dz.js": 356,
+		"./ar-kw": 357,
+		"./ar-kw.js": 357,
+		"./ar-ly": 358,
+		"./ar-ly.js": 358,
+		"./ar-ma": 359,
+		"./ar-ma.js": 359,
+		"./ar-sa": 360,
+		"./ar-sa.js": 360,
+		"./ar-tn": 361,
+		"./ar-tn.js": 361,
+		"./ar.js": 355,
+		"./az": 362,
+		"./az.js": 362,
+		"./be": 363,
+		"./be.js": 363,
+		"./bg": 364,
+		"./bg.js": 364,
+		"./bn": 365,
+		"./bn.js": 365,
+		"./bo": 366,
+		"./bo.js": 366,
+		"./br": 367,
+		"./br.js": 367,
+		"./bs": 368,
+		"./bs.js": 368,
+		"./ca": 369,
+		"./ca.js": 369,
+		"./cs": 370,
+		"./cs.js": 370,
+		"./cv": 371,
+		"./cv.js": 371,
+		"./cy": 372,
+		"./cy.js": 372,
+		"./da": 373,
+		"./da.js": 373,
+		"./de": 374,
+		"./de-at": 375,
+		"./de-at.js": 375,
+		"./de-ch": 376,
+		"./de-ch.js": 376,
+		"./de.js": 374,
+		"./dv": 377,
+		"./dv.js": 377,
+		"./el": 378,
+		"./el.js": 378,
+		"./en-au": 379,
+		"./en-au.js": 379,
+		"./en-ca": 380,
+		"./en-ca.js": 380,
+		"./en-gb": 381,
+		"./en-gb.js": 381,
+		"./en-ie": 382,
+		"./en-ie.js": 382,
+		"./en-nz": 383,
+		"./en-nz.js": 383,
+		"./eo": 384,
+		"./eo.js": 384,
+		"./es": 385,
+		"./es-do": 386,
+		"./es-do.js": 386,
+		"./es.js": 385,
+		"./et": 387,
+		"./et.js": 387,
+		"./eu": 388,
+		"./eu.js": 388,
+		"./fa": 389,
+		"./fa.js": 389,
+		"./fi": 390,
+		"./fi.js": 390,
+		"./fo": 391,
+		"./fo.js": 391,
+		"./fr": 392,
+		"./fr-ca": 393,
+		"./fr-ca.js": 393,
+		"./fr-ch": 394,
+		"./fr-ch.js": 394,
+		"./fr.js": 392,
+		"./fy": 395,
+		"./fy.js": 395,
+		"./gd": 396,
+		"./gd.js": 396,
+		"./gl": 397,
+		"./gl.js": 397,
+		"./gom-latn": 398,
+		"./gom-latn.js": 398,
+		"./he": 399,
+		"./he.js": 399,
+		"./hi": 400,
+		"./hi.js": 400,
+		"./hr": 401,
+		"./hr.js": 401,
+		"./hu": 402,
+		"./hu.js": 402,
+		"./hy-am": 403,
+		"./hy-am.js": 403,
+		"./id": 404,
+		"./id.js": 404,
+		"./is": 405,
+		"./is.js": 405,
+		"./it": 406,
+		"./it.js": 406,
+		"./ja": 407,
+		"./ja.js": 407,
+		"./jv": 408,
+		"./jv.js": 408,
+		"./ka": 409,
+		"./ka.js": 409,
+		"./kk": 410,
+		"./kk.js": 410,
+		"./km": 411,
+		"./km.js": 411,
+		"./kn": 412,
+		"./kn.js": 412,
+		"./ko": 413,
+		"./ko.js": 413,
+		"./ky": 414,
+		"./ky.js": 414,
+		"./lb": 415,
+		"./lb.js": 415,
+		"./lo": 416,
+		"./lo.js": 416,
+		"./lt": 417,
+		"./lt.js": 417,
+		"./lv": 418,
+		"./lv.js": 418,
+		"./me": 419,
+		"./me.js": 419,
+		"./mi": 420,
+		"./mi.js": 420,
+		"./mk": 421,
+		"./mk.js": 421,
+		"./ml": 422,
+		"./ml.js": 422,
+		"./mr": 423,
+		"./mr.js": 423,
+		"./ms": 424,
+		"./ms-my": 425,
+		"./ms-my.js": 425,
+		"./ms.js": 424,
+		"./my": 426,
+		"./my.js": 426,
+		"./nb": 427,
+		"./nb.js": 427,
+		"./ne": 428,
+		"./ne.js": 428,
+		"./nl": 429,
+		"./nl-be": 430,
+		"./nl-be.js": 430,
+		"./nl.js": 429,
+		"./nn": 431,
+		"./nn.js": 431,
+		"./pa-in": 432,
+		"./pa-in.js": 432,
+		"./pl": 433,
+		"./pl.js": 433,
+		"./pt": 434,
+		"./pt-br": 435,
+		"./pt-br.js": 435,
+		"./pt.js": 434,
+		"./ro": 436,
+		"./ro.js": 436,
+		"./ru": 437,
+		"./ru.js": 437,
+		"./sd": 438,
+		"./sd.js": 438,
+		"./se": 439,
+		"./se.js": 439,
+		"./si": 440,
+		"./si.js": 440,
+		"./sk": 441,
+		"./sk.js": 441,
+		"./sl": 442,
+		"./sl.js": 442,
+		"./sq": 443,
+		"./sq.js": 443,
+		"./sr": 444,
+		"./sr-cyrl": 445,
+		"./sr-cyrl.js": 445,
+		"./sr.js": 444,
+		"./ss": 446,
+		"./ss.js": 446,
+		"./sv": 447,
+		"./sv.js": 447,
+		"./sw": 448,
+		"./sw.js": 448,
+		"./ta": 449,
+		"./ta.js": 449,
+		"./te": 450,
+		"./te.js": 450,
+		"./tet": 451,
+		"./tet.js": 451,
+		"./th": 452,
+		"./th.js": 452,
+		"./tl-ph": 453,
+		"./tl-ph.js": 453,
+		"./tlh": 454,
+		"./tlh.js": 454,
+		"./tr": 455,
+		"./tr.js": 455,
+		"./tzl": 456,
+		"./tzl.js": 456,
+		"./tzm": 457,
+		"./tzm-latn": 458,
+		"./tzm-latn.js": 458,
+		"./tzm.js": 457,
+		"./uk": 459,
+		"./uk.js": 459,
+		"./ur": 460,
+		"./ur.js": 460,
+		"./uz": 461,
+		"./uz-latn": 462,
+		"./uz-latn.js": 462,
+		"./uz.js": 461,
+		"./vi": 463,
+		"./vi.js": 463,
+		"./x-pseudo": 464,
+		"./x-pseudo.js": 464,
+		"./yo": 465,
+		"./yo.js": 465,
+		"./zh-cn": 466,
+		"./zh-cn.js": 466,
+		"./zh-hk": 467,
+		"./zh-hk.js": 467,
+		"./zh-tw": 468,
+		"./zh-tw.js": 468
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -42669,11 +42493,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 355;
+	webpackContext.id = 353;
 
 
 /***/ }),
-/* 356 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42681,7 +42505,7 @@
 	//! author : Werner Mollentze : https://github.com/wernerm
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42751,7 +42575,7 @@
 
 
 /***/ }),
-/* 357 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42761,7 +42585,7 @@
 	//! author : forabi https://github.com/forabi
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42898,7 +42722,7 @@
 
 
 /***/ }),
-/* 358 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42906,7 +42730,7 @@
 	//! author : Noureddine LOUAHEDJ : https://github.com/noureddineme
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42962,7 +42786,7 @@
 
 
 /***/ }),
-/* 359 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42970,7 +42794,7 @@
 	//! author : Nusret Parlak: https://github.com/nusretparlak
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43026,7 +42850,7 @@
 
 
 /***/ }),
-/* 360 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43034,7 +42858,7 @@
 	//! author : Ali Hmer: https://github.com/kikoanis
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43157,7 +42981,7 @@
 
 
 /***/ }),
-/* 361 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43166,7 +42990,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43222,7 +43046,7 @@
 
 
 /***/ }),
-/* 362 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43230,7 +43054,7 @@
 	//! author : Suhail Alkowaileet : https://github.com/xsoh
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43332,7 +43156,7 @@
 
 
 /***/ }),
-/* 363 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43340,7 +43164,7 @@
 	//! author : Nader Toukabri : https://github.com/naderio
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43396,7 +43220,7 @@
 
 
 /***/ }),
-/* 364 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43404,7 +43228,7 @@
 	//! author : topchiyev : https://github.com/topchiyev
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43506,7 +43330,7 @@
 
 
 /***/ }),
-/* 365 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43516,7 +43340,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43645,7 +43469,7 @@
 
 
 /***/ }),
-/* 366 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43653,7 +43477,7 @@
 	//! author : Krasen Borisov : https://github.com/kraz
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43740,7 +43564,7 @@
 
 
 /***/ }),
-/* 367 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43748,7 +43572,7 @@
 	//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43864,7 +43688,7 @@
 
 
 /***/ }),
-/* 368 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43872,7 +43696,7 @@
 	//! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43988,7 +43812,7 @@
 
 
 /***/ }),
-/* 369 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43996,7 +43820,7 @@
 	//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44101,7 +43925,7 @@
 
 
 /***/ }),
-/* 370 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44110,7 +43934,7 @@
 	//! based on (hr) translation by Bojan Marković
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44249,7 +44073,7 @@
 
 
 /***/ }),
-/* 371 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44257,7 +44081,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44342,7 +44166,7 @@
 
 
 /***/ }),
-/* 372 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44350,7 +44174,7 @@
 	//! author : petrbela : https://github.com/petrbela
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44519,7 +44343,7 @@
 
 
 /***/ }),
-/* 373 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44527,7 +44351,7 @@
 	//! author : Anatoly Mironov : https://github.com/mirontoli
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44587,7 +44411,7 @@
 
 
 /***/ }),
-/* 374 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44596,7 +44420,7 @@
 	//! author : https://github.com/ryangreaves
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44673,7 +44497,7 @@
 
 
 /***/ }),
-/* 375 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44681,7 +44505,7 @@
 	//! author : Ulrik Nielsen : https://github.com/mrbase
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44738,7 +44562,7 @@
 
 
 /***/ }),
-/* 376 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44748,7 +44572,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44821,7 +44645,7 @@
 
 
 /***/ }),
-/* 377 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44832,7 +44656,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44905,7 +44729,7 @@
 
 
 /***/ }),
-/* 378 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44913,7 +44737,7 @@
 	//! author : sschueller : https://github.com/sschueller
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44988,7 +44812,7 @@
 
 
 /***/ }),
-/* 379 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44996,7 +44820,7 @@
 	//! author : Jawish Hameed : https://github.com/jawish
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45093,7 +44917,7 @@
 
 
 /***/ }),
-/* 380 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45101,7 +44925,7 @@
 	//! author : Aggelos Karalias : https://github.com/mehiel
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45198,7 +45022,7 @@
 
 
 /***/ }),
-/* 381 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45206,7 +45030,7 @@
 	//! author : Jared Morse : https://github.com/jarcoal
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45270,7 +45094,7 @@
 
 
 /***/ }),
-/* 382 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45278,7 +45102,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45338,7 +45162,7 @@
 
 
 /***/ }),
-/* 383 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45346,7 +45170,7 @@
 	//! author : Chris Gedrim : https://github.com/chrisgedrim
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45410,7 +45234,7 @@
 
 
 /***/ }),
-/* 384 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45418,7 +45242,7 @@
 	//! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45482,7 +45306,7 @@
 
 
 /***/ }),
-/* 385 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45490,7 +45314,7 @@
 	//! author : Luke McGregor : https://github.com/lukemcgregor
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45554,7 +45378,7 @@
 
 
 /***/ }),
-/* 386 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45564,7 +45388,7 @@
 	//! comment : miestasmia corrected the translation by colindean
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45632,7 +45456,7 @@
 
 
 /***/ }),
-/* 387 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45640,7 +45464,7 @@
 	//! author : Julio Napurí : https://github.com/julionc
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45720,14 +45544,14 @@
 
 
 /***/ }),
-/* 388 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale : Spanish (Dominican Republic) [es-do]
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45807,7 +45631,7 @@
 
 
 /***/ }),
-/* 389 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45816,7 +45640,7 @@
 	//! improvements : Illimar Tambek : https://github.com/ragulka
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45892,7 +45716,7 @@
 
 
 /***/ }),
-/* 390 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45900,7 +45724,7 @@
 	//! author : Eneko Illarramendi : https://github.com/eillarra
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45963,7 +45787,7 @@
 
 
 /***/ }),
-/* 391 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45971,7 +45795,7 @@
 	//! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46075,7 +45899,7 @@
 
 
 /***/ }),
-/* 392 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46083,7 +45907,7 @@
 	//! author : Tarmo Aidantausta : https://github.com/bleadof
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46187,7 +46011,7 @@
 
 
 /***/ }),
-/* 393 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46195,7 +46019,7 @@
 	//! author : Ragnar Johannesen : https://github.com/ragnar123
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46252,7 +46076,7 @@
 
 
 /***/ }),
-/* 394 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46260,7 +46084,7 @@
 	//! author : John Fischer : https://github.com/jfroffice
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46340,7 +46164,7 @@
 
 
 /***/ }),
-/* 395 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46348,7 +46172,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46419,7 +46243,7 @@
 
 
 /***/ }),
-/* 396 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46427,7 +46251,7 @@
 	//! author : Gaspard Bucher : https://github.com/gaspard
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46502,7 +46326,7 @@
 
 
 /***/ }),
-/* 397 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46510,7 +46334,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46582,7 +46406,7 @@
 
 
 /***/ }),
-/* 398 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46590,7 +46414,7 @@
 	//! author : Jon Ashdown : https://github.com/jonashdown
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46663,7 +46487,7 @@
 
 
 /***/ }),
-/* 399 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46671,7 +46495,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46745,7 +46569,7 @@
 
 
 /***/ }),
-/* 400 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46753,7 +46577,7 @@
 	//! author : The Discoverer : https://github.com/WikiDiscoverer
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46872,7 +46696,7 @@
 
 
 /***/ }),
-/* 401 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46882,7 +46706,7 @@
 	//! author : Tal Ater : https://github.com/TalAter
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46976,7 +46800,7 @@
 
 
 /***/ }),
-/* 402 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46984,7 +46808,7 @@
 	//! author : Mayank Singhal : https://github.com/mayanksinghal
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47105,7 +46929,7 @@
 
 
 /***/ }),
-/* 403 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47113,7 +46937,7 @@
 	//! author : Bojan Marković : https://github.com/bmarkovic
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47255,7 +47079,7 @@
 
 
 /***/ }),
-/* 404 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47263,7 +47087,7 @@
 	//! author : Adam Brunner : https://github.com/adambrunner
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47369,7 +47193,7 @@
 
 
 /***/ }),
-/* 405 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47377,7 +47201,7 @@
 	//! author : Armendarabyan : https://github.com/armendarabyan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47469,7 +47293,7 @@
 
 
 /***/ }),
-/* 406 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47478,7 +47302,7 @@
 	//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47557,7 +47381,7 @@
 
 
 /***/ }),
-/* 407 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47565,7 +47389,7 @@
 	//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47689,7 +47513,7 @@
 
 
 /***/ }),
-/* 408 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47698,7 +47522,7 @@
 	//! author: Mattia Larentis: https://github.com/nostalgiaz
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47764,7 +47588,7 @@
 
 
 /***/ }),
-/* 409 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47772,7 +47596,7 @@
 	//! author : LI Long : https://github.com/baryon
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47849,7 +47673,7 @@
 
 
 /***/ }),
-/* 410 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47858,7 +47682,7 @@
 	//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47937,7 +47761,7 @@
 
 
 /***/ }),
-/* 411 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47945,7 +47769,7 @@
 	//! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48031,7 +47855,7 @@
 
 
 /***/ }),
-/* 412 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48039,7 +47863,7 @@
 	//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48123,7 +47947,7 @@
 
 
 /***/ }),
-/* 413 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48131,7 +47955,7 @@
 	//! author : Kruy Vanna : https://github.com/kruyvanna
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48186,7 +48010,7 @@
 
 
 /***/ }),
-/* 414 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48194,7 +48018,7 @@
 	//! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48317,7 +48141,7 @@
 
 
 /***/ }),
-/* 415 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48326,7 +48150,7 @@
 	//! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48391,7 +48215,7 @@
 
 
 /***/ }),
-/* 416 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48399,7 +48223,7 @@
 	//! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48484,7 +48308,7 @@
 
 
 /***/ }),
-/* 417 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48493,7 +48317,7 @@
 	//! author : David Raison : https://github.com/kwisatz
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48626,7 +48450,7 @@
 
 
 /***/ }),
-/* 418 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48634,7 +48458,7 @@
 	//! author : Ryan Hart : https://github.com/ryanhart2
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48701,7 +48525,7 @@
 
 
 /***/ }),
-/* 419 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48709,7 +48533,7 @@
 	//! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48823,7 +48647,7 @@
 
 
 /***/ }),
-/* 420 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48832,7 +48656,7 @@
 	//! author : Jānis Elmeris : https://github.com/JanisE
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48925,7 +48749,7 @@
 
 
 /***/ }),
-/* 421 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48933,7 +48757,7 @@
 	//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49041,7 +48865,7 @@
 
 
 /***/ }),
-/* 422 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49049,7 +48873,7 @@
 	//! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49110,7 +48934,7 @@
 
 
 /***/ }),
-/* 423 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49118,7 +48942,7 @@
 	//! author : Borislav Mickov : https://github.com/B0k0
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49205,7 +49029,7 @@
 
 
 /***/ }),
-/* 424 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49213,7 +49037,7 @@
 	//! author : Floyd Pink : https://github.com/floydpink
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49291,7 +49115,7 @@
 
 
 /***/ }),
-/* 425 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49300,7 +49124,7 @@
 	//! author : Vivek Athalye : https://github.com/vnathalye
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49455,7 +49279,7 @@
 
 
 /***/ }),
-/* 426 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49463,7 +49287,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49542,7 +49366,7 @@
 
 
 /***/ }),
-/* 427 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49551,7 +49375,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49630,7 +49454,7 @@
 
 
 /***/ }),
-/* 428 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49640,7 +49464,7 @@
 	//! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49731,7 +49555,7 @@
 
 
 /***/ }),
-/* 429 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49740,7 +49564,7 @@
 	//!           Sigurd Gartmann : https://github.com/sigurdga
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49799,7 +49623,7 @@
 
 
 /***/ }),
-/* 430 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49807,7 +49631,7 @@
 	//! author : suvash : https://github.com/suvash
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49927,7 +49751,7 @@
 
 
 /***/ }),
-/* 431 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49936,7 +49760,7 @@
 	//! author : Jacob Middag : https://github.com/middagj
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50020,7 +49844,7 @@
 
 
 /***/ }),
-/* 432 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50029,7 +49853,7 @@
 	//! author : Jacob Middag : https://github.com/middagj
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50113,7 +49937,7 @@
 
 
 /***/ }),
-/* 433 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50121,7 +49945,7 @@
 	//! author : https://github.com/mechuwind
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50178,7 +50002,7 @@
 
 
 /***/ }),
-/* 434 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50186,7 +50010,7 @@
 	//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50307,7 +50131,7 @@
 
 
 /***/ }),
-/* 435 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50315,7 +50139,7 @@
 	//! author : Rafal Hirsz : https://github.com/evoL
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50419,7 +50243,7 @@
 
 
 /***/ }),
-/* 436 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50427,7 +50251,7 @@
 	//! author : Jefferson : https://github.com/jalex79
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50489,7 +50313,7 @@
 
 
 /***/ }),
-/* 437 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50497,7 +50321,7 @@
 	//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50555,7 +50379,7 @@
 
 
 /***/ }),
-/* 438 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50564,7 +50388,7 @@
 	//! author : Valentin Agachi : https://github.com/avaly
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50635,7 +50459,7 @@
 
 
 /***/ }),
-/* 439 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50645,7 +50469,7 @@
 	//! author : Коренберг Марк : https://github.com/socketpair
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50823,7 +50647,7 @@
 
 
 /***/ }),
-/* 440 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50831,7 +50655,7 @@
 	//! author : Narain Sagar : https://github.com/narainsagar
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50926,7 +50750,7 @@
 
 
 /***/ }),
-/* 441 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50934,7 +50758,7 @@
 	//! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50992,7 +50816,7 @@
 
 
 /***/ }),
-/* 442 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51000,7 +50824,7 @@
 	//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51068,7 +50892,7 @@
 
 
 /***/ }),
-/* 443 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51077,7 +50901,7 @@
 	//! based on work of petrbela : https://github.com/petrbela
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51223,7 +51047,7 @@
 
 
 /***/ }),
-/* 444 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51231,7 +51055,7 @@
 	//! author : Robert Sedovšek : https://github.com/sedovsek
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51390,7 +51214,7 @@
 
 
 /***/ }),
-/* 445 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51400,7 +51224,7 @@
 	//! author : Oerd Cukalla : https://github.com/oerd
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51465,7 +51289,7 @@
 
 
 /***/ }),
-/* 446 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51473,7 +51297,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51580,7 +51404,7 @@
 
 
 /***/ }),
-/* 447 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51588,7 +51412,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51695,7 +51519,7 @@
 
 
 /***/ }),
-/* 448 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51703,7 +51527,7 @@
 	//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51789,7 +51613,7 @@
 
 
 /***/ }),
-/* 449 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51797,7 +51621,7 @@
 	//! author : Jens Alm : https://github.com/ulmus
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51863,7 +51687,7 @@
 
 
 /***/ }),
-/* 450 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51871,7 +51695,7 @@
 	//! author : Fahad Kassim : https://github.com/fadsel
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -51927,7 +51751,7 @@
 
 
 /***/ }),
-/* 451 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -51935,7 +51759,7 @@
 	//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52062,7 +51886,7 @@
 
 
 /***/ }),
-/* 452 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52070,7 +51894,7 @@
 	//! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52156,7 +51980,7 @@
 
 
 /***/ }),
-/* 453 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52165,7 +51989,7 @@
 	//! author : Onorio De J. Afonso : https://github.com/marobo
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52229,7 +52053,7 @@
 
 
 /***/ }),
-/* 454 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52237,7 +52061,7 @@
 	//! author : Kridsada Thanabulpong : https://github.com/sirn
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52301,7 +52125,7 @@
 
 
 /***/ }),
-/* 455 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52309,7 +52133,7 @@
 	//! author : Dan Hagman : https://github.com/hagmandan
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52368,7 +52192,7 @@
 
 
 /***/ }),
-/* 456 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52376,7 +52200,7 @@
 	//! author : Dominika Kruk : https://github.com/amaranthrose
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52493,7 +52317,7 @@
 
 
 /***/ }),
-/* 457 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52502,7 +52326,7 @@
 	//!           Burak Yiğit Kaya: https://github.com/BYK
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52588,7 +52412,7 @@
 
 
 /***/ }),
-/* 458 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52597,7 +52421,7 @@
 	//! author : Iustì Canun
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52684,7 +52508,7 @@
 
 
 /***/ }),
-/* 459 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52692,7 +52516,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52747,7 +52571,7 @@
 
 
 /***/ }),
-/* 460 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52755,7 +52579,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52810,7 +52634,7 @@
 
 
 /***/ }),
-/* 461 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52819,7 +52643,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -52966,7 +52790,7 @@
 
 
 /***/ }),
-/* 462 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -52975,7 +52799,7 @@
 	//! author : Zack : https://github.com/ZackVision
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53070,7 +52894,7 @@
 
 
 /***/ }),
-/* 463 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53078,7 +52902,7 @@
 	//! author : Sardor Muminov : https://github.com/muminoff
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53133,7 +52957,7 @@
 
 
 /***/ }),
-/* 464 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53141,7 +52965,7 @@
 	//! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53196,7 +53020,7 @@
 
 
 /***/ }),
-/* 465 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53204,7 +53028,7 @@
 	//! author : Bang Nguyen : https://github.com/bangnk
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53280,7 +53104,7 @@
 
 
 /***/ }),
-/* 466 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53288,7 +53112,7 @@
 	//! author : Andrew Hood : https://github.com/andrewhood125
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53353,7 +53177,7 @@
 
 
 /***/ }),
-/* 467 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53361,7 +53185,7 @@
 	//! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53418,7 +53242,7 @@
 
 
 /***/ }),
-/* 468 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53427,7 +53251,7 @@
 	//! author : Zeno Zeng : https://github.com/zenozeng
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53534,7 +53358,7 @@
 
 
 /***/ }),
-/* 469 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53544,7 +53368,7 @@
 	//! author : Konstantin : https://github.com/skfd
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53644,7 +53468,7 @@
 
 
 /***/ }),
-/* 470 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -53653,7 +53477,7 @@
 	//! author : Chris Lam : https://github.com/hehachris
 
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(353)) :
+	    true ? factory(__webpack_require__(351)) :
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -53753,16 +53577,14 @@
 
 
 /***/ }),
-/* 471 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -53774,78 +53596,201 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'ChangeLabel',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ChangeLabel = function (_React$Component) {
-	  _inherits(ChangeLabel, _React$Component);
-
-	  function ChangeLabel() {
-	    _classCallCheck(this, ChangeLabel);
-
-	    return _possibleConstructorReturn(this, (ChangeLabel.__proto__ || Object.getPrototypeOf(ChangeLabel)).apply(this, arguments));
-	  }
-
-	  _createClass(ChangeLabel, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            'buttonLabel="Put on my calendar" />'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonLabel: "Put on my calendar" })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonLabel=\"Put on my calendar\" />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonLabel: 'Put on my calendar' })
+	            )
+	        );
 	    }
-	  }]);
+	});
 
-	  return ChangeLabel;
-	}(_react2.default.Component);
+/***/ }),
+/* 470 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports.default = ChangeLabel;
+	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
-	ChangeLabel.displayName = "ChangeLabel";
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(349);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'ChangeTemplate',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var icon = { 'calendar-plus-o': 'left' };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let icon = \{ 'calendar-plus-o': 'left' \};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null),
+	                    "/*",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "object property can be any Font Awesome icon",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "and value can be 'left' or 'right'",
+	                    _react2.default.createElement('br', null),
+	                    "*/",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonTemplate=\{icon\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
+	            )
+	        );
+	    }
+	});
+
+/***/ }),
+/* 471 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddToCalendar = __webpack_require__(349);
+
+	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'TextOnlyTemplate',
+
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
+
+	        var icon = { textOnly: 'none' };
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let icon = \{ textOnly: 'none' \};",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "buttonTemplate=\{icon\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
+	            )
+	        );
+	    }
+	});
 
 /***/ }),
 /* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -53857,98 +53802,54 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'TextOnlyDropdown',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ChangeTemplate = function (_React$Component) {
-	  _inherits(ChangeTemplate, _React$Component);
-
-	  function ChangeTemplate() {
-	    _classCallCheck(this, ChangeTemplate);
-
-	    return _possibleConstructorReturn(this, (ChangeTemplate.__proto__ || Object.getPrototypeOf(ChangeTemplate)).apply(this, arguments));
-	  }
-
-	  _createClass(ChangeTemplate, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      var icon = { "calendar-plus-o": "left" };
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let icon = { 'calendar-plus-o': 'left' };",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null),
-	            "/*",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "object property can be any Font Awesome icon",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "and value can be 'left' or 'right'",
-	            _react2.default.createElement("br", null),
-	            "*/",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null)
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "buttonTemplate={icon} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "displayItemIcons=\{false\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, displayItemIcons: false })
+	            )
+	        );
 	    }
-	  }]);
-
-	  return ChangeTemplate;
-	}(_react2.default.Component);
-
-	exports.default = ChangeTemplate;
-
-
-	ChangeTemplate.displayName = "ChangeTemplate";
+	});
 
 /***/ }),
 /* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -53960,87 +53861,80 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'Change Dropdown Order',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	        var items = [{ outlook: 'Outlook' }, { outlookcom: 'Outlook.com' }, { apple: 'Apple Calendar' }, { yahoo: 'Yahoo' }, { google: 'Google' }];
 
-	var TextOnlyTemplate = function (_React$Component) {
-	  _inherits(TextOnlyTemplate, _React$Component);
-
-	  function TextOnlyTemplate() {
-	    _classCallCheck(this, TextOnlyTemplate);
-
-	    return _possibleConstructorReturn(this, (TextOnlyTemplate.__proto__ || Object.getPrototypeOf(TextOnlyTemplate)).apply(this, arguments));
-	  }
-
-	  _createClass(TextOnlyTemplate, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      var icon = { textOnly: "none" };
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let icon = { textOnly: 'none' };",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null)
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "buttonTemplate={icon} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, buttonTemplate: icon })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlookcom: 'Outlook.com' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ apple: 'Apple Calendar' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ yahoo: 'Yahoo' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
 	    }
-	  }]);
-
-	  return TextOnlyTemplate;
-	}(_react2.default.Component);
-
-	exports.default = TextOnlyTemplate;
-
-
-	TextOnlyTemplate.displayName = "TextOnlyTemplate";
+	});
 
 /***/ }),
 /* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -54052,78 +53946,71 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'Remove Dropdown Item',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	        var items = [{ outlook: 'Outlook' }, { google: 'Google' }];
 
-	var TextOnlyDropdown = function (_React$Component) {
-	  _inherits(TextOnlyDropdown, _React$Component);
-
-	  function TextOnlyDropdown() {
-	    _classCallCheck(this, TextOnlyDropdown);
-
-	    return _possibleConstructorReturn(this, (TextOnlyDropdown.__proto__ || Object.getPrototypeOf(TextOnlyDropdown)).apply(this, arguments));
-	  }
-
-	  _createClass(TextOnlyDropdown, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "displayItemIcons={false} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, displayItemIcons: false })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
 	    }
-	  }]);
-
-	  return TextOnlyDropdown;
-	}(_react2.default.Component);
-
-	exports.default = TextOnlyDropdown;
-
-
-	TextOnlyDropdown.displayName = "TextOnlyDropdown";
+	});
 
 /***/ }),
 /* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -54135,391 +54022,127 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	    displayName: 'Change Dropdown Labels',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	    render: function render() {
+	        var event = {
+	            title: 'Sample Event',
+	            description: 'This is the sample event provided as an example only',
+	            location: 'Portland, OR',
+	            startTime: '2016-09-16T20:15:00-04:00',
+	            endTime: '2016-09-16T21:45:00-04:00'
+	        };
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	        var items = [{ outlook: 'Outlook' }, { outlookcom: 'Outlook.com' }, { apple: 'iCal' }, { yahoo: 'Yahoo!' }, { google: 'Google' }];
 
-	var ChangeDropdownOrder = function (_React$Component) {
-	  _inherits(ChangeDropdownOrder, _React$Component);
-
-	  function ChangeDropdownOrder() {
-	    _classCallCheck(this, ChangeDropdownOrder);
-
-	    return _possibleConstructorReturn(this, (ChangeDropdownOrder.__proto__ || Object.getPrototypeOf(ChangeDropdownOrder)).apply(this, arguments));
-	  }
-
-	  _createClass(ChangeDropdownOrder, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      var items = [{ outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { apple: "Apple Calendar" }, { yahoo: "Yahoo" }, { google: "Google" }];
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let items = [",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ outlook: 'Outlook' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ outlookcom: 'Outlook.com' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ apple: 'Apple Calendar' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ yahoo: 'Yahoo' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ google: 'Google' }",
-	            _react2.default.createElement("br", null),
-	            "];",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null)
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "listItems={items} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
-	        )
-	      );
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'pre',
+	                { className: 'column example__code' },
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'js' },
+	                    "let items = [",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlook: 'Outlook' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ outlookcom: 'Outlook.com' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ apple: 'iCal' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ yahoo: 'Yahoo!' \}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "\{ google: 'Google' \}",
+	                    _react2.default.createElement('br', null),
+	                    "];",
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement('br', null)
+	                ),
+	                _react2.default.createElement(
+	                    'code',
+	                    { className: 'jsx' },
+	                    "<AddToCalendar",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "event={event}",
+	                    _react2.default.createElement('br', null),
+	                    '\xA0\xA0\xA0',
+	                    "listItems=\{items\} />"
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'column' },
+	                _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
+	            )
+	        );
 	    }
-	  }]);
-
-	  return ChangeDropdownOrder;
-	}(_react2.default.Component);
-
-	exports.default = ChangeDropdownOrder;
-
-
-	ChangeDropdownOrder.displayName = "Change Dropdown Order";
+	});
 
 /***/ }),
 /* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactAddToCalendar = __webpack_require__(349);
-
-	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	  displayName: 'CodeExampleComponent',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	  propTypes: {
+	    children: _react2.default.PropTypes.element,
+	    id: _react2.default.PropTypes.number,
+	    title: _react2.default.PropTypes.string
+	  },
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var RemoveDropdownItem = function (_React$Component) {
-	  _inherits(RemoveDropdownItem, _React$Component);
-
-	  function RemoveDropdownItem() {
-	    _classCallCheck(this, RemoveDropdownItem);
-
-	    return _possibleConstructorReturn(this, (RemoveDropdownItem.__proto__ || Object.getPrototypeOf(RemoveDropdownItem)).apply(this, arguments));
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { key: this.props.id, id: 'example-' + this.props.id, className: 'example' },
+	      _react2.default.createElement(
+	        'h2',
+	        { className: 'example__heading' },
+	        this.props.title
+	      ),
+	      this.props.children
+	    );
 	  }
-
-	  _createClass(RemoveDropdownItem, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      var items = [{ outlook: "Outlook" }, { google: "Google" }];
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let items = [",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ outlook: 'Outlook' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ google: 'Google' }",
-	            _react2.default.createElement("br", null),
-	            "];",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null)
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "listItems={items} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return RemoveDropdownItem;
-	}(_react2.default.Component);
-
-	exports.default = RemoveDropdownItem;
-
-
-	RemoveDropdownItem.displayName = "Remove Dropdown Item";
+	});
 
 /***/ }),
 /* 477 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactAddToCalendar = __webpack_require__(349);
-
-	var _reactAddToCalendar2 = _interopRequireDefault(_reactAddToCalendar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ChangeDropdownLabels = function (_React$Component) {
-	  _inherits(ChangeDropdownLabels, _React$Component);
-
-	  function ChangeDropdownLabels() {
-	    _classCallCheck(this, ChangeDropdownLabels);
-
-	    return _possibleConstructorReturn(this, (ChangeDropdownLabels.__proto__ || Object.getPrototypeOf(ChangeDropdownLabels)).apply(this, arguments));
-	  }
-
-	  _createClass(ChangeDropdownLabels, [{
-	    key: "render",
-	    value: function render() {
-	      var event = {
-	        title: "Sample Event",
-	        description: "This is the sample event provided as an example only",
-	        location: "Portland, OR",
-	        startTime: "2016-09-16T20:15:00-04:00",
-	        endTime: "2016-09-16T21:45:00-04:00"
-	      };
-
-	      var items = [{ outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { apple: "iCal" }, { yahoo: "Yahoo!" }, { google: "Google" }];
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "row" },
-	        _react2.default.createElement(
-	          "pre",
-	          { className: "column example__code" },
-	          _react2.default.createElement(
-	            "code",
-	            { className: "js" },
-	            "let items = [",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ outlook: 'Outlook' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ outlookcom: 'Outlook.com' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ apple: 'iCal' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ yahoo: 'Yahoo!' }",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "{ google: 'Google' }",
-	            _react2.default.createElement("br", null),
-	            "];",
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null)
-	          ),
-	          _react2.default.createElement(
-	            "code",
-	            { className: "jsx" },
-	            "<AddToCalendar",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "event={event}",
-	            _react2.default.createElement("br", null),
-	            "\xA0\xA0\xA0",
-	            "listItems={items} />"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column" },
-	          _react2.default.createElement(_reactAddToCalendar2.default, { event: event, listItems: items })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ChangeDropdownLabels;
-	}(_react2.default.Component);
-
-	exports.default = ChangeDropdownLabels;
-
-
-	ChangeDropdownLabels.displayName = "Change Dropdown Labels";
-
-/***/ }),
-/* 478 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _propTypes = __webpack_require__(350);
-
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var CodeExampleComponent = function (_React$Component) {
-	  _inherits(CodeExampleComponent, _React$Component);
-
-	  function CodeExampleComponent() {
-	    _classCallCheck(this, CodeExampleComponent);
-
-	    return _possibleConstructorReturn(this, (CodeExampleComponent.__proto__ || Object.getPrototypeOf(CodeExampleComponent)).apply(this, arguments));
-	  }
-
-	  _createClass(CodeExampleComponent, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        {
-	          key: this.props.id,
-	          id: "example-" + this.props.id,
-	          className: "example" },
-	        _react2.default.createElement(
-	          "h2",
-	          { className: "example__heading" },
-	          this.props.title
-	        ),
-	        this.props.children
-	      );
-	    }
-	  }]);
-
-	  return CodeExampleComponent;
-	}(_react2.default.Component);
-
-	exports.default = CodeExampleComponent;
-
-
-	CodeExampleComponent.displayName = "CodeExampleComponent";
-
-	CodeExampleComponent.propTypes = {
-	  children: _propTypes2.default.element,
-	  id: _propTypes2.default.number,
-	  title: _propTypes2.default.string
-	};
-
-/***/ }),
-/* 479 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 480 */
-479,
-/* 481 */
+/* 478 */
+477,
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -54531,38 +54154,16 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	  displayName: 'HeroExample',
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var HeroExample = function (_React$Component) {
-	  _inherits(HeroExample, _React$Component);
-
-	  function HeroExample() {
-	    _classCallCheck(this, HeroExample);
-
-	    return _possibleConstructorReturn(this, (HeroExample.__proto__ || Object.getPrototypeOf(HeroExample)).apply(this, arguments));
+	  render: function render() {
+	    return _react2.default.createElement(_reactAddToCalendar2.default, { buttonTemplate: { 'calendar-plus-o': 'left' } });
 	  }
-
-	  _createClass(HeroExample, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(_reactAddToCalendar2.default, { buttonTemplate: { "calendar-plus-o": "left" } });
-	    }
-	  }]);
-
-	  return HeroExample;
-	}(_react2.default.Component);
-
-	exports.default = HeroExample;
-
-
-	HeroExample.displayName = "HeroExample";
+	});
 
 /***/ }),
-/* 482 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
