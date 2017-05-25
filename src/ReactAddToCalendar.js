@@ -100,7 +100,7 @@ export default class ReactAddToCalendar extends React.Component {
 
       return (
         <li key={helpers.getRandomKey()}>
-          <a
+        <a
             className={currentItem + "-link"}
             onClick={self.handleDropdownLinkClick}
             href={helpers.buildUrl(
@@ -108,8 +108,7 @@ export default class ReactAddToCalendar extends React.Component {
               currentItem,
               self.state.isCrappyIE
             )}
-            target="_blank"
-          >
+            target="_blank">
             {icon}
             {currentLabel}
           </a>
