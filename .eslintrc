@@ -65,6 +65,7 @@
     "no-reserved-keys": 0,         // disallow reserved words being used as object literal keys (off by default)
     "no-sparse-arrays": 0,         // disallow sparse arrays
     "no-unreachable": 0,           // disallow unreachable statements after a return, throw, continue, or break statement
+    "no-useless-escape": 0,        // disallow useless escape rule
     "use-isnan": 0,                // disallow comparisons with the value NaN
     "valid-jsdoc": 0,              // Ensure JSDoc comments are valid (off by default)
     "valid-typeof": 0,             // Ensure that the results of typeof are compared against a valid string
