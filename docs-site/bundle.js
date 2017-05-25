@@ -20203,8 +20203,7 @@
 	              { href: "https://npmjs.org/package/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://badge.fury.io/js/react-add-to-calendar.svg",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20212,8 +20211,7 @@
 	              { href: "https://travis-ci.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://travis-ci.org/jasonsalzman/react-add-to-calendar.svg?branch=master",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20221,8 +20219,7 @@
 	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/david/strongloop/express.svg?maxAge=2592000",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20230,8 +20227,7 @@
 	              { href: "https://david-dm.org/jasonsalzman/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/david/peer/webcomponents/generator-element.svg?maxAge=2592000",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            ),
 	            "\xA0\xA0",
 	            _react2.default.createElement(
@@ -20239,8 +20235,7 @@
 	              { href: "https://npmjs.org/package/react-add-to-calendar" },
 	              _react2.default.createElement("img", {
 	                src: "https://img.shields.io/npm/dm/react-add-to-calendar.svg",
-	                className: "badge"
-	              })
+	                className: "badge" })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -20279,8 +20274,7 @@
 	          _react2.default.createElement("img", {
 	            className: "github-ribbon",
 	            src: "images/ribbon.png",
-	            alt: "Fork me on GitHub"
-	          })
+	            alt: "Fork me on GitHub" })
 	        )
 	      );
 	    }
@@ -20411,8 +20405,7 @@
 	          {
 	            key: "example-" + index,
 	            id: index,
-	            title: example.title
-	          },
+	            title: example.title },
 	          _react2.default.createElement(example.component, null)
 	        );
 	      });
@@ -21368,7 +21361,7 @@
 	  hljs.NUMBER_RE = '\\b\\d+(\\.\\d+)?';
 	  hljs.C_NUMBER_RE = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'; // 0x..., 0..., decimal, float
 	  hljs.BINARY_NUMBER_RE = '\\b(0b[01]+)'; // 0b...
-	  hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+	  hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
 
 	  // Common modes
 	  hljs.BACKSLASH_ESCAPE = {
@@ -21962,7 +21955,7 @@
 	            },
 	            {
 	              className: 'variable',
-	              begin: '[\\$%]\{', end: '\}',
+	              begin: '[\\$%]\\{', end: '\\}',
 	              contains: ['self', NUMBER]
 	            },
 	            NUMBER,
@@ -22854,7 +22847,7 @@
 	      {
 	        // the function class is a bit different for AspectJ compared to the Java language
 	        className : 'function',
-	        begin : /\w+ +\w+(\.)?\w+\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[{;]/,
+	        begin : /\w+ +\w+(\.)?\w+\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
 	        returnBegin : true,
 	        end : /[{;=]/,
 	        keywords : KEYWORDS,
@@ -23159,7 +23152,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$[\w\d#@][\w\d_]*/},
-	      {begin: /\${(.*?)}/}
+	      {begin: /\$\{(.*?)}/}
 	    ]
 	  };
 	  var KEYWORDS = 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10';
@@ -23251,7 +23244,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$[\w\d#@][\w\d_]*/},
-	      {begin: /\${(.*?)}/}
+	      {begin: /\$\{(.*?)}/}
 	    ]
 	  };
 	  var QUOTE_STRING = {
@@ -23308,7 +23301,7 @@
 	      },
 	      {
 	        className: 'function',
-	        begin: /\w[\w\d_]*\s*\(\s*\)\s*{/,
+	        begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
 	        returnBegin: true,
 	        contains: [hljs.inherit(hljs.TITLE_MODE, {begin: /\w[\w\d_]*/})],
 	        relevance: 0
@@ -23462,8 +23455,8 @@
 	  var COMMENT_MODES = [
 	    hljs.C_LINE_COMMENT_MODE,
 	    hljs.COMMENT(
-	      /{/,
-	      /}/,
+	      /\{/,
+	      /\}/,
 	      {
 	        relevance: 0
 	      }
@@ -23565,7 +23558,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'struct enum', end: /{/,
+	        beginKeywords: 'struct enum', end: /\{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -23575,7 +23568,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'interface', end: /{/,
+	        beginKeywords: 'interface', end: /\{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -23682,7 +23675,7 @@
 	      hljs.QUOTE_STRING_MODE,
 	      hljs.C_NUMBER_MODE,
 
-	      {begin: '->|<-[|:]?|::|#!?|>>=|\{\\||\\|\}|:==|=:|\\.\\.|<>|`'} // relevance booster
+	      {begin: '->|<-[|:]?|::|#!?|>>=|\\{\\||\\|\\}|:==|=:|\\.\\.|<>|`'} // relevance booster
 	    ]
 	  };
 	};
@@ -23749,13 +23742,13 @@
 	    begin: /\b(true|false|nil)\b/
 	  };
 	  var COLLECTION = {
-	    begin: '[\\[\{]', end: '[\\]\}]'
+	    begin: '[\\[\\{]', end: '[\\]\\}]'
 	  };
 	  var HINT = {
 	    className: 'comment',
 	    begin: '\\^' + SYMBOL_RE
 	  };
-	  var HINT_COL = hljs.COMMENT('\\^\{', '\}');
+	  var HINT_COL = hljs.COMMENT('\\^\\{', '\\}');
 	  var KEY = {
 	    className: 'symbol',
 	    begin: '[:]{1,2}' + SYMBOL_RE
@@ -23870,7 +23863,7 @@
 	  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#{/, end: /}/,
+	    begin: /#\{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var EXPRESSIONS = [
@@ -24302,7 +24295,7 @@
 	  var NUM_SUFFIX = '(_[uif](8|16|32|64))?';
 	  var CRYSTAL_IDENT_RE = '[a-zA-Z_]\\w*[!?=]?';
 	  var RE_STARTER = '!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|' +
-	    '>>|>|\\[|\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+	    '>>|>|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
 	  var CRYSTAL_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\][=?]?';
 	  var CRYSTAL_KEYWORDS = {
 	    keyword:
@@ -24320,8 +24313,8 @@
 	  var EXPANSION = {
 	    className: 'template-variable',
 	    variants: [
-	      {begin: '\{\{', end: '\}\}'},
-	      {begin: '\{%', end: '%\}'}
+	      {begin: '\\{\\{', end: '\\}\\}'},
+	      {begin: '\\{%', end: '%\\}'}
 	    ],
 	    keywords: CRYSTAL_KEYWORDS
 	  };
@@ -24969,8 +24962,8 @@
 	   */
 	  var D_TOKEN_STRING_MODE = {
 	    className: 'string',
-	    begin: 'q"\{',
-	    end: '\}"'
+	    begin: 'q"\\{',
+	    end: '\\}"'
 	  };
 
 	  /**
@@ -25162,7 +25155,7 @@
 	module.exports = function (hljs) {
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '\\$\{', end: '}',
+	    begin: '\\$\\{', end: '}',
 	    keywords: 'true false null this is new super'
 	  };
 
@@ -25279,13 +25272,13 @@
 	    'specialize strict unaligned varargs ';
 	  var COMMENT_MODES = [
 	    hljs.C_LINE_COMMENT_MODE,
-	    hljs.COMMENT(/{/, /}/, {relevance: 0}),
+	    hljs.COMMENT(/\{/, /\}/, {relevance: 0}),
 	    hljs.COMMENT(/\(\*/, /\*\)/, {relevance: 10})
 	  ];
 	  var DIRECTIVE = {
 	    className: 'meta',
 	    variants: [
-	      {begin: /{\$/, end: /}/},
+	      {begin: /\{\$/, end: /\}/},
 	      {begin: /\(\*\$/, end: /\*\)/}
 	    ]
 	  };
@@ -25406,11 +25399,11 @@
 	    case_insensitive: true,
 	    subLanguage: 'xml',
 	    contains: [
-	      hljs.COMMENT(/{%\s*comment\s*%}/, /{%\s*endcomment\s*%}/),
-	      hljs.COMMENT(/{#/, /#}/),
+	      hljs.COMMENT(/\{%\s*comment\s*%}/, /\{%\s*endcomment\s*%}/),
+	      hljs.COMMENT(/\{#/, /#}/),
 	      {
 	        className: 'template-tag',
-	        begin: /{%/, end: /%}/,
+	        begin: /\{%/, end: /%}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -25438,7 +25431,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /{{/, end: /}}/,
+	        begin: /\{\{/, end: /}}/,
 	        contains: [FILTER]
 	      }
 	    ]
@@ -25752,7 +25745,7 @@
 	    contains: [
 	      {
 	        className: 'template-tag',
-	        begin: /{[#\/]/, end: /}/, illegal: /;/,
+	        begin: /\{[#\/]/, end: /\}/, illegal: /;/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -25768,7 +25761,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /{/, end: /}/, illegal: /;/,
+	        begin: /\{/, end: /\}/, illegal: /;/,
 	        keywords: EXPRESSION_KEYWORDS
 	      }
 	    ]
@@ -25825,7 +25818,7 @@
 	    'include use alias fn quote';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '#\{', end: '}',
+	    begin: '#\\{', end: '}',
 	    lexemes: ELIXIR_IDENT_RE,
 	    keywords: ELIXIR_KEYWORDS
 	  };
@@ -26042,7 +26035,7 @@
 	  ];
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '#\{', end: '}',
+	    begin: '#\\{', end: '}',
 	    keywords: RUBY_KEYWORDS
 	  };
 	  var STRING = {
@@ -26981,7 +26974,7 @@
 	    aliases: ['gss'],
 	    case_insensitive: true, // language is case-insensitive
 	    keywords: KEYWORDS,
-	    illegal: '(\{[%#]|[%#]\})',
+	    illegal: '(\\{[%#]|[%#]\\})',
 	    contains: [
 	      hljs.C_NUMBER_MODE,
 	      hljs.C_LINE_COMMENT_MODE,
@@ -27335,7 +27328,7 @@
 	      },
 	      {
 	        className: 'function',
-	        beginKeywords: 'func', end: /\s*{/, excludeEnd: true,
+	        beginKeywords: 'func', end: /\s*\{/, excludeEnd: true,
 	        contains: [
 	          hljs.TITLE_MODE,
 	          {
@@ -27639,7 +27632,7 @@
 	    hljs.COMMENT('{{!(--)?', '(--)?}}'),
 	      {
 	        className: 'template-tag',
-	        begin: /{{[#\/]/, end: /}}/,
+	        begin: /\{\{[#\/]/, end: /\}\}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -27656,7 +27649,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /{{/, end: /}}/,
+	        begin: /\{\{/, end: /\}\}/,
 	        keywords: BUILT_INS
 	      }
 	    ]
@@ -27817,7 +27810,7 @@
 	        contains: [
 	          hljs.BACKSLASH_ESCAPE,
 	          { className: 'subst', // interpolation
-	            begin: '\\$\{', end: '\}'
+	            begin: '\\$\\{', end: '\\}'
 	          },
 	          { className: 'subst', // interpolation
 	            begin: '\\$', end: '\\W}'
@@ -27849,13 +27842,13 @@
 	        excludeBegin: true, excludeEnd: true
 	      },
 	      { className: 'class', // enums
-	        beginKeywords: 'enum', end: '\{',
+	        beginKeywords: 'enum', end: '\\{',
 	        contains: [
 	          hljs.TITLE_MODE
 	        ]
 	      },
 	      { className: 'class', // abstracts
-	        beginKeywords: 'abstract', end: '[\{$]',
+	        beginKeywords: 'abstract', end: '[\\{$]',
 	        contains: [
 	          { className: 'type',
 	            begin: '\\(', end: '\\)',
@@ -27876,7 +27869,7 @@
 	        }
 	      },
 	      { className: 'class', // classes
-	        begin: '\\b(class|interface) +', end: '[\{$]',  excludeEnd: true,
+	        begin: '\\b(class|interface) +', end: '[\\{$]',  excludeEnd: true,
 	        keywords: 'class interface',
 	        contains: [
 	          { className: 'keyword',
@@ -27963,7 +27956,7 @@
 	  var BUILT_INS = 'action collection component concat debugger each each-in else get hash if input link-to loc log mut outlet partial query-params render textarea unbound unless with yield view';
 
 	  var ATTR_ASSIGNMENT = {
-	    illegal: /}}/,
+	    illegal: /\}\}/,
 	    begin: /[a-zA-Z0-9_]+=/,
 	    returnBegin: true,
 	    relevance: 0,
@@ -27975,7 +27968,7 @@
 	  };
 
 	  var SUB_EXPR = {
-	    illegal: /}}/,
+	    illegal: /\}\}/,
 	    begin: /\)/, end: /\)/,
 	    contains: [
 	      {
@@ -28008,7 +28001,7 @@
 	      hljs.COMMENT('{{!(--)?', '(--)?}}'),
 	      {
 	        className: 'template-tag',
-	        begin: /{{[#\/]/, end: /}}/,
+	        begin: /\{\{[#\/]/, end: /\}\}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -28020,7 +28013,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /{{[a-zA-Z][a-zA-Z\-]+/, end: /}}/,
+	        begin: /\{\{[a-zA-Z][a-zA-Z\-]+/, end: /\}\}/,
 	        keywords: {keyword: 'as', built_in: BUILT_INS},
 	        contains: [
 	          hljs.QUOTE_STRING_MODE
@@ -28144,13 +28137,13 @@
 	    begin: /\b([Tt]rue|[Ff]alse|nil|None)\b/
 	  };
 	  var COLLECTION = {
-	    begin: '[\\[\{]', end: '[\\]\}]'
+	    begin: '[\\[\\{]', end: '[\\]\\}]'
 	  };
 	  var HINT = {
 	    className: 'comment',
 	    begin: '\\^' + SYMBOL_RE
 	  };
-	  var HINT_COL = hljs.COMMENT('\\^\{', '\}');
+	  var HINT_COL = hljs.COMMENT('\\^\\{', '\\}');
 	  var KEY = {
 	    className: 'symbol',
 	    begin: '[:]{1,2}' + SYMBOL_RE
@@ -28295,7 +28288,7 @@
 	                className: 'variable',
 	                variants: [
 	                  {begin: /\$[\w\d"][\w\d_]*/},
-	                  {begin: /\${(.*?)}/}
+	                  {begin: /\$\{(.*?)}/}
 	                ]
 	              },
 	              STRING,
@@ -28542,7 +28535,7 @@
 	  };
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '\\$\{', end: '\}',
+	    begin: '\\$\\{', end: '\\}',
 	    keywords: KEYWORDS,
 	    contains: []  // defined later
 	  };
@@ -28645,7 +28638,7 @@
 	      },
 	      {
 	        className: 'function',
-	        beginKeywords: 'function', end: /{/, excludeEnd: true,
+	        beginKeywords: 'function', end: /\{/, excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: IDENT_RE}),
 	          {
@@ -28672,7 +28665,7 @@
 	        ]
 	      },
 	      {
-	        beginKeywords: 'constructor', end: /{/, excludeEnd: true
+	        beginKeywords: 'constructor', end: /\{/, excludeEnd: true
 	      }
 	    ],
 	    illegal: /#(?!!)/
@@ -29101,7 +29094,7 @@
 	      },
 	      {
 	        className: 'class',
-	        beginKeywords: 'class interface trait', end: /[:{(]|$/, // remove 'trait' when removed from KEYWORDS
+	        beginKeywords: 'class interface trait', end: /[:\{(]|$/, // remove 'trait' when removed from KEYWORDS
 	        excludeEnd: true,
 	        illegal: 'extends implements',
 	        contains: [
@@ -29807,7 +29800,7 @@
 	  var TITLE = hljs.inherit(hljs.TITLE_MODE, {begin: JS_IDENT_RE});
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#{/, end: /}/,
+	    begin: /#\{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var SUBST_SIMPLE = {
@@ -30324,7 +30317,7 @@
 	      hljs.QUOTE_STRING_MODE,
 	      hljs.C_NUMBER_MODE,
 	      {
-	        begin: /{/, end: /}/,
+	        begin: /\{/, end: /\}/,
 	        illegal: /:/
 	      }
 	    ]
@@ -30406,7 +30399,7 @@
 	        starts: TRANSPOSE
 	      },
 	      {
-	        begin: '\{', end: /}/,
+	        begin: '\\{', end: /}/,
 	        contains: COMMON_CONTAINS,
 	        relevance: 0,
 	        starts: TRANSPOSE
@@ -30417,7 +30410,7 @@
 	        relevance: 0,
 	        starts: TRANSPOSE
 	      },
-	      hljs.COMMENT('^\\s*\\%\{\\s*$', '^\\s*\\%\}\\s*$'),
+	      hljs.COMMENT('^\\s*\\%\\{\\s*$', '^\\s*\\%\\}\\s*$'),
 	      hljs.COMMENT('\\%', '$')
 	    ].concat(COMMON_CONTAINS)
 	  };
@@ -31287,7 +31280,7 @@
 	    'atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: '[$@]\{', end: '\}',
+	    begin: '[$@]\\{', end: '\\}',
 	    keywords: PERL_KEYWORDS
 	  };
 	  var METHOD = {
@@ -31326,7 +31319,7 @@
 	          relevance: 5
 	        },
 	        {
-	          begin: 'q[qwxr]?\\s*\{', end: '\}',
+	          begin: 'q[qwxr]?\\s*\\{', end: '\\}',
 	          relevance: 5
 	        },
 	        {
@@ -31551,7 +31544,7 @@
 	  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /#{/, end: /}/,
+	    begin: /#\{/, end: /}/,
 	    keywords: KEYWORDS
 	  };
 	  var EXPRESSIONS = [
@@ -31728,7 +31721,7 @@
 	    className: 'variable',
 	    variants: [
 	      {begin: /\$\d+/},
-	      {begin: /\${/, end: /}/},
+	      {begin: /\$\{/, end: /}/},
 	      {begin: '[\\$\\@]' + hljs.UNDERSCORE_IDENT_RE}
 	    ]
 	  };
@@ -31812,7 +31805,7 @@
 	        relevance: 0
 	      }
 	    ],
-	    illegal: '[^\\s\}]'
+	    illegal: '[^\\s\\}]'
 	  };
 	};
 
@@ -31891,7 +31884,7 @@
 	  };
 	  var ANTIQUOTE = {
 	    className: 'subst',
-	    begin: /\${/,
+	    begin: /\$\{/,
 	    end: /}/,
 	    keywords: NIX_KEYWORDS
 	  };
@@ -32245,7 +32238,7 @@
 		FUNCTIONS = {
 			className: 'function',
 			beginKeywords: 'module function',
-			end: '\\=|\{',
+			end: '\\=|\\{',
 			contains: [PARAMS, hljs.UNDERSCORE_TITLE_MODE]
 		};
 
@@ -32380,7 +32373,7 @@
 	      },
 	      {
 	        className: 'variable',
-	        begin: '\\$\{?[\\w\\-\\.\\:]+\}?'
+	        begin: '\\$\\{?[\\w\\-\\.\\:]+\\}?'
 	      },
 	      {
 	        className: 'keyword',
@@ -32522,7 +32515,7 @@
 	            className: 'subst',
 	            variants: [
 	              {begin: /\$\w+/},
-	              {begin: /{\$/, end: /}/}
+	              {begin: /\{\$/, end: /\}/}
 	            ]
 	          }
 	        ]
@@ -32958,7 +32951,7 @@
 	      hljs.C_LINE_COMMENT_MODE,
 	      {
 	        className: 'class',
-	        beginKeywords: 'message enum service', end: /{/,
+	        beginKeywords: 'message enum service', end: /\{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -33047,12 +33040,12 @@
 	      VARIABLE,
 	      STRING,
 	      {
-	        beginKeywords: 'class', end: '\{|;',
+	        beginKeywords: 'class', end: '\\{|;',
 	        illegal: /=/,
 	        contains: [TITLE, COMMENT]
 	      },
 	      {
-	        beginKeywords: 'define', end: /{/,
+	        beginKeywords: 'define', end: /\{/,
 	        contains: [
 	          {
 	            className: 'section', begin: hljs.IDENT_RE, endsParent: true
@@ -33060,7 +33053,7 @@
 	        ]
 	      },
 	      {
-	        begin: hljs.IDENT_RE + '\\s+\{', returnBegin: true,
+	        begin: hljs.IDENT_RE + '\\s+\\{', returnBegin: true,
 	        end: /\S/,
 	        contains: [
 	          {
@@ -33068,7 +33061,7 @@
 	            begin: hljs.IDENT_RE
 	          },
 	          {
-	            begin: /{/, end: /}/,
+	            begin: /\{/, end: /\}/,
 	            keywords: PUPPET_KEYWORDS,
 	            relevance: 0,
 	            contains: [
@@ -33179,7 +33172,7 @@
 	  };
 	  var SUBST = {
 	    className: 'subst',
-	    begin: /{/, end: /}/,
+	    begin: /\{/, end: /\}/,
 	    keywords: KEYWORDS,
 	    illegal: /#/
 	  };
@@ -33420,7 +33413,7 @@
 	          hljs.BACKSLASH_ESCAPE,
 	          {
 	            className: 'subst',
-	            begin: '\\$\{', end: '\}'
+	            begin: '\\$\\{', end: '\\}'
 	          }
 	        ]
 	      },
@@ -33454,7 +33447,7 @@
 	      PROPERTY,
 	      {
 	        className: 'function',
-	        beginKeywords: 'function', end: /{/, excludeEnd: true,
+	        beginKeywords: 'function', end: /\{/, excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/}),
 	          {
@@ -33591,7 +33584,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
-	  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\{';
+	  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
 
 	  var PROPERTY = {
 	    className: 'attribute',
@@ -33998,7 +33991,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
-	  var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\{\}",\'`;#|\\\\\\s]+';
+	  var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+';
 	  var SCHEME_SIMPLE_NUMBER_RE = '(\\-|\\+)?\\d+([./]\\d+)?';
 	  var SCHEME_COMPLEX_NUMBER_RE = SCHEME_SIMPLE_NUMBER_RE + '[+\\-]' + SCHEME_SIMPLE_NUMBER_RE + 'i';
 	  var BUILTINS = {
@@ -35146,7 +35139,7 @@
 	      },
 	      {
 	        className: 'variable',
-	        begin: /\${?[a-zA-Z0-9_]+}?/
+	        begin: /\$\{?[a-zA-Z0-9_]+\}?/
 	      },
 	      {
 	        className: 'string',
@@ -35817,7 +35810,7 @@
 	        className: 'class',
 	        beginKeywords: 'struct protocol class extension enum',
 	        keywords: SWIFT_KEYWORDS,
-	        end: '\{',
+	        end: '\\{',
 	        excludeEnd: true,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][\u00C0-\u02B80-9A-Za-z$_]*/})
@@ -35909,8 +35902,8 @@
 	  var TEMPLATE_VARIABLES = {
 	    className: 'template-variable',
 	    variants: [
-	      { begin: '{{', end: '}}' }, // jinja templates Ansible
-	      { begin: '%{', end: '}' } // Ruby i18n
+	      { begin: '\{\{', end: '\}\}' }, // jinja templates Ansible
+	      { begin: '%\{', end: '\}' } // Ruby i18n
 	    ]
 	  };
 	  var STRING = {
@@ -36044,7 +36037,7 @@
 	      hljs.COMMENT('^[ \\t]*#', '$'),
 	      {
 	        beginKeywords: 'proc',
-	        end: '[\{]',
+	        end: '[\\{]',
 	        excludeEnd: true,
 	        contains: [
 	          {
@@ -36060,12 +36053,12 @@
 	        excludeEnd: true,
 	        variants: [
 	          {
-	            begin: '\\$(\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*\\(([a-zA-Z0-9_])*\\)',
-	            end: '[^a-zA-Z0-9_\}\\$]'
+	            begin: '\\$(\\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*\\(([a-zA-Z0-9_])*\\)',
+	            end: '[^a-zA-Z0-9_\\}\\$]'
 	          },
 	          {
-	            begin: '\\$(\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
-	            end: '(\\))?[^a-zA-Z0-9_\}\\$]'
+	            begin: '\\$(\\{)?(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
+	            end: '(\\))?[^a-zA-Z0-9_\\}\\$]'
 	          }
 	        ]
 	      },
@@ -36109,7 +36102,7 @@
 	              className: 'string', // because it looks like attributes in HTML tags
 	              variants: [
 	                {begin: /\[/, end: /\]/},
-	                {begin: /{/, end: /}/}
+	                {begin: /\{/, end: /\}/}
 	              ]
 	            },
 	            {
@@ -36173,7 +36166,7 @@
 	      hljs.C_BLOCK_COMMENT_MODE,
 	      {
 	        className: 'class',
-	        beginKeywords: 'struct enum service exception', end: /{/,
+	        beginKeywords: 'struct enum service exception', end: /\{/,
 	        illegal: /\n/,
 	        contains: [
 	          hljs.inherit(hljs.TITLE_MODE, {
@@ -36322,10 +36315,10 @@
 	    case_insensitive: true,
 	    subLanguage: 'xml',
 	    contains: [
-	      hljs.COMMENT(/{#/, /#}/),
+	      hljs.COMMENT(/\{#/, /#}/),
 	      {
 	        className: 'template-tag',
-	        begin: /{%/, end: /%}/,
+	        begin: /\{%/, end: /%}/,
 	        contains: [
 	          {
 	            className: 'name',
@@ -36341,7 +36334,7 @@
 	      },
 	      {
 	        className: 'template-variable',
-	        begin: /{{/, end: /}}/,
+	        begin: /\{\{/, end: /}}/,
 	        contains: ['self', FILTER, FUNCTIONS]
 	      }
 	    ]
@@ -36389,7 +36382,7 @@
 	          hljs.BACKSLASH_ESCAPE,
 	          {
 	            className: 'subst',
-	            begin: '\\$\{', end: '\}'
+	            begin: '\\$\\{', end: '\\}'
 	          }
 	        ]
 	      },
@@ -36444,7 +36437,7 @@
 	      },
 	      {
 	        className: 'function',
-	        begin: 'function', end: /[{;]/, excludeEnd: true,
+	        begin: 'function', end: /[\{;]/, excludeEnd: true,
 	        keywords: KEYWORDS,
 	        contains: [
 	          'self',
@@ -36466,7 +36459,7 @@
 	        relevance: 0 // () => {} is more typical in TypeScript
 	      },
 	      {
-	        beginKeywords: 'constructor', end: /{/, excludeEnd: true,
+	        beginKeywords: 'constructor', end: /\{/, excludeEnd: true,
 	        contains: [
 	          'self',
 	          {
@@ -36489,10 +36482,10 @@
 	        relevance: 0
 	      },
 	      {
-	        beginKeywords: 'module', end: /{/, excludeEnd: true
+	        beginKeywords: 'module', end: /\{/, excludeEnd: true
 	      },
 	      {
-	        beginKeywords: 'interface', end: /{/, excludeEnd: true,
+	        beginKeywords: 'interface', end: /\{/, excludeEnd: true,
 	        keywords: 'interface extends'
 	      },
 	      {
@@ -37561,7 +37554,7 @@
 	      e.preventDefault();
 	      var url = e.currentTarget.getAttribute("href");
 
-	      if (url.startsWith("data") || url.startsWith("BEGIN")) {
+	      if (!helpers.isMobile() && (url.startsWith("data") || url.startsWith("BEGIN"))) {
 	        var filename = "download.ics";
 	        var blob = new Blob([url], { type: "text/calendar;charset=utf-8" });
 
@@ -37609,9 +37602,8 @@
 	            {
 	              className: currentItem + "-link",
 	              onClick: self.handleDropdownLinkClick,
-	              href: helpers.buildUrl(self.props.event, currentItem),
-	              target: "_blank"
-	            },
+	              href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE),
+	              target: "_blank" },
 	            icon,
 	            currentLabel
 	          )
@@ -37894,8 +37886,11 @@
 	    }
 	  }, {
 	    key: "buildUrl",
-	    value: function buildUrl(event, type) {
+	    value: function buildUrl(event, type, isCrappyIE) {
 	      var calendarUrl = "";
+
+	      // allow mobile browsers to open the gmail data URI within native calendar app
+	      type = type == "google" && this.isMobile() ? "outlook" : type;
 
 	      switch (type) {
 	        case "google":
@@ -37933,9 +37928,27 @@
 
 	        default:
 	          calendarUrl = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "URL:" + document.URL, "DTSTART:" + this.formatTime(event.startTime), "DTEND:" + this.formatTime(event.endTime), "SUMMARY:" + event.title, "DESCRIPTION:" + event.description, "LOCATION:" + event.location, "END:VEVENT", "END:VCALENDAR"].join("\n");
+
+	          if (!isCrappyIE && this.isMobile()) {
+	            calendarUrl = encodeURI("data:text/calendar;charset=utf8," + calendarUrl);
+	          }
 	      }
 
 	      return calendarUrl;
+	    }
+
+	    // determine if a mobile browser is being used
+
+	  }, {
+	    key: "isMobile",
+	    value: function isMobile() {
+	      var mobile = false;
+
+	      (function (a) {
+	        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) mobile = true;
+	      })(window.navigator.userAgent || window.navigator.vendor || window.opera);
+
+	      return mobile;
 	    }
 	  }]);
 
@@ -54484,8 +54497,7 @@
 	        {
 	          key: this.props.id,
 	          id: "example-" + this.props.id,
-	          className: "example"
-	        },
+	          className: "example" },
 	        _react2.default.createElement(
 	          "h2",
 	          { className: "example__heading" },
