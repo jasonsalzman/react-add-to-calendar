@@ -20,8 +20,8 @@ npm install react-add-to-calendar --save
 You’ll need to install React and Moment separately since they are not included in the package. Below is a simple example on how to use the Add to Calendar button in a React view.
 
 ```js
-var React = require('react');
-var AddToCalendar = require('react-add-to-calendar');
+import React from 'react';
+import AddToCalendar from 'react-add-to-calendar';
 
 class Example extends React.Component {
   static displayName = 'Example';
