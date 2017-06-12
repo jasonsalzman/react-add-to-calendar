@@ -77,3 +77,6 @@ defaultValue: `[
 type: `string`
 defaultValue: `'react-add-to-calendar'`
 
+### `optionsOpen`
+type: `bool`
+defaultValue: `false`

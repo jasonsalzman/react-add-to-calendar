@@ -25,6 +25,24 @@ describe("AddToCalendar", () => {
     expect(dropdown).to.exist;
   });
 
+  it("should show the options menu if optionsOpen is true", () => {
+    var event = {
+      title: "Sample Event",
+      description: "This is the sample event provided as an example only",
+      location: "Portland, OR",
+      startTime: "2016-09-16T20:15:00-04:00",
+      endTime: "2016-09-16T21:45:00-04:00"
+    };
+    var addToCalendar = TestUtils.renderIntoDocument(
+      <AddToCalendar event={event} optionsOpen />
+    );
+    var dropdown = TestUtils.findRenderedDOMComponentWithClass(
+      addToCalendar,
+      "react-add-to-calendar__dropdown"
+    );
+    expect(dropdown).to.exist;
+  });
+
   it("should mount and unmount properly", done => {
     var TestComponent = createReactClass({
       displayName: "TestComponent",

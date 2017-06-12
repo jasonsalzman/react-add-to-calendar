@@ -9,7 +9,7 @@ export default class ReactAddToCalendar extends React.Component {
     super(props);
 
     this.state = {
-      optionsOpen: false,
+      optionsOpen: props.optionsOpen || false,
       isCrappyIE: false
     };
 
@@ -196,6 +196,7 @@ ReactAddToCalendar.propTypes = {
   buttonTemplate: PropTypes.object,
   buttonWrapperClass: PropTypes.string,
   displayItemIcons: PropTypes.bool,
+  optionsOpen: PropTypes.bool,
   dropdownClass: PropTypes.string,
   event: PropTypes.shape({
     title: PropTypes.string,
@@ -215,6 +216,7 @@ ReactAddToCalendar.defaultProps = {
   buttonTemplate: { caret: "right" },
   buttonWrapperClass: "react-add-to-calendar__wrapper",
   displayItemIcons: true,
+  optionsOpen: false,
   dropdownClass: "react-add-to-calendar__dropdown",
   event: {
     title: "Sample Event",
