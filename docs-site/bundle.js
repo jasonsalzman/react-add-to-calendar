@@ -18413,7 +18413,8 @@
 	              className: currentItem + "-link",
 	              onClick: self.handleDropdownLinkClick,
 	              href: helpers.buildUrl(self.props.event, currentItem, self.state.isCrappyIE),
-	              target: "_blank" },
+	              target: "_blank"
+	            },
 	            icon,
 	            currentLabel
 	          )
@@ -18439,13 +18440,12 @@
 
 	      if (template[0] !== "textOnly") {
 	        var iconPlacement = this.props.buttonTemplate[template];
-	        var buttonIconClass = "react-add-to-calendar__icon--" + iconPlacement + " fa fa-";
+	        var buttonClassPrefix = this.props.buttonIconClass === "react-add-to-calendar__icon--" ? "" + this.props.buttonIconClass + iconPlacement : this.props.buttonIconClass;
+	        var iconPrefix = this.props.useFontAwesomeIcons ? "fa fa-" : "";
 
-	        if (template[0] === "caret") {
-	          buttonIconClass += this.state.optionsOpen ? "caret-up" : "caret-down";
-	        } else {
-	          buttonIconClass += template[0];
-	        }
+	        var mainButtonIconClass = template[0] === "caret" ? this.state.optionsOpen ? "caret-up" : "caret-down" : template[0];
+
+	        var buttonIconClass = buttonClassPrefix + " " + iconPrefix + mainButtonIconClass;
 
 	        buttonIcon = _react2.default.createElement("i", { className: buttonIconClass });
 	        buttonLabel = iconPlacement === "right" ? _react2.default.createElement(
@@ -18508,6 +18508,8 @@
 	  buttonClassOpen: _propTypes2.default.string,
 	  buttonLabel: _propTypes2.default.string,
 	  buttonTemplate: _propTypes2.default.object,
+	  buttonIconClass: _propTypes2.default.string,
+	  useFontAwesomeIcons: _propTypes2.default.bool,
 	  buttonWrapperClass: _propTypes2.default.string,
 	  displayItemIcons: _propTypes2.default.bool,
 	  optionsOpen: _propTypes2.default.bool,
@@ -18528,6 +18530,8 @@
 	  buttonClassOpen: "react-add-to-calendar__button--light",
 	  buttonLabel: "Add to My Calendar",
 	  buttonTemplate: { caret: "right" },
+	  buttonIconClass: "react-add-to-calendar__icon--",
+	  useFontAwesomeIcons: true,
 	  buttonWrapperClass: "react-add-to-calendar__wrapper",
 	  displayItemIcons: true,
 	  optionsOpen: false,
@@ -18825,7 +18829,7 @@
 	      var calendarUrl = "";
 
 	      // allow mobile browsers to open the gmail data URI within native calendar app
-	      type = type == "google" && this.isMobile() ? "outlook" : type;
+	      // type = (type == "google" && this.isMobile()) ? "outlook" : type;
 
 	      switch (type) {
 	        case "google":

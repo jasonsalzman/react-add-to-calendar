@@ -92,24 +92,25 @@ export default class ReactAddToCalendar extends React.Component {
 
       let icon = null;
       if (self.props.displayItemIcons) {
-        let currentIcon = currentItem === "outlook" ||
-          currentItem === "outlookcom"
-          ? "windows"
-          : currentItem;
+        let currentIcon =
+          currentItem === "outlook" || currentItem === "outlookcom"
+            ? "windows"
+            : currentItem;
         icon = <i className={"fa fa-" + currentIcon} />;
       }
 
       return (
         <li key={helpers.getRandomKey()}>
           <a
-              className={currentItem + "-link"}
-              onClick={self.handleDropdownLinkClick}
-              href={helpers.buildUrl(
+            className={currentItem + "-link"}
+            onClick={self.handleDropdownLinkClick}
+            href={helpers.buildUrl(
               self.props.event,
               currentItem,
               self.state.isCrappyIE
             )}
-              target="_blank">
+            target="_blank"
+          >
             {icon}
             {currentLabel}
           </a>
@@ -119,9 +120,7 @@ export default class ReactAddToCalendar extends React.Component {
 
     return (
       <div className={this.props.dropdownClass}>
-        <ul>
-          {items}
-        </ul>
+        <ul>{items}</ul>
       </div>
     );
   }
@@ -132,26 +131,33 @@ export default class ReactAddToCalendar extends React.Component {
     let template = Object.keys(this.props.buttonTemplate);
 
     if (template[0] !== "textOnly") {
-      let iconPlacement = this.props.buttonTemplate[template];
-      let buttonIconClass =
-        "react-add-to-calendar__icon--" + iconPlacement + " fa fa-";
+      const iconPlacement = this.props.buttonTemplate[template];
+      const buttonClassPrefix =
+        this.props.buttonIconClass === "react-add-to-calendar__icon--"
+          ? `${this.props.buttonIconClass}${iconPlacement}`
+          : this.props.buttonIconClass;
+      const iconPrefix = this.props.useFontAwesomeIcons ? "fa fa-" : "";
 
-      if (template[0] === "caret") {
-        buttonIconClass += this.state.optionsOpen ? "caret-up" : "caret-down";
-      } else {
-        buttonIconClass += template[0];
-      }
+      const mainButtonIconClass =
+        template[0] === "caret"
+          ? this.state.optionsOpen ? "caret-up" : "caret-down"
+          : template[0];
+
+      let buttonIconClass = `${buttonClassPrefix} ${iconPrefix}${mainButtonIconClass}`;
 
       buttonIcon = <i className={buttonIconClass} />;
-      buttonLabel = iconPlacement === "right"
-        ? <span>
+      buttonLabel =
+        iconPlacement === "right" ? (
+          <span>
             {buttonLabel + " "}
             {buttonIcon}
           </span>
-        : <span>
+        ) : (
+          <span>
             {buttonIcon}
             {" " + buttonLabel}
-          </span>;
+          </span>
+        );
     }
 
     let buttonClass = this.state.optionsOpen
@@ -194,6 +200,8 @@ ReactAddToCalendar.propTypes = {
   buttonClassOpen: PropTypes.string,
   buttonLabel: PropTypes.string,
   buttonTemplate: PropTypes.object,
+  buttonIconClass: PropTypes.string,
+  useFontAwesomeIcons: PropTypes.bool,
   buttonWrapperClass: PropTypes.string,
   displayItemIcons: PropTypes.bool,
   optionsOpen: PropTypes.bool,
@@ -214,6 +222,8 @@ ReactAddToCalendar.defaultProps = {
   buttonClassOpen: "react-add-to-calendar__button--light",
   buttonLabel: "Add to My Calendar",
   buttonTemplate: { caret: "right" },
+  buttonIconClass: "react-add-to-calendar__icon--",
+  useFontAwesomeIcons: true,
   buttonWrapperClass: "react-add-to-calendar__wrapper",
   displayItemIcons: true,
   optionsOpen: false,
