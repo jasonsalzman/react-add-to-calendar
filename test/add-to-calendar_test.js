@@ -57,4 +57,25 @@ describe("AddToCalendar", () => {
     var element = TestUtils.renderIntoDocument(<TestComponent />);
     element.setState({ mounted: false }, done);
   });
+
+  it("should trigger onClick function passed", () => {
+    var event = {
+      title: "Sample Event",
+      description: "This is the sample event provided as an example only",
+      location: "Portland, OR",
+      startTime: "2016-09-16T20:15:00-04:00",
+      endTime: "2016-09-16T21:45:00-04:00"
+    };
+    var spy = sinon.spy();
+    var addToCalendar = TestUtils.renderIntoDocument(
+      <AddToCalendar event={event} optionsOpen onClick={spy} />
+    );
+    var link = TestUtils.findRenderedDOMComponentWithClass(
+      addToCalendar,
+      "outlookcom-link"
+    );
+    TestUtils.Simulate.click(link);
+    expect(spy.calledOnce).to.be.true;
+    expect(spy.calledWith("outlookcom"));
+  });
 });

@@ -53,6 +53,7 @@ export default class ReactAddToCalendar extends React.Component {
   handleDropdownLinkClick(e) {
     e.preventDefault();
     let url = e.currentTarget.getAttribute("href");
+    let linkType = e.currentTarget.getAttribute("class").split("-")[0];
 
     if (
       !helpers.isMobile() &&
@@ -79,7 +80,7 @@ export default class ReactAddToCalendar extends React.Component {
     } else {
       window.open(url, "_blank");
     }
-
+    this.props.onClick && this.props.onClick(linkType);
     this.toggleCalendarDropdown();
   }
 
@@ -140,7 +141,9 @@ export default class ReactAddToCalendar extends React.Component {
 
       const mainButtonIconClass =
         template[0] === "caret"
-          ? this.state.optionsOpen ? "caret-up" : "caret-down"
+          ? this.state.optionsOpen
+            ? "caret-up"
+            : "caret-down"
           : template[0];
 
       let buttonIconClass = `${buttonClassPrefix} ${iconPrefix}${mainButtonIconClass}`;
@@ -214,6 +217,7 @@ ReactAddToCalendar.propTypes = {
     endTime: PropTypes.string
   }).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.object),
+  onClick: PropTypes.func,
   rootClass: PropTypes.string
 };
 
@@ -242,5 +246,6 @@ ReactAddToCalendar.defaultProps = {
     { outlookcom: "Outlook.com" },
     { yahoo: "Yahoo" }
   ],
+  onClick: null,
   rootClass: "react-add-to-calendar"
 };
