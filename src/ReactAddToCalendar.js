@@ -209,6 +209,7 @@ ReactAddToCalendar.propTypes = {
   event: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
+    googleDescription: PropTypes.string,
     location: PropTypes.string,
     startTime: PropTypes.string,
     endTime: PropTypes.string
