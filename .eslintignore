@@ -1,0 +1,4 @@
+dist/**/*.js
+docs/**/*.js
+docs-site/**/*.js
+lib/**/*.js
