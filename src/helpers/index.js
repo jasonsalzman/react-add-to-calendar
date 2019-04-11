@@ -11,6 +11,26 @@ export default class helpers {
     return formattedDate.replace("+00:00", "Z");
   }
 
+  formatRFC5545Text(raw) {
+    // https://tools.ietf.org/html/rfc5545#section-3.1
+    //   Lines of text SHOULD NOT be longer than 75 octets, excluding the line
+    //   break.  Long content lines SHOULD be split into a multiple line
+    //   representations using a line "folding" technique.
+    // https://tools.ietf.org/html/rfc5545#section-3.3.11
+    //   An intentional formatted text line break MUST only be included in
+    //   a "TEXT" property value by representing the line break with the
+    //   character sequence of BACKSLASH, followed by a LATIN SMALL LETTER
+    //   N or a LATIN CAPITAL LETTER N, that is "\n" or "\N".
+    const text = raw || "";
+    const escaped = text.replace(/[\r\n]/g, '\\n');
+    const splits = [];
+    for (let split = escaped; (split.length !== 0); split = split.substr(75)) {
+      splits.push(split.substr(0, 75));
+    }
+    const formatted = splits.join("\n ");
+    return formatted;
+  }
+
   calculateDuration(startTime, endTime) {
     // snag parameters and format properly in UTC
     let end = moment.utc(endTime).format("DD/MM/YYYY HH:mm:ss");
@@ -77,9 +97,9 @@ export default class helpers {
           "URL:" + document.URL,
           "DTSTART:" + this.formatTime(event.startTime),
           "DTEND:" + this.formatTime(event.endTime),
-          "SUMMARY:" + event.title,
-          "DESCRIPTION:" + event.description,
-          "LOCATION:" + event.location,
+          "SUMMARY:" + this.formatRFC5545Text(event.title),
+          "DESCRIPTION:" + this.formatRFC5545Text(event.description),
+          "LOCATION:" + this.formatRFC5545Text(event.location),
           "END:VEVENT",
           "END:VCALENDAR"
         ].join("\n");
