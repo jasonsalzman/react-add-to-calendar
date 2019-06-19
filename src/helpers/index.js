@@ -80,6 +80,7 @@ export default class helpers {
           "SUMMARY:" + event.title,
           "DESCRIPTION:" + event.description,
           "LOCATION:" + event.location,
+          "ORGANIZER;CN=" + event.organizer + " Reminder:MAILTO:" + event.mailTo,
           "END:VEVENT",
           "END:VCALENDAR"
         ].join("\n");
