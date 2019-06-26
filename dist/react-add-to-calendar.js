@@ -638,7 +638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          break;
 
 	        default:
-	          calendarUrl = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "URL:" + document.URL, "DTSTART:" + this.formatTime(event.startTime), "DTEND:" + this.formatTime(event.endTime), "SUMMARY:" + event.title, "DESCRIPTION:" + event.description, "LOCATION:" + event.location, "ORGANIZER;CN=" + event.organizer + " Reminder:MAILTO:" + event.mailTo, "END:VEVENT", "END:VCALENDAR"].join("\n");
+	          calendarUrl = ["BEGIN:VCALENDAR", "VERSION:2.0", "BEGIN:VEVENT", "URL:" + document.URL, "DTSTART:" + this.formatTime(event.startTime), "DTEND:" + this.formatTime(event.endTime), "SUMMARY:" + event.title, "DESCRIPTION:" + event.description, "LOCATION:" + event.location, "ORGANIZER;CN=" + event.organizer + ":MAILTO:" + event.mailTo, "END:VEVENT", "END:VCALENDAR"].join("\n");
 
 	          if (!isCrappyIE && this.isMobile()) {
 	            calendarUrl = encodeURI("data:text/calendar;charset=utf8," + calendarUrl);
