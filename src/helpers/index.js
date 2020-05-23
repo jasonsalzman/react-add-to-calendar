@@ -44,6 +44,7 @@ export default class helpers {
         calendarUrl += "&location=" + encodeURIComponent(event.location);
         calendarUrl += "&text=" + encodeURIComponent(event.title);
         calendarUrl += "&details=" + encodeURIComponent(event.description);
+        calendarUrl += "&recur=" + encodeURIComponent(event.recur);
         break;
 
       case "yahoo":
