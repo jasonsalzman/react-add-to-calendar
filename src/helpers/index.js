@@ -64,7 +64,7 @@ export default class helpers {
         calendarUrl += "&subject=" + encodeURIComponent(event.title);
         calendarUrl += "&location=" + encodeURIComponent(event.location);
         calendarUrl += "&body=" + encodeURIComponent(event.description);
-        calendarUrl += "&allday=false";
+        calendarUrl += "&allday=true";
         calendarUrl += "&uid=" + this.getRandomKey();
         calendarUrl += "&path=/calendar/view/Month";
         break;
