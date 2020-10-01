@@ -59,6 +59,20 @@ let event = {
 
 See [here](https://github.com/jasonsalzman/react-add-to-calendar/blob/master/docs/ReactAddToCalendar.md) for a full list of props that may be passed to the component. Examples are given on the [main website](https://jasonsalzman.github.io/react-add-to-calendar).
 
+## Styling
+
+To import the base styles, at the top of the file:
+
+```js
+import 'react-add-to-calendar/dist/react-add-to-calendar.css'
+```
+
+You can overwrite the base CSS classes to customize styles. Some classes include:
+- `.react-add-to-calendar`: outermost parent `<div>`
+- `.react-add-to-calendar__wrapper`: `<div>` that wraps the dropdown toggle
+- `.react-add-to-calendar__button`: `<a>` inside the dropdown toggle wrapper
+- `.react-add-to-calendar__dropdown`: `<div>` that wraps the dropdown
+
 ## Compatibility
 
 ### React
