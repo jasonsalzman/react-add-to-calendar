@@ -20,7 +20,7 @@ export default class ReactAddToCalendar extends React.Component {
   UNSAFE_componentWillMount() {
     // polyfill for startsWith to fix IE bug
     if (!String.prototype.startsWith) {
-      String.prototype.startsWith = function(searchString, position) {
+      String.prototype.startsWith = function (searchString, position) {
         position = position || 0;
         return this.indexOf(searchString, position) === position;
       };
@@ -42,7 +42,9 @@ export default class ReactAddToCalendar extends React.Component {
     let showOptions = !this.state.optionsOpen;
 
     if (showOptions) {
-      document.addEventListener("click", this.toggleCalendarDropdown, false);
+      document.addEventListener("click", this.toggleCalendarDropdown, {
+        capture: true
+      });
     } else {
       document.removeEventListener("click", this.toggleCalendarDropdown);
     }
@@ -86,7 +88,7 @@ export default class ReactAddToCalendar extends React.Component {
   renderDropdown() {
     let self = this;
 
-    let items = this.props.listItems.map(listItem => {
+    let items = this.props.listItems.map((listItem) => {
       let currentItem = Object.keys(listItem)[0];
       let currentLabel = listItem[currentItem];
 
@@ -140,7 +142,9 @@ export default class ReactAddToCalendar extends React.Component {
 
       const mainButtonIconClass =
         template[0] === "caret"
-          ? this.state.optionsOpen ? "caret-up" : "caret-down"
+          ? this.state.optionsOpen
+            ? "caret-up"
+            : "caret-down"
           : template[0];
 
       let buttonIconClass = `${buttonClassPrefix} ${iconPrefix}${mainButtonIconClass}`;
