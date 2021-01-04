@@ -46,7 +46,9 @@ export default class ReactAddToCalendar extends React.Component {
         capture: true
       });
     } else {
-      document.removeEventListener("click", this.toggleCalendarDropdown);
+      document.removeEventListener("click", this.toggleCalendarDropdown, {
+        capture: true
+      });
     }
 
     this.setState({ optionsOpen: showOptions });
