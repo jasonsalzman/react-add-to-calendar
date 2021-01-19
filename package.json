@@ -87,8 +87,8 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "peerDependencies": {
-    "react": "^15.5.4 || ^16.0.0",
-    "react-dom": "^15.5.4 || ^16.0.0"
+    "react": "^15.5.4 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^15.5.4 || ^16.0.0 || ^17.0.0"
   },
   "optionalDependencies": {
     "moment": "^2.18.1"
