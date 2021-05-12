@@ -9,7 +9,8 @@
             "imports": ["react"],
             "locals": ["module"]
           }]
-        }]
+        }, "@babel/transform-react-jsx-source"]
+        
       ]
     }
   }

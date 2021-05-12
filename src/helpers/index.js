@@ -70,19 +70,44 @@ export default class helpers {
         break;
 
       default:
-        calendarUrl = [
-          "BEGIN:VCALENDAR",
-          "VERSION:2.0",
-          "BEGIN:VEVENT",
-          "URL:" + document.URL,
-          "DTSTART:" + this.formatTime(event.startTime),
-          "DTEND:" + this.formatTime(event.endTime),
-          "SUMMARY:" + event.title,
-          "DESCRIPTION:" + event.description,
-          "LOCATION:" + event.location,
-          "END:VEVENT",
-          "END:VCALENDAR"
-        ].join("\n");
+        if (event.constructor === Array) {
+          event.map(el => {
+            calendarUrl = 
+              [
+              ...calendarUrl,
+              "BEGIN:VEVENT",
+              "URL:" + document.URL,
+              "DTSTART:" + this.formatTime(el.startTime),
+              "DTEND:" + this.formatTime(el.endTime),
+              "SUMMARY:" + el.title,
+              "DESCRIPTION:" + el.description,
+              "LOCATION:" + el.location,
+              "END:VEVENT",
+              ]
+          })
+          calendarUrl.unshift( "BEGIN:VCALENDAR","VERSION:2.0")
+          calendarUrl.push("END:VCALENDAR")
+          var calAux = calendarUrl
+
+          calAux.map(el => {
+            calendarUrl = [...calAux ,el].join("\n")
+          })
+        } else {
+          calendarUrl = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "BEGIN:VEVENT",
+            "URL:" + document.URL,
+            "DTSTART:" + this.formatTime(event.startTime),
+            "DTEND:" + this.formatTime(event.endTime),
+            "SUMMARY:" + event.title,
+            "DESCRIPTION:" + event.description,
+            "LOCATION:" + event.location,
+            "END:VEVENT",
+            "END:VCALENDAR"
+          ].join("\n");
+        }
+
 
         if (!isCrappyIE && this.isMobile()) {
           calendarUrl = encodeURI(
@@ -90,7 +115,7 @@ export default class helpers {
           );
         }
     }
-
+    console.log(calendarUrl)
     return calendarUrl;
   }
 
@@ -98,7 +123,7 @@ export default class helpers {
   isMobile() {
     let mobile = false;
 
-    (function(a) {
+    (function (a) {
       if (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
           a
