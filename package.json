@@ -70,7 +70,7 @@
     "lodash": "^4.17.4",
     "mocha": "^3.4.1",
     "mocha-jsdom": "^1.1.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.2.0",
     "react-docgen": "^2.15.0",
